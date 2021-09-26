@@ -77,7 +77,7 @@
       
         <li class="list-item">
           
-            <a href="/" class="item-link active">Home</a>
+            <a href="/" class="item-link">Home</a>
           
         </li>
       
@@ -129,7 +129,7 @@
         
           <li class="menu-item">
             
-              <a href="/" class="menu-link mobile-active">Home</a>
+              <a href="/" class="menu-link">Home</a>
             
           </li>
         
@@ -192,68 +192,48 @@
   </div>
 </header>
 
-    <main class="app-body">
+    <div id="article-banner">
+  <h2>Archives</h2>
+  <p class="post-date">Archives</p>
+</div>
+<main class="app-body" id="archives">
   
-    <article class="article-card">
-      <h2 class="article-head">
-        <a href="/2021/09/26/java/">java</a>
-      </h2>
-      <p class="article-date">September 26, 2021</p>
-      
-        
-  <a href="/tags#Java笔记" >
-    <span class="tag-code">Java笔记</span>
-  </a>
-
-      
-      <div class="article-summary">
-        
-           第一篇Java笔记 
-
-        
+  
+  
+    <section class="time-section">
+  <h1 class="section-year">
+    2021
+  </h1>
+  <div class="section-list">
+    
+    
+      <div class="section-list-item">
+        <a href="/2021/09/26/java/" class="archive-title">java</a>
+        <p class="archive-date">09-26</p>
       </div>
-      <a class="more" href="/2021/09/26/java/">Read more</a>
-    </article>
-  
-    <article class="article-card">
-      <h2 class="article-head">
-        <a href="/2021/09/26/%E4%B8%AA%E4%BA%BA%E7%BB%8F%E5%8E%86/">个人经历</a>
-      </h2>
-      <p class="article-date">September 26, 2021</p>
-      
-        
-  <a href="/tags#情感" >
-    <span class="tag-code">情感</span>
-  </a>
-
-      
-      <div class="article-summary">
-        
-          湖南工业大学19级计院学子不请自来。1.学校占地十分大，新生军训从北苑走到西苑军训都得10多分钟，军训和平时上课基本上都是一天下来都是1w步以上，要是晚上去西苑再跑几圈，一般都是会有2w步的。2.我觉得宿舍条件特别好呀，四人寝，(悄咪咪的说我们寝室只住了三个)，上床下桌。有独卫，有空调。但是 ...
-        
+    
+      <div class="section-list-item">
+        <a href="/2021/09/26/%E4%B8%AA%E4%BA%BA%E7%BB%8F%E5%8E%86/" class="archive-title">个人经历</a>
+        <p class="archive-date">09-26</p>
       </div>
-      <a class="more" href="/2021/09/26/%E4%B8%AA%E4%BA%BA%E7%BB%8F%E5%8E%86/">Read more</a>
-    </article>
-  
-    <article class="article-card">
-      <h2 class="article-head">
-        <a href="/2021/09/25/hello-world/">Hello World</a>
-      </h2>
-      <p class="article-date">September 25, 2021</p>
-      
-      <div class="article-summary">
-        
-          Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer ...
-        
+    
+      <div class="section-list-item">
+        <a href="/2021/09/25/hello-world/" class="archive-title">Hello World</a>
+        <p class="archive-date">09-25</p>
       </div>
-      <a class="more" href="/2021/09/25/hello-world/">Read more</a>
-    </article>
-  
-
+    
+  </div>
+</section>
   
 </main>
 
-
+<script>
+  (function () {
+    var url = 'http://example.com/tags/Java笔记/index.html';
+    $('#article-banner').geopattern(url);
+    $('.header').removeClass('fixed-header');
+  })();
+</script>
     <div class="scroll-top">
   <span class="arrow-icon"></span>
 </div>
