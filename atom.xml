@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-09-26T13:00:13.405Z</updated>
+  <updated>2021-09-27T01:48:23.196Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -21,15 +21,17 @@
     <link href="http://example.com/2021/09/26/java/"/>
     <id>http://example.com/2021/09/26/java/</id>
     <published>2021-09-26T11:56:56.000Z</published>
-    <updated>2021-09-26T13:00:13.405Z</updated>
+    <updated>2021-09-27T01:48:23.196Z</updated>
     
-    <content type="html"><![CDATA[<p> 第一篇Java笔记 </p>]]></content>
+    <content type="html"><![CDATA[<h1>Format类<h3>导包：import java.text.Foemat<p><img src="C:\Users\风萧\AppData\Roaming\Typora\typora-user-images\image-20210927012310719.png" alt="image-20210927012310719"></p><h1>PrintStream类<h3 id="java-io-PrintStream-提供了printf-方法"><a href="#java-io-PrintStream-提供了printf-方法" class="headerlink" title="java.io.PrintStream 提供了printf()方法"></a>java.io.PrintStream 提供了printf()方法</h3><h1 id="正则表达式-重点"><a href="#正则表达式-重点" class="headerlink" title="正则表达式(重点)"></a>正则表达式(重点)</h1><h3 id="java-util-regex"><a href="#java-util-regex" class="headerlink" title="java.util.regex"></a>java.util.regex</h3><p>两个重要的类<em>Pattern<strong>与</strong>Matcher*</em>()</p><h1 id="java多线程-Thread待续"><a href="#java多线程-Thread待续" class="headerlink" title="java多线程 Thread待续"></a>java多线程 Thread待续</h1>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt; 第一篇Java笔记 &lt;/p&gt;
-</summary>
+    <summary type="html">&lt;h1&gt;Format类
+&lt;h3&gt;导包：import java.text.Foemat
+
+&lt;p&gt;&lt;img src=&quot;C:\Users\风萧\AppData\Roaming\Typora\typora-user-images\image-20210927012310719.png&quot; </summary>
       
     
     
