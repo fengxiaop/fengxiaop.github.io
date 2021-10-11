@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-09-27T01:48:23.196Z</updated>
+  <updated>2021-10-11T03:21:38.088Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>git</title>
+    <link href="http://example.com/2021/10/11/git/"/>
+    <id>http://example.com/2021/10/11/git/</id>
+    <published>2021-10-11T03:21:00.000Z</published>
+    <updated>2021-10-11T03:21:38.088Z</updated>
+    
+    <content type="html"><![CDATA[<p>git clone 仓库地址</p><p>git add .</p><p>git commit -u”内容描述”</p><p>git push 上传地址</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;git clone 仓库地址&lt;/p&gt;
+&lt;p&gt;git add .&lt;/p&gt;
+&lt;p&gt;git commit -u”内容描述”&lt;/p&gt;
+&lt;p&gt;git push 上传地址&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    
+    <category term="git命令" scheme="http://example.com/tags/git%E5%91%BD%E4%BB%A4/"/>
+    
+  </entry>
   
   <entry>
     <title>java</title>
