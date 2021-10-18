@@ -110,7 +110,7 @@
     <link href="http://example.com/2021/10/13/leetcode_412/"/>
     <id>http://example.com/2021/10/13/leetcode_412/</id>
     <published>2021-10-13T08:38:40.000Z</published>
-    <updated>2021-10-13T08:41:48.201Z</updated>
+    <updated>2021-10-18T02:32:51.296Z</updated>
     
     <content type="html"><![CDATA[<p>412.[Fizz Buzz]</p><p>给你一个整数 n ，找出从 1 到 n 各个整数的 Fizz Buzz 表示，并用字符串数组 answer（下标从 1 开始）返回结果，其中：</p><p>answer[i] == “FizzBuzz” 如果 i 同时是 3 和 5 的倍数。<br>answer[i] == “Fizz” 如果 i 是 3 的倍数。<br>answer[i] == “Buzz” 如果 i 是 5 的倍数。<br>answer[i] == i 如果上述条件全不满足。</p><p>示例 1：</p><p>输入：n = 3<br>输出：[“1”,”2”,”Fizz”]<br>示例 2：</p><p>输入：n = 5<br>输出：[“1”,”2”,”Fizz”,”4”,”Buzz”]<br>示例 3：</p><p>输入：n = 15<br>输出：[“1”,”2”,”Fizz”,”4”,”Buzz”,”Fizz”,”7”,”8”,”Fizz”,”Buzz”,”11”,”Fizz”,”13”,”14”,”FizzBuzz”]</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> List&lt;String&gt; <span class="title">fizzBuzz</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">        List&lt;String&gt; li = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        <span class="keyword">for</span>(Integer i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">      &#123;  </span><br><span class="line">        <span class="keyword">if</span>(i % <span class="number">3</span> == <span class="number">0</span> &amp;&amp; i % <span class="number">5</span> == <span class="number">0</span>) li.add(<span class="string">&quot;FizzBuzz&quot;</span>);</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(i%<span class="number">3</span>==<span class="number">0</span>)li.add(<span class="string">&quot;Fizz&quot;</span>);</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(i%<span class="number">5</span>==<span class="number">0</span>)li.add(<span class="string">&quot;Buzz&quot;</span>);</span><br><span class="line">        <span class="keyword">else</span> li.add(i.toString());</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> li;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
     
@@ -158,7 +158,7 @@
     <link href="http://example.com/2021/10/11/git/"/>
     <id>http://example.com/2021/10/11/git/</id>
     <published>2021-10-11T03:21:00.000Z</published>
-    <updated>2021-10-18T02:29:39.618Z</updated>
+    <updated>2021-10-18T02:32:20.263Z</updated>
     
     <content type="html"><![CDATA[<h3 id="…or-create-a-new-repository-on-the-command-line"><a href="#…or-create-a-new-repository-on-the-command-line" class="headerlink" title="…or create a new repository on the command line"></a>…or create a new repository on the command line</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">echo &quot;# learnGit&quot; &gt;&gt; README.md</span><br><span class="line">git init</span><br><span class="line">git add README.md</span><br><span class="line">git commit -m &quot;first commit&quot;</span><br><span class="line">git branch -M main</span><br><span class="line">git remote add origin https://github.com/fengxiaop/learnGit.git</span><br><span class="line">git push -u origin main</span><br></pre></td></tr></table></figure><h3 id="…or-push-an-existing-repository-from-the-command-line"><a href="#…or-push-an-existing-repository-from-the-command-line" class="headerlink" title="…or push an existing repository from the command line"></a>…or push an existing repository from the command line</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin https://github.com/fengxiaop/learnGit.git</span><br><span class="line">git branch -M main</span><br><span class="line">git push -u origin main</span><br></pre></td></tr></table></figure><p>git clone 仓库地址</p><p>git add .</p><p>git commit -u”内容描述”</p><p>git push 上传地址</p>]]></content>
     
@@ -180,17 +180,16 @@
     <link href="http://example.com/2021/09/26/java/"/>
     <id>http://example.com/2021/09/26/java/</id>
     <published>2021-09-26T11:56:56.000Z</published>
-    <updated>2021-10-13T06:14:56.803Z</updated>
+    <updated>2021-10-18T02:32:34.848Z</updated>
     
-    <content type="html"><![CDATA[<h1>Format类<h3>导包：import java.text.Foemat<p><img src="https://github.com/fengxiaop/gallery/blob/master/image/image-20210927012310719.png?raw=true" alt="java.tect"></p><h1>PrintStream类<h3 id="java-io-PrintStream-提供了printf-方法"><a href="#java-io-PrintStream-提供了printf-方法" class="headerlink" title="java.io.PrintStream 提供了printf()方法"></a>java.io.PrintStream 提供了printf()方法</h3><h1 id="正则表达式-重点"><a href="#正则表达式-重点" class="headerlink" title="正则表达式(重点)"></a>正则表达式(重点)</h1><h3 id="java-util-regex"><a href="#java-util-regex" class="headerlink" title="java.util.regex"></a>java.util.regex</h3><p>两个重要的类<em>Pattern<strong>与</strong>Matcher*</em>()</p><h1 id="java多线程-Thread待续"><a href="#java多线程-Thread待续" class="headerlink" title="java多线程 Thread待续"></a>java多线程 Thread待续</h1>]]></content>
+    <content type="html"><![CDATA[<h1>Format类<h3>导包：import java.text.Foemat![java.tect](https://github.com/fengxiaop/gallery/blob/master/image/image-20210927012310719.png?raw=true)<h1>PrintStream类<h3 id="java-io-PrintStream-提供了printf-方法"><a href="#java-io-PrintStream-提供了printf-方法" class="headerlink" title="java.io.PrintStream 提供了printf()方法"></a>java.io.PrintStream 提供了printf()方法</h3><h1 id="正则表达式-重点"><a href="#正则表达式-重点" class="headerlink" title="正则表达式(重点)"></a>正则表达式(重点)</h1><h3 id="java-util-regex"><a href="#java-util-regex" class="headerlink" title="java.util.regex"></a>java.util.regex</h3><p>两个重要的类<em>Pattern<strong>与</strong>Matcher*</em>()</p><h1 id="java多线程-Thread待续"><a href="#java多线程-Thread待续" class="headerlink" title="java多线程 Thread待续"></a>java多线程 Thread待续</h1>]]></content>
     
     
       
       
     <summary type="html">&lt;h1&gt;Format类
 &lt;h3&gt;导包：import java.text.Foemat
-
-&lt;p&gt;&lt;img src=&quot;https://github.com/fengxiaop/gallery/blob/master/image/image-20210927012310719.png?</summary>
+![java.tect](https://github.com/fengxiaop/gallery/blob/master/image/image-20210927012310719.png?r</summary>
       
     
     
