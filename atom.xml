@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-10-20T07:55:43.689Z</updated>
+  <updated>2021-10-23T08:45:35.386Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,52 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>湖南省财务大学生竞赛</title>
+    <link href="http://example.com/2021/10/23/%E6%B9%96%E5%8D%97%E7%9C%81%E8%B4%A2%E5%8A%A1%E5%A4%A7%E5%AD%A6%E7%94%9F%E7%AB%9E%E8%B5%9B/"/>
+    <id>http://example.com/2021/10/23/%E6%B9%96%E5%8D%97%E7%9C%81%E8%B4%A2%E5%8A%A1%E5%A4%A7%E5%AD%A6%E7%94%9F%E7%AB%9E%E8%B5%9B/</id>
+    <published>2021-10-23T08:33:56.000Z</published>
+    <updated>2021-10-23T08:45:35.386Z</updated>
+    
+    <content type="html"><![CDATA[<p>  被拉去参加财务大学生竞赛 让我当大数据分析师</p><p>  刷了几套题发现是考查找数据能力以及利用python tushare库做分析</p><p><img src="C:\Users\风萧\AppData\Roaming\Typora\typora-user-images\image-20211023164530957.png" alt="image-20211023164530957"></p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> tushare <span class="keyword">as</span> ts</span><br><span class="line">ts.set_token(<span class="string">&#x27;41addd8c3955aea5623099855def5d5ae794632258ad289d8fd02fb6&#x27;</span>)</span><br><span class="line">ds = ts.pro_bar(ts_code=<span class="string">&#x27;000425.SZ&#x27;</span>, start_date=<span class="string">&#x27;20130101&#x27;</span>, end_date=<span class="string">&#x27;20171231&#x27;</span>, freq=<span class="string">&#x27;M&#x27;</span>, adj=<span class="string">&#x27;hfq&#x27;</span>)</span><br><span class="line">ds = ds[[<span class="string">&#x27;trade_date&#x27;</span>, <span class="string">&#x27;close&#x27;</span>]]</span><br><span class="line">ds.to_excel(<span class="string">&#x27;D:/bigdata/000425.xlsx&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(ds)</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;  被拉去参加财务大学生竞赛 让我当大数据分析师&lt;/p&gt;
+&lt;p&gt;  刷了几套题发现是考查找数据能力以及利用python tushare库做分析&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;C:\Users\风萧\AppData\Roaming\Typora\typora-user-i</summary>
+      
+    
+    
+    
+    
+    <category term="竞赛" scheme="http://example.com/tags/%E7%AB%9E%E8%B5%9B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SpringMvc</title>
+    <link href="http://example.com/2021/10/20/SpringMvc/"/>
+    <id>http://example.com/2021/10/20/SpringMvc/</id>
+    <published>2021-10-20T08:39:38.000Z</published>
+    <updated>2021-10-20T09:59:18.646Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="一-SpringMVC"><a href="#一-SpringMVC" class="headerlink" title="一  SpringMVC"></a>一  SpringMVC</h1><h2 id="Spring-MVc-Model-View-Controller"><a href="#Spring-MVc-Model-View-Controller" class="headerlink" title="Spring+MVc(Model View Controller)"></a>Spring+MVc(Model View Controller)</h2><p>Model :实体类Bean     专门做存储业务数据  </p><pre><code>         业务处理Bean 指Servicw或Dao对象，专门用于处理业务逻辑和数据访问</code></pre><p>View :视图层  指工程中的html+jsp等页面  </p><p>Controller : 控制层 servelt </p><h1 id="二-HelloWorld"><a href="#二-HelloWorld" class="headerlink" title="二 HelloWorld"></a>二 HelloWorld</h1><p><img src="https://i.loli.net/2021/10/20/mIv4EeUBpWXiFrR.png" alt="添加maven框架"></p><p><img src="https://i.loli.net/2021/10/20/4sMPdelLVobrc9E.png"></p><p>添加依赖 如果爆红点右上角的maven刷新下载自动加载就好了</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;一-SpringMVC&quot;&gt;&lt;a href=&quot;#一-SpringMVC&quot; class=&quot;headerlink&quot; title=&quot;一  SpringMVC&quot;&gt;&lt;/a&gt;一  SpringMVC&lt;/h1&gt;&lt;h2 id=&quot;Spring-MVc-Model-View-Contr</summary>
+      
+    
+    
+    
+    
+    <category term="java" scheme="http://example.com/tags/java/"/>
+    
+  </entry>
   
   <entry>
     <title>leetcode_453</title>
