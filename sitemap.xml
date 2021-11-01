@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://example.com/2021/11/01/leetcode_1221/</loc>
+    
+    <lastmod>2021-11-01</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/2021/11/01/leetcode_561/</loc>
+    
+    <lastmod>2021-11-01</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/2021/11/01/leetcode_575/</loc>
+    
+    <lastmod>2021-11-01</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://example.com/2021/11/01/ArrayList%E4%B8%8EHashset/</loc>
     
     <lastmod>2021-11-01</lastmod>
@@ -37,7 +58,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/2021/10/20/leetcode-453/</loc>
+    <loc>http://example.com/2021/10/20/leetcode_453/</loc>
     
     <lastmod>2021-10-23</lastmod>
     
@@ -222,6 +243,13 @@
   
   <url>
     <loc>http://example.com/tags/%E7%AB%9E%E8%B5%9B/</loc>
+    <lastmod>2021-11-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/tags/%E8%B4%AA%E5%BF%83/</loc>
     <lastmod>2021-11-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
