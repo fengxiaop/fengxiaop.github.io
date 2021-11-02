@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-11-01T15:09:13.985Z</updated>
+  <updated>2021-11-02T05:08:00.471Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>pyautogui挂实验室时长</title>
+    <link href="http://example.com/2021/11/02/pyautogui%E6%8C%82%E5%AE%9E%E9%AA%8C%E5%AE%A4%E6%97%B6%E9%95%BF/"/>
+    <id>http://example.com/2021/11/02/pyautogui%E6%8C%82%E5%AE%9E%E9%AA%8C%E5%AE%A4%E6%97%B6%E9%95%BF/</id>
+    <published>2021-11-02T05:00:59.000Z</published>
+    <updated>2021-11-02T05:08:00.471Z</updated>
+    
+    <content type="html"><![CDATA[<p> 利用pyautogui实现高校实验室挂时长</p><p>原理其实很简单 就是实现每隔五分钟点一下鼠标的作用</p><p>一般用于夜晚电脑开着挂</p><h1>第一步<p>先导包</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pyautogui</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> time</span><br></pre></td></tr></table></figure><p>第二部写个for循环</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>,<span class="number">100</span>):</span><br><span class="line">    <span class="built_in">print</span>(i)</span><br><span class="line">    pyautogui.click(<span class="number">1113</span>,<span class="number">209</span>, clicks=<span class="number">5</span>,interval=<span class="number">1</span>,duration=<span class="number">0.5</span>)</span><br><span class="line">    time.sleep(<span class="number">298</span>)</span><br></pre></td></tr></table></figure><p>github仓库源代码  <a href="https://github.com/fengxiaop/pyautogui">https://github.com/fengxiaop/pyautogui</a></p><p>有用的话记得点个 star</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt; 利用pyautogui实现高校实验室挂时长&lt;/p&gt;
+&lt;p&gt;原理其实很简单 就是实现每隔五分钟点一下鼠标的作用&lt;/p&gt;
+&lt;p&gt;一般用于夜晚电脑开着挂&lt;/p&gt;
+&lt;h1&gt;第一步
+
+&lt;p&gt;先导包&lt;/p&gt;
+&lt;figure class=&quot;highlight python&quot;&gt;&lt;tabl</summary>
+      
+    
+    
+    
+    
+    <category term="python" scheme="http://example.com/tags/python/"/>
+    
+    <category term="小程序" scheme="http://example.com/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+    
+  </entry>
   
   <entry>
     <title>leetcode_1221</title>
