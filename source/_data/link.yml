@@ -1,0 +1,15 @@
+- class_name: 友情鏈接
+  class_desc: 金毛的小站
+  link_list:
+    - name: 金毛败犬
+      link: https://www.eririspace.cn/
+      avatar: https://i.loli.net/2021/10/18/Zd1DocbtkNEaeOG.jpg
+      descr: 金毛6666
+
+- class_name: 網站
+  class_desc: 值得推薦的網站
+  link_list:
+    - name: github
+      link: https://github.com/fengxiaop
+      avatar: https://i.loli.net/2021/10/18/2BGsAcdQja3DuxK.gif
+      descr: 世界上最大的男同网站(X)
