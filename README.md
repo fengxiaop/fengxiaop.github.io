@@ -1,2 +1,2 @@
 # fengxiaop.github.io
-项目采用hexo+vexo搭建
+项目采用hexo+butterfly搭建
