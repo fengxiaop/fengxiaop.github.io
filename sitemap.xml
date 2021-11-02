@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://example.com/2021/11/02/Test/</loc>
+    
+    <lastmod>2021-11-02</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://example.com/2021/11/02/pyautogui%E6%8C%82%E5%AE%9E%E9%AA%8C%E5%AE%A4%E6%97%B6%E9%95%BF/</loc>
     
     <lastmod>2021-11-02</lastmod>
@@ -271,6 +278,13 @@
   
   <url>
     <loc>http://example.com/tags/%E5%B0%8F%E4%BD%9C%E5%93%81/</loc>
+    <lastmod>2021-11-02</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/tags/Test/</loc>
     <lastmod>2021-11-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
