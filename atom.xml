@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-11-08T06:45:32.867Z</updated>
+  <updated>2021-11-08T08:42:27.481Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>udp和tcp的区别</title>
+    <link href="http://example.com/2021/11/08/udp%E5%92%8Ctcp%E7%9A%84%E5%8C%BA%E5%88%AB/"/>
+    <id>http://example.com/2021/11/08/udp%E5%92%8Ctcp%E7%9A%84%E5%8C%BA%E5%88%AB/</id>
+    <published>2021-11-08T08:41:32.000Z</published>
+    <updated>2021-11-08T08:42:27.481Z</updated>
+    
+    <content type="html"><![CDATA[<ol><li><p>TCP<strong>面向连接</strong>；UDP是无连接的，即发送数据之前不需要建立连接。</p></li><li><p>TCP提供<strong>可靠的服务</strong>；UDP不保证可靠交付。</p></li><li><p>TCP<strong>面向字节流</strong>，把数据看成一连串无结构的字节流；UDP是面向报文的。</p></li><li><p>TCP有<strong>拥塞控制</strong>；UDP没有拥塞控制，因此网络出现拥塞不会使源主机的发送速率降低（对实时应</p></li></ol><p>用很有用，如实时视频会议等）。</p><ol start="5"><li><p>每一条TCP连接只能是<strong>点到点</strong>的；UDP支持一对一、一对多、多对一和多对多的通信方式。</p></li><li><p>TCP首部开销20字节；UDP的首部开销小，只有8个字节。</p></li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;TCP&lt;strong&gt;面向连接&lt;/strong&gt;；UDP是无连接的，即发送数据之前不需要建立连接。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;TCP提供&lt;strong&gt;可靠的服务&lt;/strong&gt;；UDP不保证可靠交付。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;TCP&lt;</summary>
+      
+    
+    
+    
+    
+    <category term="计算机网络" scheme="http://example.com/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
+    
+  </entry>
   
   <entry>
     <title>Thread类</title>
@@ -479,28 +506,6 @@
     
     
     <category term="leetcode" scheme="http://example.com/tags/leetcode/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>绩点计算器</title>
-    <link href="http://example.com/2021/10/13/%E7%BB%A9%E7%82%B9%E8%AE%A1%E7%AE%97%E5%99%A8/"/>
-    <id>http://example.com/2021/10/13/%E7%BB%A9%E7%82%B9%E8%AE%A1%E7%AE%97%E5%99%A8/</id>
-    <published>2021-10-13T08:48:57.000Z</published>
-    <updated>2021-10-18T02:41:39.399Z</updated>
-    
-    <content type="html"><![CDATA[<p>在群里突然有人问了这么一个问题<br><img src="https://img-blog.csdnimg.cn/20200520142152806.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3BqMjAwMjAzMTg=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>由于本校教务系统只有均分（这个必须得吐槽一百遍） 所以学分绩点的计算得自己算或者在网上算  </p><p>网上有网页的计算器  链接：<a href="http://apps.chasedream.com/gpa/%E3%80%81">http://apps.chasedream.com/gpa/、</a></p><p>所以自己想了一下自己可以写一个绩点计算器出来吗  好像也不是很难的样子</p><p>所以自己用了差不多20分钟帮这个写出来了</p><p>下面是源码</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> number;</span><br><span class="line"></span><br><span class="line"><span class="keyword">float</span> score;</span><br><span class="line"></span><br><span class="line"><span class="keyword">float</span> credit,creditsum=<span class="number">0</span>; </span><br><span class="line"></span><br><span class="line"><span class="keyword">float</span> gpasum=<span class="number">0.0</span>,GPA=<span class="number">0.0</span>;</span><br><span class="line"></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;请输入需要计算的科目数量&quot;</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;number);</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> count=<span class="number">1</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;number;i++)</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;请输入第%d科的成绩和学分&quot;</span>,count); </span><br><span class="line"></span><br><span class="line"><span class="built_in">scanf</span>(<span class="string">&quot;%f %f&quot;</span>,&amp;score,&amp;credit);</span><br><span class="line"></span><br><span class="line">creditsum+=credit;</span><br><span class="line"></span><br><span class="line"><span class="comment">//printf(&quot;%.1f&quot;,(score/10-5)*credit);</span></span><br><span class="line"></span><br><span class="line">gpasum+=(score/<span class="number">10</span><span class="number">-5</span>)*credit;</span><br><span class="line"></span><br><span class="line">GPA=gpasum/creditsum;</span><br><span class="line"></span><br><span class="line">count++;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//printf(&quot;学分总和：%.1f&quot;,creditsum);</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//printf(&quot;总分：%.1f&quot;,gpasum);</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;您的GPA是%.1f&quot;</span>,GPA);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure><p>功能样图<br><img src="https://img-blog.csdnimg.cn/20200520142248247.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3BqMjAwMjAzMTg=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>欢迎关注微信公众号  ：打码少年风萧<br>程序链接<br>链接：<a href="https://pan.baidu.com/s/1MzkRQ3XCtWadlWFxFDef4g">https://pan.baidu.com/s/1MzkRQ3XCtWadlWFxFDef4g</a><br>提取码：30qf </p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;在群里突然有人问了这么一个问题&lt;br&gt;&lt;img src=&quot;https://img-blog.csdnimg.cn/20200520142152806.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,sha</summary>
-      
-    
-    
-    
-    
-    <category term="小作品" scheme="http://example.com/tags/%E5%B0%8F%E4%BD%9C%E5%93%81/"/>
     
   </entry>
   
