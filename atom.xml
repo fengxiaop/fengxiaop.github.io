@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-12-31T08:27:01.658Z</updated>
+  <updated>2022-01-01T15:45:57.239Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>年终总结</title>
+    <link href="http://example.com/2022/01/01/%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/"/>
+    <id>http://example.com/2022/01/01/%E5%B9%B4%E7%BB%88%E6%80%BB%E7%BB%93/</id>
+    <published>2022-01-01T15:40:37.000Z</published>
+    <updated>2022-01-01T15:45:57.239Z</updated>
+    
+    <content type="html"><![CDATA[<p>  送走了迷茫的2021年 迎来了可能最为艰难的2022年  上学期突然下定决心决定工作，这学期开学到现在陆陆续续的刷了150道力扣  其实很多都是水题。不过像我这样努力了一个月也去拿了个程序设计二等奖。也明白了我现在一直坚持的一句话，</p><p><strong>任何时候努力都不算晚</strong></p><p><img src="https://s2.loli.net/2022/01/01/fbXKBq5ujagpmzk.png"></p><p>也许愿一下自己来年的愿望吧 希望自己能够春招实习能够找到一份好的实习，秋招能够找到自己满意的工作。去想去的上海，弥补高考的遗憾。</p><p>也给来年一些期许吧</p><p>1.力扣打卡 每月满勤</p><p>2.数据结构全部再过一遍</p><p>3.学好八股！</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;  送走了迷茫的2021年 迎来了可能最为艰难的2022年  上学期突然下定决心决定工作，这学期开学到现在陆陆续续的刷了150道力扣  其实很多都是水题。不过像我这样努力了一个月也去拿了个程序设计二等奖。也明白了我现在一直坚持的一句话，&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;任何时</summary>
+      
+    
+    
+    
+    
+    <category term="碎碎念" scheme="http://example.com/tags/%E7%A2%8E%E7%A2%8E%E5%BF%B5/"/>
+    
+  </entry>
   
   <entry>
     <title>完美数</title>
@@ -483,33 +506,6 @@
     
     
     <category term="String" scheme="http://example.com/tags/String/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Arrays工具类</title>
-    <link href="http://example.com/2021/11/08/Arrays%E5%B7%A5%E5%85%B7%E7%B1%BB/"/>
-    <id>http://example.com/2021/11/08/Arrays%E5%B7%A5%E5%85%B7%E7%B1%BB/</id>
-    <published>2021-11-08T02:46:15.000Z</published>
-    <updated>2021-11-08T02:53:33.049Z</updated>
-    
-    <content type="html"><![CDATA[<p>Arrays.sort(arr)</p><p>给数组arr排序</p><p>二分法查找的使用</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.leetcode;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.Arrays;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ArraysTest</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> [] arr = &#123;<span class="number">1</span>,<span class="number">11</span>,<span class="number">22</span>,<span class="number">33</span>,<span class="number">45</span>,<span class="number">35</span>&#125;;</span><br><span class="line">        Arrays.sort(arr);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; arr.length; i++) &#123;</span><br><span class="line">            System.out.println(arr[i]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> index = Arrays.binarySearch(arr,<span class="number">333</span>);</span><br><span class="line">        System.out.println(index);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;Arrays.sort(arr)&lt;/p&gt;
-&lt;p&gt;给数组arr排序&lt;/p&gt;
-&lt;p&gt;二分法查找的使用&lt;/p&gt;
-&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;</summary>
-      
-    
-    
-    
-    
-    <category term="java" scheme="http://example.com/tags/java/"/>
-    
-    <category term="Arrays" scheme="http://example.com/tags/Arrays/"/>
     
   </entry>
   
