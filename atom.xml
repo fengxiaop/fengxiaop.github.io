@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-02-22T05:15:21.369Z</updated>
+  <updated>2022-02-22T05:48:10.132Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>反射</title>
+    <link href="http://example.com/2022/02/22/%E5%8F%8D%E5%B0%84/"/>
+    <id>http://example.com/2022/02/22/%E5%8F%8D%E5%B0%84/</id>
+    <published>2022-02-22T05:47:36.000Z</published>
+    <updated>2022-02-22T05:48:10.132Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="七、反射"><a href="#七、反射" class="headerlink" title="七、反射"></a>七、反射</h2><p>每个类都有一个 <strong>Class</strong> 对象，包含了与类有关的信息。当编译一个新类时，会产生一个同名的 .class 文件，该文件内容保存着 Class 对象。</p><p>类加载相当于 Class 对象的加载，类在第一次使用时才动态加载到 JVM 中。也可以使用 <code>Class.forName(&quot;com.mysql.jdbc.Driver&quot;)</code> 这种方式来控制类的加载，该方法会返回一个 Class 对象。</p><p>反射可以提供运行时的类信息，并且这个类可以在运行时才加载进来，甚至在编译时期该类的 .class 不存在也可以加载进来。</p><p>Class 和 java.lang.reflect 一起对反射提供了支持，java.lang.reflect 类库主要包含了以下三个类：</p><ul><li><strong>Field</strong> ：可以使用 get() 和 set() 方法读取和修改 Field 对象关联的字段；</li><li><strong>Method</strong> ：可以使用 invoke() 方法调用与 Method 对象关联的方法；</li><li><strong>Constructor</strong> ：可以用 Constructor 的 newInstance() 创建新的对象。</li></ul><p><strong>反射的优点：</strong></p><ul><li><strong>可扩展性</strong> ：应用程序可以利用全限定名创建可扩展对象的实例，来使用来自外部的用户自定义类。</li><li><strong>类浏览器和可视化开发环境</strong> ：一个类浏览器需要可以枚举类的成员。可视化开发环境（如 IDE）可以从利用反射中可用的类型信息中受益，以帮助程序员编写正确的代码。</li><li><strong>调试器和测试工具</strong> ： 调试器需要能够检查一个类里的私有成员。测试工具可以利用反射来自动地调用类里定义的可被发现的 API 定义，以确保一组测试中有较高的代码覆盖率。</li></ul><p><strong>反射的缺点：</strong></p><p>尽管反射非常强大，但也不能滥用。如果一个功能可以不用反射完成，那么最好就不用。在我们使用反射技术时，下面几条内容应该牢记于心。</p><ul><li><strong>性能开销</strong> ：反射涉及了动态类型的解析，所以 JVM 无法对这些代码进行优化。因此，反射操作的效率要比那些非反射操作低得多。我们应该避免在经常被执行的代码或对性能要求很高的程序中使用反射。</li><li><strong>安全限制</strong> ：使用反射技术要求程序必须在一个没有安全限制的环境中运行。如果一个程序必须在有安全限制的环境中运行，如 Applet，那么这就是个问题了。</li><li><strong>内部暴露</strong> ：由于反射允许代码执行一些在正常情况下不被允许的操作（比如访问私有的属性和方法），所以使用反射可能会导致意料之外的副作用，这可能导致代码功能失调并破坏可移植性。反射代码破坏了抽象性，因此当平台发生改变的时候，代码的行为就有可能也随着变化。</li><li>源于 <a href="https://github.com/CyC2018/CS-Notes/blob/master/notes/Java%20%E5%9F%BA%E7%A1%80.md#clone">https://github.com/CyC2018/CS-Notes/blob/master/notes/Java%20%E5%9F%BA%E7%A1%80.md#clone</a></li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;七、反射&quot;&gt;&lt;a href=&quot;#七、反射&quot; class=&quot;headerlink&quot; title=&quot;七、反射&quot;&gt;&lt;/a&gt;七、反射&lt;/h2&gt;&lt;p&gt;每个类都有一个 &lt;strong&gt;Class&lt;/strong&gt; 对象，包含了与类有关的信息。当编译一个新类时，会产生一个同名的</summary>
+      
+    
+    
+    
+    
+    <category term="Java" scheme="http://example.com/tags/Java/"/>
+    
+  </entry>
   
   <entry>
     <title>新年总结以及未来展望</title>
@@ -480,33 +502,6 @@
     
     
     <category term="java" scheme="http://example.com/tags/java/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>udp和tcp的区别</title>
-    <link href="http://example.com/2021/11/08/udp%E5%92%8Ctcp%E7%9A%84%E5%8C%BA%E5%88%AB/"/>
-    <id>http://example.com/2021/11/08/udp%E5%92%8Ctcp%E7%9A%84%E5%8C%BA%E5%88%AB/</id>
-    <published>2021-11-08T08:41:32.000Z</published>
-    <updated>2021-11-08T08:42:27.481Z</updated>
-    
-    <content type="html"><![CDATA[<ol><li><p>TCP<strong>面向连接</strong>；UDP是无连接的，即发送数据之前不需要建立连接。</p></li><li><p>TCP提供<strong>可靠的服务</strong>；UDP不保证可靠交付。</p></li><li><p>TCP<strong>面向字节流</strong>，把数据看成一连串无结构的字节流；UDP是面向报文的。</p></li><li><p>TCP有<strong>拥塞控制</strong>；UDP没有拥塞控制，因此网络出现拥塞不会使源主机的发送速率降低（对实时应</p></li></ol><p>用很有用，如实时视频会议等）。</p><ol start="5"><li><p>每一条TCP连接只能是<strong>点到点</strong>的；UDP支持一对一、一对多、多对一和多对多的通信方式。</p></li><li><p>TCP首部开销20字节；UDP的首部开销小，只有8个字节。</p></li></ol>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;TCP&lt;strong&gt;面向连接&lt;/strong&gt;；UDP是无连接的，即发送数据之前不需要建立连接。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;TCP提供&lt;strong&gt;可靠的服务&lt;/strong&gt;；UDP不保证可靠交付。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;TCP&lt;</summary>
-      
-    
-    
-    
-    
-    <category term="计算机网络" scheme="http://example.com/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
     
   </entry>
   
