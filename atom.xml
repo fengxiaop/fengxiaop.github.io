@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-02-22T05:48:10.132Z</updated>
+  <updated>2022-03-12T08:36:42.738Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JAVA面向对象</title>
+    <link href="http://example.com/2022/03/12/JAVA%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/"/>
+    <id>http://example.com/2022/03/12/JAVA%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/</id>
+    <published>2022-03-12T08:36:10.000Z</published>
+    <updated>2022-03-12T08:36:42.738Z</updated>
+    
+    <content type="html"><![CDATA[<p>JAVA面向对象</p><p><strong>面向过程:</strong> 先确定如何操作数据，再决定数据的结构，适用于小规模问题。</p><p><strong>面向对象OOP：</strong>先决定数据的结构，在考虑操作数据的算法，适用于大规模问题。</p><p><strong>this与super关键字</strong></p><p>this关键字</p><ul><li>隐式参数的调用</li><li>调用该类的其他构造器</li></ul><p>super关键字</p><ul><li>调用父类方法</li><li>调用父类构造器</li></ul><p>注意：this可以作为当前对象的引用，但是super却不可以作为父类对象的引用</p><h2 id="HashMap"><a href="#HashMap" class="headerlink" title="HashMap"></a>HashMap</h2><p>数组+链表</p><p>数组+链表+红黑树</p><h3 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h3><p>1.无序 不可重复</p><p>2.⽆序：因为不⼀定挂在那个单链表上了 </p><p>为什么不可重复 </p><p>通过重写equals方法保证的</p><h2 id="String"><a href="#String" class="headerlink" title="String"></a>String</h2><p>Java里面有一个字符串常量池的东西</p><p>创建字符串对象时，如果字符串常量池没有那个字符 则需要先在字符串常量池里面创建，再创建字符串对象</p><p>如果已存在于字符串常量池，则只需要创建字符串对象</p><h4 id="为什么把字符串存储在⼀个“字符串常量池”当中呢？"><a href="#为什么把字符串存储在⼀个“字符串常量池”当中呢？" class="headerlink" title="为什么把字符串存储在⼀个“字符串常量池”当中呢？"></a>为什么把字符串存储在⼀个“字符串常量池”当中呢？</h4><ol><li><p>因为字符串在实际的开发中使⽤太频繁。 </p></li><li><p>为了提⾼执⾏效率，所以把字符串放到了⽅法区的“字符串常量池”当中。 </p></li></ol><h2 id="String、-StringBuilder、-StringBuffer解析"><a href="#String、-StringBuilder、-StringBuffer解析" class="headerlink" title="String、 StringBuilder、 StringBuffer解析"></a>String、 StringBuilder、 StringBuffer解析</h2><p>String 底层数组用final修饰，不可变。</p><p>StringBuilder 底层数组没有用final修饰，可变；线程不安全，效率高</p><p>StringBuffer 底层数组没有用final修饰，可变；线程安全 效率地</p><p>⽅法都采⽤ 了 synchronized 修饰 </p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;JAVA面向对象&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;面向过程:&lt;/strong&gt; 先确定如何操作数据，再决定数据的结构，适用于小规模问题。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;面向对象OOP：&lt;/strong&gt;先决定数据的结构，在考虑操作数据的算法，适用于大规模问题。&lt;/p&gt;
+&lt;p&gt;</summary>
+      
+    
+    
+    
+    
+    <category term="Java" scheme="http://example.com/tags/Java/"/>
+    
+  </entry>
   
   <entry>
     <title>反射</title>
@@ -480,28 +505,6 @@
     <category term="pdf" scheme="http://example.com/tags/pdf/"/>
     
     <category term="小作业" scheme="http://example.com/tags/%E5%B0%8F%E4%BD%9C%E4%B8%9A/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>双指针</title>
-    <link href="http://example.com/2021/11/10/%E5%8F%8C%E6%8C%87%E9%92%88/"/>
-    <id>http://example.com/2021/11/10/%E5%8F%8C%E6%8C%87%E9%92%88/</id>
-    <published>2021-11-10T07:51:11.000Z</published>
-    <updated>2021-11-10T07:58:29.968Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="双指针"><a href="#双指针" class="headerlink" title="双指针"></a>双指针</h2><h4 id="26-删除有序数组中的重复项"><a href="#26-删除有序数组中的重复项" class="headerlink" title="26. 删除有序数组中的重复项"></a><a href="https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/">26. 删除有序数组中的重复项</a></h4><p>这题典型的双指针 一个指针是用来遍历  另外一个用来存储</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">removeDuplicates</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> t = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nums.length; i ++ ) &#123;</span><br><span class="line">            <span class="keyword">if</span> (i == <span class="number">0</span> || nums[i] != nums[i - <span class="number">1</span>]) </span><br><span class="line">            &#123;</span><br><span class="line">                nums[t] = nums[i];</span><br><span class="line">                t++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> t;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>​    i用来遍历数组  而t用来存储新的数组</p><p>通用解法拓展</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">removeDuplicates</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> n = nums.length;</span><br><span class="line">        <span class="keyword">if</span> (n &lt;= <span class="number">1</span>) <span class="keyword">return</span> n;   </span><br><span class="line">        <span class="keyword">return</span> process(nums, <span class="number">1</span>, nums[n - <span class="number">1</span>]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">process</span><span class="params">(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> k, <span class="keyword">int</span> max)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> idx = <span class="number">0</span>; </span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> x : nums) &#123;</span><br><span class="line">            <span class="keyword">if</span> (idx &lt; k || nums[idx - k] != x) nums[idx++] = x;</span><br><span class="line">            <span class="keyword">if</span> (idx - k &gt;= <span class="number">0</span> &amp;&amp; nums[idx - k] == max) <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> idx;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">作者：AC_OIer</span><br><span class="line">链接：https:<span class="comment">//leetcode-cn.com/problems/remove-duplicates-from-sorted-array/solution/shua-chuan-lc-jian-ji-shuang-zhi-zhen-ji-2eg8/</span></span><br><span class="line">来源：力扣（LeetCode）</span><br><span class="line">著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;双指针&quot;&gt;&lt;a href=&quot;#双指针&quot; class=&quot;headerlink&quot; title=&quot;双指针&quot;&gt;&lt;/a&gt;双指针&lt;/h2&gt;&lt;h4 id=&quot;26-删除有序数组中的重复项&quot;&gt;&lt;a href=&quot;#26-删除有序数组中的重复项&quot; class=&quot;headerlink&quot; </summary>
-      
-    
-    
-    
-    
-    <category term="java" scheme="http://example.com/tags/java/"/>
     
   </entry>
   
