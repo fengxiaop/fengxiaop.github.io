@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-03-14T06:04:03.626Z</updated>
+  <updated>2022-03-14T12:01:14.596Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>操作系统</title>
+    <link href="http://example.com/2022/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+    <id>http://example.com/2022/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</id>
+    <published>2022-03-14T07:27:02.479Z</published>
+    <updated>2022-03-14T12:01:14.596Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="操作系统"><a href="#操作系统" class="headerlink" title="操作系统"></a>操作系统</h1><h2 id="什么是操作系统？"><a href="#什么是操作系统？" class="headerlink" title="什么是操作系统？"></a>什么是操作系统？</h2><ul><li><p>操作系统(Operating System)是管理计算机硬件和软件资源的程序 是计算机的基石</p></li><li><p><strong>操作系统本质上是一个运行在计算机上的软件程序 ，用于管理计算机硬件和软件资源。</strong> 举例：运行在你电脑上的所有应用程序都通过操作系统来调用系统内存以及磁盘等等硬件。</p></li><li><p><strong>操作系统存在屏蔽了硬件层的复杂性。</strong> 操作系统就像是硬件使用的负责人，统筹着各种相关事项。</p></li><li><p><strong>操作系统的内核（Kernel）是操作系统的核心部分，它负责系统的内存管理，硬件设备的管理，文件系统的管理以及应用程序的管理</strong>。 内核是连接应用程序和硬件的桥梁，决定着系统的性能和稳定性。</p></li></ul><p>根据进程访问资源的特点，我们可以把进程在系统上的运行分为两个级别：</p><ol><li>用户态(user mode) : 用户态运行的进程可以直接读取用户程序的数据。</li><li>系统态(kernel mode):可以简单的理解系统态运行的进程或程序几乎可以访问计算机的任何资源，不受限制。</li></ol><h2 id="线程与进程的关系"><a href="#线程与进程的关系" class="headerlink" title="线程与进程的关系"></a>线程与进程的关系</h2><p>线程是进程划分成最小的运行单位，一个进程在其执行的过程中可以产生多个线程。</p><p>线程与进程最大的区别是   </p><p>进程各部分是独立的  而各线程则不一定</p><p>因为同一进程中的线程极有可能会相互影响。线程执行开销小，但不利于资源的管理和保护；而进程正相反</p><p>进程有哪几种状态</p><ul><li><strong>创建状态：</strong> 进程目前正在被创建，尚未到就绪状态。</li><li><strong>就绪状态：</strong> 进程已处于准备允许状态。即进程获得了除了处理器之外的一切所需资源。一但得到处理器资源(处理器分配的时间片)即可运行。</li><li><strong>运行状态</strong>： 进程正在处理器上上运行(单核 CPU 下任意时刻只有一个进程处于运行状态)。</li><li>**阻塞状态： **又称为等待状态，进程正在等待某一事件而暂停运行如等待某资源为可用或等待 IO 操作完成。即使处理器空闲，该进程也不能运行。</li><li><strong>结束状态：</strong> 进程正在从系统中消失。可能是进程正常结束或其他原因中断退出运行。</li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;操作系统&quot;&gt;&lt;a href=&quot;#操作系统&quot; class=&quot;headerlink&quot; title=&quot;操作系统&quot;&gt;&lt;/a&gt;操作系统&lt;/h1&gt;&lt;h2 id=&quot;什么是操作系统？&quot;&gt;&lt;a href=&quot;#什么是操作系统？&quot; class=&quot;headerlink&quot; title=&quot;什</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>分享会</title>
@@ -470,30 +490,6 @@
     
     
     <category term="java" scheme="http://example.com/tags/java/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>springboot程序</title>
-    <link href="http://example.com/2021/11/19/springboot%E7%A8%8B%E5%BA%8F/"/>
-    <id>http://example.com/2021/11/19/springboot%E7%A8%8B%E5%BA%8F/</id>
-    <published>2021-11-19T14:32:33.000Z</published>
-    <updated>2021-11-19T14:49:18.032Z</updated>
-    
-    <content type="html"><![CDATA[<p>   新建一个maven工程   注意选择JDK的版本 如果版本过高可能会不支持 最好选择8 9 11</p><p><img src="https://i.loli.net/2021/11/19/vyPn9YbNDIqgj5O.png"></p><p>像我第一次踩坑就是因为JDK是17  可能还不支持 把17改为8 就好了  所以大家选择的时候还是尽量选择一起的稳定版本</p><p><img src="https://i.loli.net/2021/11/19/ywctzqRAQuDHvaX.jpg"></p><p>修改名称</p><p><img src="https://i.loli.net/2021/11/19/goJIalrzDH7Lqh1.png"></p><p>新建一个包boot</p><p>在boot包下创建一个类 MainApplication</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> org.example.boot;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.springframework.boot.SpringApplication;</span><br><span class="line"><span class="keyword">import</span> org.springframework.boot.autoconfigure.SpringBootApplication;</span><br><span class="line"></span><br><span class="line"><span class="meta">@SpringBootApplication</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MainApplication</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        SpringApplication.run(MainApplication.class,args);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>点击pom.xml 进行导包</p><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">parent</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-parent<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.3.4.RELEASE<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">parent</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependencies</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-web<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependencies</span>&gt;</span></span><br></pre></td></tr></table></figure><p>建立controller层</p><p>创建了类HelloController</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> org.example.boot.Controller;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.springframework.stereotype.Controller;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.bind.annotation.RequestMapping;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.bind.annotation.RestController;</span><br><span class="line"><span class="meta">@RestController</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HelloController</span> </span>&#123;</span><br><span class="line">    <span class="meta">@RequestMapping(&quot;/hello&quot;)</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">hello01</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;第一个springboot hello   &quot;</span>;</span><br><span class="line">        System.out.println(<span class="string">&quot;Springboot程序启动成功&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>点击启动MainApplication</p><p><img src="https://i.loli.net/2021/11/19/ZSj5ATgpJKtFvRG.png"></p><p>如果显示端口被占用</p><p><img src="https://i.loli.net/2021/11/19/NGvJwUrAL3OYQdj.png"></p><p>则我们在resource包建一个文件application.properties</p><p><code>server.port=8111</code></p><p>定义这个没有被使用的端口</p><p><img src="https://i.loli.net/2021/11/19/jcBPxiRn3Ho68hu.png"></p><p>输出了我们写的内容 表示启动成功</p><p>我们用127.0.0.1+端口 /hello 来访问     例如我的就是127.0.0.1:8111/hello</p><p><img src="https://i.loli.net/2021/11/19/WeOlqNGX29dZ4Kt.png"></p><p>就可以显示成功啦</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;   新建一个maven工程   注意选择JDK的版本 如果版本过高可能会不支持 最好选择8 9 11&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2021/11/19/vyPn9YbNDIqgj5O.png&quot;&gt;&lt;/p&gt;
-&lt;p&gt;像我第一次踩坑就是</summary>
-      
-    
-    
-    
-    
-    <category term="springboot" scheme="http://example.com/tags/springboot/"/>
     
   </entry>
   
