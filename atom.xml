@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-03-25T08:29:32.341Z</updated>
+  <updated>2022-03-26T04:39:30.687Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Git命令</title>
+    <link href="http://example.com/2022/03/26/git/"/>
+    <id>http://example.com/2022/03/26/git/</id>
+    <published>2022-03-26T03:56:56.000Z</published>
+    <updated>2022-03-26T04:39:30.687Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Git-RESTful-API-命令行"><a href="#Git-RESTful-API-命令行" class="headerlink" title="Git/RESTful API/命令行"></a>Git/RESTful API/命令行</h1><ul><li><a href="#git">Git</a><ul><li><a href="#git-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4">Git 常用命令</a></li><li><a href="#git-%E6%A0%87%E7%AD%BE%E7%AE%A1%E7%90%86">Git 标签管理</a></li><li><a href="#git-%E6%92%A4%E9%94%80%E4%B8%8E%E5%9B%9E%E6%BB%9A">Git 撤销与回滚</a></li><li><a href="#git-%E5%88%86%E6%94%AF%E7%AE%A1%E7%90%86">Git 分支管理</a></li></ul></li><li><a href="#restful-api">RESTful API</a></li><li><a href="#linux-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4">Linux 常用命令</a></li><li><a href="#%E5%8F%82%E8%80%83">参考</a></li></ul><hr><h2 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h2><h4 id="Git-常用命令"><a href="#Git-常用命令" class="headerlink" title="Git 常用命令"></a>Git 常用命令</h4><ul><li><code>git init</code></li><li><code>git clone</code></li><li><code>git remote add origin ***.git</code></li><li><code>git push -u origin master</code></li><li>推送到远程仓库的dev分支：<code>git push origin dev</code></li><li><code>git log</code></li><li><code>git log --graph --pretty=oneline --abbrev-commit</code></li><li><code>git status</code></li><li><code>git diff</code></li><li><code>git add *</code></li><li><code>git commit -m &quot;message&quot;</code></li><li>commit之后又改了一个小bug，但是又不想增加一个commit，可以用：<code>git commit --amend --no-edit</code>，直接将改动添加到上一次的commit中</li><li><code>git push</code></li><li><code>git pull</code></li><li><code>touch .gitignore</code></li></ul><h4 id="Git-标签管理"><a href="#Git-标签管理" class="headerlink" title="Git 标签管理"></a>Git 标签管理</h4><ul><li>首先切换到需要打标签的分支上，然后使用<code>git tag v1.0</code>就可以在当前commit打上v1.0的标签</li><li><code>git tag v1.0 commitID</code> 对特定commit打标签</li><li>打标签时加上message：<code>git tag -a &lt;tagname&gt; -m &quot;message&quot;</code></li><li><code>git tag</code> 查看所有标签</li><li><code>git show [tagname]</code> 查看标签详细信息</li><li><code>git push origin &lt;tagname&gt;</code>可以推送一个本地标签到远程仓库</li><li><code>git push origin --tags</code>可以推送全部未推送过的本地标签</li><li><code>git tag -d &lt;tagname&gt;</code>可以删除一个本地标签</li><li><code>git push origin :refs/tags/&lt;tagname&gt;</code>可以删除一个远程标签（先从本地删除）</li></ul><h4 id="Git-撤销与回滚"><a href="#Git-撤销与回滚" class="headerlink" title="Git 撤销与回滚"></a>Git 撤销与回滚</h4><ul><li><strong>暂存区</strong>：<code>git add</code>之后commit之前存在的区域；<strong>工作区</strong>：<code>git commit</code>之后存在的区域；<strong>远程仓库</strong>：<code>git push</code>之后；</li><li>作了修改，但还没<code>git add</code>，撤销到上一次提交：<code>git checkout -f -- filename</code>；<code>git checkout -f -- .</code></li><li>作了修改，并且已经<code>git add</code>，但还没<code>git commit</code>：<ul><li>先将暂存区的修改撤销：<code>git reset HEAD filename</code>/<code>git reset HEAD</code>；此时修改只存在于工作区，变为了 “unstaged changes”；</li><li>再利用上面的checkout命令从工作区撤销修改</li></ul></li><li><code>git add</code>之后，作了修改，想丢弃这次修改：<code>git checkout -f --filename</code>会回到最近一次<code>git add</code></li><li>作了修改，并且已经<code>git commit</code>了，想撤销这次的修改：<ul><li><code>git revert commitID</code>. 其实，<code>git revert</code>可以用来撤销任意一次的修改，不一定要是最近一次</li><li><code>git reset --hard commitID</code>/<code>git reset --hard HEAD^</code>（HEAD表示当前版本，几个^表示倒数第几个版本，倒数第100个版本可以用HEAD~100）；参数<code>--hard</code>：强制将暂存区和工作区都同步到指定的版本</li><li><code>git reset</code>和<code>git revert</code>的区别是：reset是用来回滚的，将HEAD的指针指向了想要回滚的版本，作为最新的版本，而后面的版本也都没有了；而revert只是用来撤销某一次更改，对之后的更改并没有影响</li><li>然后再用<code>git push -f</code>提交到远程仓库</li></ul></li></ul><h4 id="Git-分支管理"><a href="#Git-分支管理" class="headerlink" title="Git 分支管理"></a>Git 分支管理</h4><ul><li>创建分支: <code>git branch test</code></li><li>切换分支: <code>git checkout test</code></li><li>创建并切换分支：<code>git checkout -b test</code></li><li>将test分支的更改合并到master分支：先在test分支上commit、push，再：<code>git checkout master</code>; <code>git merge test</code></li><li>如果合并时产生冲突：先手动解决冲突，再合并</li><li>删除分支：<code>git branch -d test</code></li><li><code>git stash</code><ul><li>如果当前分支还有任务没有做完，也不想提交，但此时需要切换或者创建其它分支，就可以使用stash将当前分支的所有修改（包括暂存区）先储藏起来；然后就可以切换到其它分支</li><li>在其它分支工作完成之后，首先切换回原来的分支，然后使用<code>git stash list</code>命令查看</li><li>可以使用<code>git stash apply &lt;stash number&gt;</code>恢复之前储藏的工作现场，再使用<code>git stash drop &lt;stash number&gt;</code>删除掉储藏的内容</li><li>也可以直接用<code>git stash pop</code>恢复并删除内容</li></ul></li><li>如果在其它分支上做了一个修改（比如修复了一个bug，这次修改有一个commitID），想要将这次修改应用到当前分支上，可以使用：<code>git cherry-pick commitID</code>，可以复制一个特定的提交到当前分支</li></ul><h2 id="RESTful-API"><a href="#RESTful-API" class="headerlink" title="RESTful API"></a>RESTful API</h2><p>REST指Representational State Transfer，可以翻译为“表现层状态转化”</p><h4 id="主要思想"><a href="#主要思想" class="headerlink" title="主要思想"></a>主要思想</h4><ul><li>对网络上的所有资源，都有一个<strong>统一资源标识符</strong> URI(Uniform Resource Identifier)；</li><li>这些资源可以有多种表现形式，即REST中的“表现层”Representation，比如，文本可以用txt格式表现，也可以用HTML格式、XML格式、JSON格式表现。URI只代表资源的实体，不代表它的形式；</li><li>“无状态(Stateless)”思想：服务端不应该保存客户端状态，只需要处理当前的请求，不需了解请求的历史，客户端每一次请求中包含处理该请求所需的一切信息；</li><li>客户端使用HTTP协议中的 GET/POST/PUT/DELETE 方法对服务器的资源进行操作，即REST中的”状态转化“</li></ul><h4 id="设计原则"><a href="#设计原则" class="headerlink" title="设计原则"></a>设计原则</h4><ul><li>URL设计<ul><li>最好只使用名词，而使用 GET/POST/PUT/DELETE 方法的不同表示不同的操作；比如使用<code>POST /user</code>代替<code>/user/create</code></li><li>GET：获取资源；POST：新建/更新资源；PUT：更新资源；DELETE：删除资源；</li><li>对于只支持GET/POST的客户端，使用<code>X-HTTP-Method-Override</code>属性，覆盖POST方法；</li><li>避免多级URL，比如使用<code>GET /authors/12?categories=2</code>代替<code>GET /authors/12/categories/2</code>；</li><li>避免在URI中带上版本号。不同的版本，可以理解成同一种资源的不同表现形式，所以应该采用同一个URI，版本号可以在HTTP请求头信息的Accept字段中进行区分</li></ul></li><li>状态码：服务器应该返回尽可能精确的状态码，客户端只需查看状态码，就可以判断出发生了什么情况。见计算机网络部分 – <a href="Computer%20Network.md#HTTP%E8%AF%B7%E6%B1%82%E6%9C%89%E5%93%AA%E4%BA%9B%E5%B8%B8%E8%A7%81%E7%8A%B6%E6%80%81%E7%A0%81">HTTP请求有哪些常见状态码？</a></li><li>服务器回应：在响应中放上其它API的链接，方便用户寻找</li></ul><h2 id="Linux-常用命令"><a href="#Linux-常用命令" class="headerlink" title="Linux 常用命令"></a>Linux 常用命令</h2><h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><ul><li><a href="https://learngitbranching.js.org/?demo=&locale=zh_CN">Learn Git Branching - 可视化的学习 Git 操作</a></li><li><a href="https://www.liaoxuefeng.com/wiki/896043488029600">Git教程 - 廖雪峰的官方网站</a></li><li><a href="http://www.ruanyifeng.com/blog/2018/10/restful-api-best-practices.html">RESTful API 最佳实践 - 阮一峰的网络日志</a></li><li><a href="https://github.com/jlevy/the-art-of-command-line/blob/master/README-zh.md">GitHub - jlevy/the-art-of-command-line: Master the command line, in one page</a></li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;Git-RESTful-API-命令行&quot;&gt;&lt;a href=&quot;#Git-RESTful-API-命令行&quot; class=&quot;headerlink&quot; title=&quot;Git/RESTful API/命令行&quot;&gt;&lt;/a&gt;Git/RESTful API/命令行&lt;/h1&gt;&lt;ul&gt;
+</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>数据库</title>
@@ -446,30 +467,6 @@
     
     
     <category term="算法" scheme="http://example.com/tags/%E7%AE%97%E6%B3%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>contains详解</title>
-    <link href="http://example.com/2021/12/02/contains%E8%AF%A6%E8%A7%A3/"/>
-    <id>http://example.com/2021/12/02/contains%E8%AF%A6%E8%A7%A3/</id>
-    <published>2021-12-02T06:45:12.000Z</published>
-    <updated>2021-12-02T07:04:53.334Z</updated>
-    
-    <content type="html"><![CDATA[<p>Contains方法</p><p>​    </p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.HUToh;</span><br><span class="line"><span class="keyword">import</span> java.io.BufferedInputStream;</span><br><span class="line"><span class="keyword">import</span> java.io.BufferedReader;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"><span class="keyword">import</span> java.io.InputStreamReader;</span><br><span class="line"><span class="keyword">import</span> java.util.*  ;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        ArrayList arrayList = <span class="keyword">new</span> ArrayList();</span><br><span class="line">    String s1 = <span class="keyword">new</span> String(<span class="string">&quot;abc&quot;</span>);</span><br><span class="line">        String s2 = <span class="keyword">new</span> String(<span class="string">&quot;abc&quot;</span>);</span><br><span class="line">    arrayList.add(s1);</span><br><span class="line">        arrayList.add(s2);</span><br><span class="line">        String s3 = <span class="keyword">new</span> String(<span class="string">&quot;abc&quot;</span>);</span><br><span class="line">        System.out.println(s1==s2);</span><br><span class="line">        System.out.println(s1.equals(s2));</span><br><span class="line">        System.out.println(arrayList.contains(s1));</span><br><span class="line">        System.out.println(arrayList.contains(s3));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>这段代码输出的是什么是</p><p>是false true true true</p><p>String的equals方法是重写了的 比较的是内容 并不是其他数据类型的equals比较的是内容</p><p>而Contains对象底层调用了equals方法，所以输出true；</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;Contains方法&lt;/p&gt;
-&lt;p&gt;​    &lt;/p&gt;
-&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=</summary>
-      
-    
-    
-    
-    
-    <category term="java" scheme="http://example.com/tags/java/"/>
     
   </entry>
   
