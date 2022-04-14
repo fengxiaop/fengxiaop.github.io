@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-04-14T04:00:47.580Z</updated>
+  <updated>2022-04-14T06:07:27.809Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Redis(二)</title>
+    <link href="http://example.com/2022/04/14/Redis(%E4%BA%8C)/"/>
+    <id>http://example.com/2022/04/14/Redis(%E4%BA%8C)/</id>
+    <published>2022-04-14T05:53:10.091Z</published>
+    <updated>2022-04-14T06:07:27.809Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Redis-二-String类型"><a href="#Redis-二-String类型" class="headerlink" title="Redis(二) String类型"></a>Redis(二) String类型</h1><p>​    </p><p>String类型是Redis最基本的数据类型，一个Redis中字符串value最多可以是512M</p><h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><p>set <key> <value></p><p>添加键值对</p><p>例子</p><p><code>set 1 2</code></p><p><code> get 1</code> 结果为2</p><p><code>set 1 3</code> 当key相同时，后面的value会覆盖前面的</p><p><img src="http://windxiao-1307340949.cosgz.myqcloud.com/20220414135627.png"></p><p>append 类似于StringBuilder的append()方法</p><p><code>append 1 100</code>  3+100  -&gt;3100   返回的是字符串添加后的长度</p><p>strlen 类似于length()方法</p><p><code>strlen 1 </code> 求key为1的字符串长度</p><p><img src="http://windxiao-1307340949.cosgz.myqcloud.com/20220414135935.png"></p><p>setnx  <key><value>只有在 key 不存在时   设置 key 的值</p><p><img src="http://windxiao-1307340949.cosgz.myqcloud.com/20220414140042.png"></p><p><code>incr</code> 将key储存的value加1  只能对数字类型进行操作 如果为空，新增值为1</p><p><code>decr</code> 将key储存的value-1 只能对数字值操作，如果为空，新增值为-1</p><p><img src="http://windxiao-1307340949.cosgz.myqcloud.com/20220414140622.png"></p><p>incrby / decrby  <key>&lt;步长&gt;将 key 中储存的数字值增减。自定义步长。</p><p><img src="http://windxiao-1307340949.cosgz.myqcloud.com/20220414140706.png"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;Redis-二-String类型&quot;&gt;&lt;a href=&quot;#Redis-二-String类型&quot; class=&quot;headerlink&quot; title=&quot;Redis(二) String类型&quot;&gt;&lt;/a&gt;Redis(二) String类型&lt;/h1&gt;&lt;p&gt;​    &lt;/p&gt;
+&lt;p</summary>
+      
+    
+    
+    
+    
+    <category term="Redis" scheme="http://example.com/tags/Redis/"/>
+    
+  </entry>
   
   <entry>
     <title>记第一次在Github上pull request以及成为一个7.5k+项目的contributors</title>
@@ -66,9 +89,9 @@
     <link href="http://example.com/2022/04/13/Redis/"/>
     <id>http://example.com/2022/04/13/Redis/</id>
     <published>2022-04-13T06:11:39.037Z</published>
-    <updated>2022-04-13T07:33:19.867Z</updated>
+    <updated>2022-04-14T11:14:19.718Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="Redis"><a href="#Redis" class="headerlink" title="Redis"></a>Redis</h1><h2 id="1-NoSQL数据库-Not-Only-SQL"><a href="#1-NoSQL数据库-Not-Only-SQL" class="headerlink" title="1.NoSQL数据库(Not Only SQL)"></a>1.NoSQL数据库(Not Only SQL)</h2><h3 id="概述："><a href="#概述：" class="headerlink" title="概述："></a>概述：</h3><p>是一种非关系型数据库  </p><p>我们以前学的Mysql Oracle都属于关系式数据库</p><h2 id="特点："><a href="#特点：" class="headerlink" title="特点："></a>特点：</h2><ul><li>Redis不支持ACID</li><li>不遵循SQL标准</li><li>远超于SQL的性能</li></ul><h2 id="适用场景"><a href="#适用场景" class="headerlink" title="适用场景"></a>适用场景</h2><p>对数据高并发的读写</p><p>海量数据的读写</p><p>对数据高可扩展醒的</p><h2 id="不适用场景"><a href="#不适用场景" class="headerlink" title="不适用场景"></a>不适用场景</h2><ul><li>需要事物支持</li><li>基于sql的结构化查询存储，处理复杂的关系。</li></ul><p>扩展： MongoDB 文档型数据库</p><p>​             Memcached 是以前的NoSQL数据库</p><h2 id="Redis安装"><a href="#Redis安装" class="headerlink" title="Redis安装"></a>Redis安装</h2><p>官网下载地址 <a href="https://redis.io/download/">https://redis.io/download/</a></p><p>推荐使用工具Xshell + XFTP 在Linux服务器上启动</p><p>后台启动命令</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="Redis"><a href="#Redis" class="headerlink" title="Redis"></a>Redis</h1><h2 id="1-NoSQL数据库-Not-Only-SQL"><a href="#1-NoSQL数据库-Not-Only-SQL" class="headerlink" title="1.NoSQL数据库(Not Only SQL)"></a>1.NoSQL数据库(Not Only SQL)</h2><h3 id="概述："><a href="#概述：" class="headerlink" title="概述："></a>概述：</h3><p>是一种非关系型数据库  </p><p>我们以前学的Mysql Oracle都属于关系式数据库</p><h2 id="特点："><a href="#特点：" class="headerlink" title="特点："></a>特点：</h2><ul><li>Redis不支持ACID</li><li>不遵循SQL标准</li><li>远超于SQL的性能</li></ul><h2 id="适用场景"><a href="#适用场景" class="headerlink" title="适用场景"></a>适用场景</h2><p>对数据高并发的读写</p><p>海量数据的读写</p><p>对数据高可扩展醒的</p><h2 id="不适用场景"><a href="#不适用场景" class="headerlink" title="不适用场景"></a>不适用场景</h2><ul><li>需要事物支持</li><li>基于sql的结构化查询存储，处理复杂的关系。</li></ul><p>扩展： MongoDB 文档型数据库</p><p>​             Memcached 是以前的NoSQL数据库</p><h2 id="Redis安装"><a href="#Redis安装" class="headerlink" title="Redis安装"></a>Redis安装</h2><p>官网下载地址 <a href="https://redis.io/download/">https://redis.io/download/</a></p><p>推荐使用工具Xshell + XFTP 在Linux服务器上启动</p><p>后台启动命令</p><p>redis-cli</p><p>Redis是一个开源的key-value存储系统</p><p>和Memcached类似，它支持存储value的类型相对更多，包括String(字符串)、list(链表)、set(集合)、zset(sorted set–有序集合)和hash(哈希类型)。</p><p>这些数据类型都支持push/pop、add/remove 及取交集并集和差集及更丰富的操作，而且这些操作都是原子性的。</p><p>在此基础上，Redis支持各种不同方式的排序。</p><p>与memcached一样，为了保证效率，数据都是缓存在内存中。</p>]]></content>
     
     
       
@@ -435,31 +458,6 @@
     
     
     <category term="java" scheme="http://example.com/tags/java/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JAVA面向对象</title>
-    <link href="http://example.com/2022/03/12/JAVA%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/"/>
-    <id>http://example.com/2022/03/12/JAVA%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/</id>
-    <published>2022-03-12T08:36:10.000Z</published>
-    <updated>2022-03-13T08:31:21.930Z</updated>
-    
-    <content type="html"><![CDATA[<p>JAVA面向对象</p><p><strong>面向过程:</strong> 先确定如何操作数据，再决定数据的结构，适用于小规模问题。</p><p><strong>面向对象OOP：</strong>先决定数据的结构，在考虑操作数据的算法，适用于大规模问题。</p><p><strong>this与super关键字</strong></p><p>this关键字</p><ul><li>隐式参数的调用</li><li>调用该类的其他构造器</li></ul><p>super关键字</p><ul><li>调用父类方法</li><li>调用父类构造器</li></ul><p>注意：this可以作为当前对象的引用，但是super却不可以作为父类对象的引用</p><h2 id="HashMap"><a href="#HashMap" class="headerlink" title="HashMap"></a>HashMap</h2><p>数组+链表</p><p>数组+链表+红黑树</p><h3 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h3><p>1.无序 不可重复</p><p>2.⽆序：因为不⼀定挂在那个单链表上了 </p><p>为什么不可重复 </p><p>通过重写equals方法保证的</p><h2 id="String"><a href="#String" class="headerlink" title="String"></a>String</h2><p>Java里面有一个字符串常量池的东西</p><p>创建字符串对象时，如果字符串常量池没有那个字符 则需要先在字符串常量池里面创建，再创建字符串对象</p><p>如果已存在于字符串常量池，则只需要创建字符串对象</p><h4 id="为什么把字符串存储在⼀个“字符串常量池”当中呢？"><a href="#为什么把字符串存储在⼀个“字符串常量池”当中呢？" class="headerlink" title="为什么把字符串存储在⼀个“字符串常量池”当中呢？"></a>为什么把字符串存储在⼀个“字符串常量池”当中呢？</h4><ol><li><p>因为字符串在实际的开发中使⽤太频繁。 </p></li><li><p>为了提⾼执⾏效率，所以把字符串放到了⽅法区的“字符串常量池”当中。 </p></li></ol><h2 id="String、-StringBuilder、-StringBuffer解析"><a href="#String、-StringBuilder、-StringBuffer解析" class="headerlink" title="String、 StringBuilder、 StringBuffer解析"></a>String、 StringBuilder、 StringBuffer解析</h2><p>String 底层数组用final修饰，不可变。</p><p>StringBuilder 底层数组没有用final修饰，可变；线程不安全，效率高</p><p>StringBuffer 底层数组没有用final修饰，可变；线程安全 效率地</p><p>⽅法都采⽤ 了 synchronized 修饰 </p><h3>== 与 equals</h3><p>对于基本数据类型来说  == 比较的是值</p><p>对于引用数据类型来说  ==比较的是对象的内存地址</p><p><strong><code>equals()</code></strong> 不能用于判断基本数据类型的变量，只能用来判断两个对象是否相等。<code>equals()</code>方法存在于<code>Object</code>类中，而<code>Object</code>类是所有类的直接或间接父类，因此所有的类都有<code>equals()</code>方法。 </p><p>String类中的equals方法是重写过的 因为Object的equals类方法是比较的对象的内存地址 <strong>而String类中的equals方法比较的是对象的值</strong></p><p>当创建 <code>String</code> 类型的对象时，虚拟机会在常量池中查找有没有已经存在的值和要创建的值相同的对象，如果有就把它赋给当前引用。如果没有就在常量池中重新创建一个 <code>String</code> 对象</p><p><code>String</code>类<code>equals()</code>方法：</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">equals</span><span class="params">(Object anObject)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">this</span> == anObject) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (anObject <span class="keyword">instanceof</span> String) &#123;</span><br><span class="line">        String anotherString = (String)anObject;</span><br><span class="line">        <span class="keyword">int</span> n = value.length;</span><br><span class="line">        <span class="keyword">if</span> (n == anotherString.value.length) &#123;</span><br><span class="line">            <span class="keyword">char</span> v1[] = value;</span><br><span class="line">            <span class="keyword">char</span> v2[] = anotherString.value;</span><br><span class="line">            <span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">while</span> (n-- != <span class="number">0</span>) &#123;</span><br><span class="line">                <span class="keyword">if</span> (v1[i] != v2[i])</span><br><span class="line">                    <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">                i++;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure><h3>HashCode() 与 equals()</h3><p>HashCode()的作用：</p><blockquote><p>HashCode()的作用是获取哈希码（int函数） 也称之为散列码，这个哈希码的作用是为了确认在哈希表中的索引位置。</p><p><code>hashCode()</code>定义在 JDK 的 <code>Object</code> 类中，这就意味着 Java 中的任何类都包含有 <code>hashCode()</code> 函数。另外需要注意的是： <code>Object</code> 的 <code>hashCode()</code> 方法是本地方法，也就是用 C 语言或 C++ 实现的，该方法通常用来将对象的内存地址转换为整数之后返回。</p></blockquote><p>散列表存储的是键值对(key-value)，它的特点是：<strong>能根据“键”快速的检索出对应的“值”。这其中就利用到了散列码！（可以快速找到所需要的对象）</strong></p><h3>面向对象三大特征</h3><p>封装，继承，多态</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;JAVA面向对象&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;面向过程:&lt;/strong&gt; 先确定如何操作数据，再决定数据的结构，适用于小规模问题。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;面向对象OOP：&lt;/strong&gt;先决定数据的结构，在考虑操作数据的算法，适用于大规模问题。&lt;/p&gt;
-&lt;p&gt;</summary>
-      
-    
-    
-    
-    
-    <category term="Java" scheme="http://example.com/tags/Java/"/>
     
   </entry>
   
