@@ -62,25 +62,25 @@
   </entry>
   
   <entry>
-    <title></title>
+    <title>Nginx</title>
     <link href="http://example.com/2022/04/13/Nginx/"/>
     <id>http://example.com/2022/04/13/Nginx/</id>
     <published>2022-04-13T10:16:29.698Z</published>
-    <updated>2022-04-13T14:36:02.763Z</updated>
+    <updated>2022-04-14T11:43:13.025Z</updated>
     
-    <content type="html"><![CDATA[<hr><p>title:Nginx<br>tag:Nginx</p><hr><h1 id="Nginx"><a href="#Nginx" class="headerlink" title="Nginx"></a>Nginx</h1>]]></content>
+    <content type="html"><![CDATA[<h1 id="Nginx"><a href="#Nginx" class="headerlink" title="Nginx"></a>Nginx</h1><p>Nginx (engine x) 是一个高性能的HTTP和反向代理web服务器，同时也提供了 </p><p>IMAP/POP3/SMTP服务。Nginx是由伊戈尔·赛索耶夫为俄罗斯访问量第二的 </p><p>Rambler.ru站点（俄文：Рамблер）开发的，第一个公开版本0.1.0发布于2004 </p><p>年10月4日。 </p><p>其将源代码以类BSD许可证的形式发布，因它的稳定性、丰富的功能集、简单的配 </p><p>置文件和低系统资源的消耗而闻名。2011年6月1日，nginx 1.0.4发布。 </p><p>Nginx是一款轻量级的Web 服务器/反向代理服务器及电子邮件（</p><p>IMAP/POP3） </p><p>代理服务器，在BSD-like 协议下发行。其特点是占有内存少，并发能力强，事实 </p><p>上nginx的并发能力在同类型的网页服务器中表现较好，中国大陆使用nginx网站 </p><p>用户有：百度、京东、新浪、网易、腾讯、淘宝等。</p>]]></content>
     
     
       
       
-    <summary type="html">&lt;hr&gt;
-&lt;p&gt;title:Nginx&lt;br&gt;tag:Nginx&lt;/p&gt;
-&lt;hr&gt;
-&lt;h1 id=&quot;Nginx&quot;&gt;&lt;a href=&quot;#Nginx&quot; class=&quot;headerlink&quot; title=&quot;Nginx&quot;&gt;&lt;/a&gt;Nginx&lt;/h1&gt;</summary>
+    <summary type="html">&lt;h1 id=&quot;Nginx&quot;&gt;&lt;a href=&quot;#Nginx&quot; class=&quot;headerlink&quot; title=&quot;Nginx&quot;&gt;&lt;/a&gt;Nginx&lt;/h1&gt;&lt;p&gt;Nginx (engine x) 是一个高性能的HTTP和反向代理web服务器，同时也提供了 &lt;/p&gt;
+&lt;p&gt;IMA</summary>
       
     
     
     
+    
+    <category term="Nginx" scheme="http://example.com/tags/Nginx/"/>
     
   </entry>
   
