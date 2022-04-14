@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-04-13T10:16:29.698Z</updated>
+  <updated>2022-04-14T02:27:08.495Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,11 +17,33 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>记第一次在Github上pull request以及成为一个7.5k+项目的contributors</title>
+    <link href="http://example.com/2022/04/14/%E8%AE%B0%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%9C%A8Github%E4%B8%8Apull%20request%E4%BB%A5%E5%8F%8A%E6%88%90%E4%B8%BA%E4%B8%80%E4%B8%AA7.5k+%E9%A1%B9%E7%9B%AE%E7%9A%84contributors/"/>
+    <id>http://example.com/2022/04/14/%E8%AE%B0%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%9C%A8Github%E4%B8%8Apull%20request%E4%BB%A5%E5%8F%8A%E6%88%90%E4%B8%BA%E4%B8%80%E4%B8%AA7.5k+%E9%A1%B9%E7%9B%AE%E7%9A%84contributors/</id>
+    <published>2022-04-14T02:13:36.089Z</published>
+    <updated>2022-04-14T02:27:08.495Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="记第一次在Github上pull-request以及成为一个7-5k-项目的contributors"><a href="#记第一次在Github上pull-request以及成为一个7-5k-项目的contributors" class="headerlink" title="记第一次在Github上pull request以及成为一个7.5k+项目的contributors"></a>记第一次在Github上pull request以及成为一个7.5k+项目的contributors</h1><p>项目地址：<a href="https://github.com/wolverinn/Waking-Up">https://github.com/wolverinn/Waking-Up</a> 这个项目是同学推荐给我的 用来复习操作系统,计算机网络，以及数据库</p><p>在复习的过程中，发现了作者有些问题有笔误和有些问题闲置下来一直没有补充，所以就在当天提了几个Issue </p><p><img src="https://s2.loli.net/2022/04/14/9gskCLieK63rXOf.png"></p><p>提了之后，每个Issue作者在晚上都回答了 并且语气非常的好</p><p>后面我就试探性的提了个pull request(应该就是所说的PR吧)  后面第二天早上，也就是今天早上作者回复了并且非常礼貌和谦虚的对我表示感谢。</p><p><img src="C:\Users\peng\AppData\Roaming\Typora\typora-user-images\image-20220414101927005.png" alt="image-20220414101927005"></p><p>其实一直对contributors有着敬佩之情，曾经感到很遥远，但是在前几天，一个群友成为了大名鼎鼎的Redis的contributors，让我羡慕的同时，认为自己难道就不可以吗。所以后面我开始看项目的同时，并且提Issue来和作者交流。</p><p>在我看来，与作者交流是一个非常使人受益的事，我遇见的作者态度都非常好，他们会和你交流并且指正你的不足。</p><p>后面就是碎碎念</p><p>找实习到这里，因为项目方面准备的很薄弱，以及学历没有优势，很多公司是笔试完石沉大海或者投简历就是石沉大海。</p><p>进行了两次面试，每次体验都挺好的，两个面试官人都很好，都会鼓励你。并且告诉你的不足之处。可惜第二家公司止步于HR面。</p><p>也由衷的感谢自己身边同学以及朋友在我低落的时候给予我极大的帮助。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;记第一次在Github上pull-request以及成为一个7-5k-项目的contributors&quot;&gt;&lt;a href=&quot;#记第一次在Github上pull-request以及成为一个7-5k-项目的contributors&quot; class=&quot;headerlink&quot;</summary>
+      
+    
+    
+    
+    
+    <category term="Github" scheme="http://example.com/tags/Github/"/>
+    
+  </entry>
+  
+  <entry>
     <title></title>
     <link href="http://example.com/2022/04/13/Nginx/"/>
     <id>http://example.com/2022/04/13/Nginx/</id>
     <published>2022-04-13T10:16:29.698Z</published>
-    <updated>2022-04-13T10:16:29.698Z</updated>
+    <updated>2022-04-13T14:36:02.763Z</updated>
     
     <content type="html"><![CDATA[<hr><p>title:Nginx<br>tag:Nginx</p><hr><h1 id="Nginx"><a href="#Nginx" class="headerlink" title="Nginx"></a>Nginx</h1>]]></content>
     
@@ -432,28 +454,6 @@
 &lt;p&gt;&lt;strong&gt;面向过程:&lt;/strong&gt; 先确定如何操作数据，再决定数据的结构，适用于小规模问题。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;面向对象OOP：&lt;/strong&gt;先决定数据的结构，在考虑操作数据的算法，适用于大规模问题。&lt;/p&gt;
 &lt;p&gt;</summary>
-      
-    
-    
-    
-    
-    <category term="Java" scheme="http://example.com/tags/Java/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>反射</title>
-    <link href="http://example.com/2022/02/22/%E5%8F%8D%E5%B0%84/"/>
-    <id>http://example.com/2022/02/22/%E5%8F%8D%E5%B0%84/</id>
-    <published>2022-02-22T05:47:36.000Z</published>
-    <updated>2022-02-22T05:48:10.132Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="七、反射"><a href="#七、反射" class="headerlink" title="七、反射"></a>七、反射</h2><p>每个类都有一个 <strong>Class</strong> 对象，包含了与类有关的信息。当编译一个新类时，会产生一个同名的 .class 文件，该文件内容保存着 Class 对象。</p><p>类加载相当于 Class 对象的加载，类在第一次使用时才动态加载到 JVM 中。也可以使用 <code>Class.forName(&quot;com.mysql.jdbc.Driver&quot;)</code> 这种方式来控制类的加载，该方法会返回一个 Class 对象。</p><p>反射可以提供运行时的类信息，并且这个类可以在运行时才加载进来，甚至在编译时期该类的 .class 不存在也可以加载进来。</p><p>Class 和 java.lang.reflect 一起对反射提供了支持，java.lang.reflect 类库主要包含了以下三个类：</p><ul><li><strong>Field</strong> ：可以使用 get() 和 set() 方法读取和修改 Field 对象关联的字段；</li><li><strong>Method</strong> ：可以使用 invoke() 方法调用与 Method 对象关联的方法；</li><li><strong>Constructor</strong> ：可以用 Constructor 的 newInstance() 创建新的对象。</li></ul><p><strong>反射的优点：</strong></p><ul><li><strong>可扩展性</strong> ：应用程序可以利用全限定名创建可扩展对象的实例，来使用来自外部的用户自定义类。</li><li><strong>类浏览器和可视化开发环境</strong> ：一个类浏览器需要可以枚举类的成员。可视化开发环境（如 IDE）可以从利用反射中可用的类型信息中受益，以帮助程序员编写正确的代码。</li><li><strong>调试器和测试工具</strong> ： 调试器需要能够检查一个类里的私有成员。测试工具可以利用反射来自动地调用类里定义的可被发现的 API 定义，以确保一组测试中有较高的代码覆盖率。</li></ul><p><strong>反射的缺点：</strong></p><p>尽管反射非常强大，但也不能滥用。如果一个功能可以不用反射完成，那么最好就不用。在我们使用反射技术时，下面几条内容应该牢记于心。</p><ul><li><strong>性能开销</strong> ：反射涉及了动态类型的解析，所以 JVM 无法对这些代码进行优化。因此，反射操作的效率要比那些非反射操作低得多。我们应该避免在经常被执行的代码或对性能要求很高的程序中使用反射。</li><li><strong>安全限制</strong> ：使用反射技术要求程序必须在一个没有安全限制的环境中运行。如果一个程序必须在有安全限制的环境中运行，如 Applet，那么这就是个问题了。</li><li><strong>内部暴露</strong> ：由于反射允许代码执行一些在正常情况下不被允许的操作（比如访问私有的属性和方法），所以使用反射可能会导致意料之外的副作用，这可能导致代码功能失调并破坏可移植性。反射代码破坏了抽象性，因此当平台发生改变的时候，代码的行为就有可能也随着变化。</li><li>源于 <a href="https://github.com/CyC2018/CS-Notes/blob/master/notes/Java%20%E5%9F%BA%E7%A1%80.md#clone">https://github.com/CyC2018/CS-Notes/blob/master/notes/Java%20%E5%9F%BA%E7%A1%80.md#clone</a></li></ul>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;七、反射&quot;&gt;&lt;a href=&quot;#七、反射&quot; class=&quot;headerlink&quot; title=&quot;七、反射&quot;&gt;&lt;/a&gt;七、反射&lt;/h2&gt;&lt;p&gt;每个类都有一个 &lt;strong&gt;Class&lt;/strong&gt; 对象，包含了与类有关的信息。当编译一个新类时，会产生一个同名的</summary>
       
     
     
