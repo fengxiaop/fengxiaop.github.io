@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-04-19T12:54:07.340Z</updated>
+  <updated>2022-04-24T12:36:11.725Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>正量数字复盘</title>
+    <link href="http://example.com/2022/04/24/%E6%AD%A3%E9%87%8F%E6%95%B0%E5%AD%97%E5%A4%8D%E7%9B%98/"/>
+    <id>http://example.com/2022/04/24/%E6%AD%A3%E9%87%8F%E6%95%B0%E5%AD%97%E5%A4%8D%E7%9B%98/</id>
+    <published>2022-04-24T11:46:58.797Z</published>
+    <updated>2022-04-24T12:36:11.725Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="正量数字复盘"><a href="#正量数字复盘" class="headerlink" title="正量数字复盘"></a>正量数字复盘</h1><p>自我介绍(2 min) </p><h2 id="Java基础"><a href="#Java基础" class="headerlink" title="Java基础"></a>Java基础</h2><h3 id="String类的方法"><a href="#String类的方法" class="headerlink" title="String类的方法"></a>String类的方法</h3><p>刚开始只想起<code>equals</code>方法</p><p>后面问截取 我答成<code>split</code>方法了  实际上应该是<code>substring</code></p><p>又问了个切割  应该是上面的<code>split</code> 这里我把<code>substring</code>方面说了 </p><p>其实还有很多 面试完之后IDEA里面敲了一下 发现还有很多常用的方法</p><p>一个是获取字符串长度 <code>length()</code> </p><p>一个查看字符串索引的字母  <code>charAt()</code></p><p>contains() toLowercase()toUppercase()这就不一一说了</p><h3 id="数组与List互转"><a href="#数组与List互转" class="headerlink" title="数组与List互转"></a>数组与List互转</h3><p>List转数组 通过toArray()方法</p><p>数组转List  我答得是for循环遍历 然后list通过add()方法加入    </p><p>后面发现可以用asList()方法 这个 很少用到</p><h3 id="HashMap和LinkedList的区别"><a href="#HashMap和LinkedList的区别" class="headerlink" title="HashMap和LinkedList的区别"></a>HashMap和LinkedList的区别</h3><p>HashMap  键值对结构  </p><p>LinkedList 底层数据结构  有序  可重复</p><h3 id="Set与HashMap的最大区别"><a href="#Set与HashMap的最大区别" class="headerlink" title="Set与HashMap的最大区别"></a>Set与HashMap的最大区别</h3><p>Set是无序的 去重的</p><h2 id="Mysql部分"><a href="#Mysql部分" class="headerlink" title="Mysql部分"></a>Mysql部分</h2><h3 id="查询五条数据"><a href="#查询五条数据" class="headerlink" title="查询五条数据"></a>查询五条数据</h3><p>limit 5</p><h3 id="修改一个指定code的name怎么做"><a href="#修改一个指定code的name怎么做" class="headerlink" title="修改一个指定code的name怎么做"></a>修改一个指定code的name怎么做</h3><p>答 update … where…</p><h3 id="一条sql查询code重复的次数"><a href="#一条sql查询code重复的次数" class="headerlink" title="一条sql查询code重复的次数"></a>一条sql查询code重复的次数</h3><p>select count(code)</p><p>group by code</p><h3 id="联合查询用哪个"><a href="#联合查询用哪个" class="headerlink" title="联合查询用哪个"></a>联合查询用哪个</h3><p>答join 被告知是连接 left join 与 right join</p><p>后面答 union</p><h3 id="Mysql的优化"><a href="#Mysql的优化" class="headerlink" title="Mysql的优化"></a>Mysql的优化</h3><p>等值查询可以hash索引</p><p>这方面不太了解  后面复盘找到了这个连接</p><p><a href="https://www.cnblogs.com/JaxYoun/p/12604009.html">https://www.cnblogs.com/JaxYoun/p/12604009.html</a></p><h3 id="用过的Mysql引擎"><a href="#用过的Mysql引擎" class="headerlink" title="用过的Mysql引擎"></a>用过的Mysql引擎</h3><p>只答出了  Innodb</p><h3 id="写代码的过程有了解过事物"><a href="#写代码的过程有了解过事物" class="headerlink" title="写代码的过程有了解过事物"></a>写代码的过程有了解过事物</h3><h3 id="事物的四个特点"><a href="#事物的四个特点" class="headerlink" title="事物的四个特点"></a>事物的四个特点</h3><h4 id="ACID"><a href="#ACID" class="headerlink" title="ACID"></a>ACID</h4><p>A 原子性 要么一起成功</p><p>C 一致性</p><p>I 独立性或隔离性</p><p>D持久性</p><h3 id="有没有听过分布式这个概念吗"><a href="#有没有听过分布式这个概念吗" class="headerlink" title="有没有听过分布式这个概念吗"></a>有没有听过分布式这个概念吗</h3><p>有 但是还没有接触过</p><h3 id="Spring重要组成部分"><a href="#Spring重要组成部分" class="headerlink" title="Spring重要组成部分"></a>Spring重要组成部分</h3><p>AOC AOP   是springcore的主要组成部分 </p><p><img src="http://windxiao-1307340949.cosgz.myqcloud.com/20220424201245.png"></p><h3 id="Springboot-pom-xml-有了解过底层吗"><a href="#Springboot-pom-xml-有了解过底层吗" class="headerlink" title="Springboot pom.xml 有了解过底层吗"></a>Springboot pom.xml 有了解过底层吗</h3><p>没用太多了解过</p><h3 id="Spring-springMvc-springboot常用的注解"><a href="#Spring-springMvc-springboot常用的注解" class="headerlink" title="Spring springMvc springboot常用的注解"></a>Spring springMvc springboot常用的注解</h3><p>@requestmapper</p><p>@scheduled</p><p>@Controller</p><p>@around</p><p>@Before</p><h3 id="Controller与RestController有什么区别"><a href="#Controller与RestController有什么区别" class="headerlink" title="Controller与RestController有什么区别"></a>Controller与RestController有什么区别</h3><p>答 不太清楚</p><p>@RestController注解等价于@ResponseBody ＋ @Controller。@RestController和@Controller的共同点是都用来表示Spring某个类是否可以接收HTTP请求，<strong>二者区别： @RestController无法返回指定页面，而@Controller可以</strong>；前者可以直接返回数据，后者需要@ResponseBody辅助。下面详细分析<em>。</em></p><p><img src="http://windxiao-1307340949.cosgz.myqcloud.com/20220424201741.png"></p><p>返回这个一个json数据 用什么注解</p><p>答 不知道</p><p>一查好像是 @Restcontroller</p><h2 id="前端"><a href="#前端" class="headerlink" title="前端"></a>前端</h2><h3 id="前端的东西有接触过吗"><a href="#前端的东西有接触过吗" class="headerlink" title="前端的东西有接触过吗"></a>前端的东西有接触过吗</h3><p>html+css+js 会写一些</p><p>框架 Layui  bootstrap Vue</p><h3 id="adjx的基本参数"><a href="#adjx的基本参数" class="headerlink" title="adjx的基本参数"></a>adjx的基本参数</h3><p>…我竟然回答能不能看以前的项目 </p><p>面试官被我逗笑了 说没事 想不起来就算了</p><p>type 是get请求还是post请求</p><p>url </p><p><a href="https://so.csdn.net/so/search?q=async&spm=1001.2101.3001.7020">async</a>：请求是否为异步</p><p>header</p><p>data</p><p>success</p><p>error</p><p>Layui下拉选择</p><p>不会qaq  我真的对前端不熟悉</p><p>问项目前端是不是自己写的 严重怀疑我的前端水平了。。。</p><h3 id="教务系统的token放哪里"><a href="#教务系统的token放哪里" class="headerlink" title="教务系统的token放哪里"></a>教务系统的token放哪里</h3><p>存在redis里面</p><h3 id="Redis了解吗"><a href="#Redis了解吗" class="headerlink" title="Redis了解吗"></a>Redis了解吗</h3><p>在学习</p><h2 id="Linux命令"><a href="#Linux命令" class="headerlink" title="Linux命令"></a>Linux命令</h2><h3 id="查看某个项目的进程-ps-ef-grep-java-nginx"><a href="#查看某个项目的进程-ps-ef-grep-java-nginx" class="headerlink" title="查看某个项目的进程  ps -ef|grep java/nginx"></a>查看某个项目的进程  ps -ef|grep java/nginx</h3><h3 id="查看当前所处的位置-pwd"><a href="#查看当前所处的位置-pwd" class="headerlink" title="查看当前所处的位置  pwd"></a>查看当前所处的位置  pwd</h3><h3 id="查看一个项目的实时日志-只记得t开头的命令打卡-面试官补充tail3"><a href="#查看一个项目的实时日志-只记得t开头的命令打卡-面试官补充tail3" class="headerlink" title="查看一个项目的实时日志  只记得t开头的命令打卡 面试官补充tail3"></a>查看一个项目的实时日志  只记得t开头的命令打卡 面试官补充tail3</h3><h2 id="日常聊天"><a href="#日常聊天" class="headerlink" title="日常聊天"></a>日常聊天</h2><h3 id="问我什么时候能够最快入职"><a href="#问我什么时候能够最快入职" class="headerlink" title="问我什么时候能够最快入职"></a>问我什么时候能够最快入职</h3><p>五月中下旬</p><h3 id="期望薪资"><a href="#期望薪资" class="headerlink" title="期望薪资"></a>期望薪资</h3><p>你那边能给多少呢</p><h3 id="老家哪的"><a href="#老家哪的" class="headerlink" title="老家哪的"></a>老家哪的</h3><p>也是湖南的</p><h3 id="为什么要来北方呢"><a href="#为什么要来北方呢" class="headerlink" title="为什么要来北方呢"></a>为什么要来北方呢</h3><p>没去过想去 不恋家 </p><p>投简历选定了天津吗</p><p>都有</p><h2 id="反问环节"><a href="#反问环节" class="headerlink" title="反问环节"></a>反问环节</h2><h3 id="后面面试流程"><a href="#后面面试流程" class="headerlink" title="后面面试流程"></a>后面面试流程</h3><p>没有了 就这一次</p><h3 id="面试结果什么时候出来"><a href="#面试结果什么时候出来" class="headerlink" title="面试结果什么时候出来"></a>面试结果什么时候出来</h3><p>本周前联系了就是有结果  没有就是没结果</p><h3 id="开发方向与培养机制"><a href="#开发方向与培养机制" class="headerlink" title="开发方向与培养机制"></a>开发方向与培养机制</h3><p>TO B 电商 系统</p><p>技术栈 springboot+springcloud微服务这一套</p><p>好像没有回答培养机制</p><p>后面讲等横向对比 有机会的话联系</p><p>总结难度还行  偏基础和开发方向 没有做题  让我感觉我刷力扣三百多道题白刷了…</p><p>自己表情管理有待加强  总喜欢想的时候看上面 像翻白眼一样  要是没复盘还真不知道自己是这样的。。。</p><p>这一次视频面试    后面希望改正过来和顺顺利利</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;正量数字复盘&quot;&gt;&lt;a href=&quot;#正量数字复盘&quot; class=&quot;headerlink&quot; title=&quot;正量数字复盘&quot;&gt;&lt;/a&gt;正量数字复盘&lt;/h1&gt;&lt;p&gt;自我介绍(2 min) &lt;/p&gt;
+&lt;h2 id=&quot;Java基础&quot;&gt;&lt;a href=&quot;#Java基础&quot; cla</summary>
+      
+    
+    
+    
+    
+    <category term="面试" scheme="http://example.com/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+  </entry>
   
   <entry>
     <title>Redis(二)</title>
@@ -435,29 +458,6 @@
     
     
     <category term="计算机网络" scheme="http://example.com/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Lambda表达式</title>
-    <link href="http://example.com/2022/03/12/Lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
-    <id>http://example.com/2022/03/12/Lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F/</id>
-    <published>2022-03-12T14:57:20.979Z</published>
-    <updated>2022-03-13T07:18:49.343Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="Lambda表达式"><a href="#Lambda表达式" class="headerlink" title="Lambda表达式"></a>Lambda表达式</h1><blockquote><p><strong>Lambda 表达式</strong> − Lambda 允许把函数作为一个方法的参数（函数作为参数传递到方法中）。</p></blockquote><p>Lambda 表达式的基础语法：Java8中引入了一个新的操作符表达式，”-&gt;” 该操作符为箭头操作符或Lambda操作符</p><p>左侧：lambda表达式的参数列表</p><p>右侧：lambda表达式中所需执行的功能，即 Lambda体</p><h2 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h2><h3 id="1-无参数，无返回值"><a href="#1-无参数，无返回值" class="headerlink" title="1.无参数，无返回值"></a>1.无参数，无返回值</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Runnable t = () -&gt; System.out.println(<span class="string">&quot;Hello Lambda&quot;</span>)</span><br><span class="line">t.run();</span><br></pre></td></tr></table></figure><h3 id="2-有参数，无返回值"><a href="#2-有参数，无返回值" class="headerlink" title="2.有参数，无返回值"></a>2.有参数，无返回值</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(x)-&gt; System.out.println(x)</span><br></pre></td></tr></table></figure><p>若只有一个参数,小括号可以省略不写</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">x-&gt; System.out.println(x)</span><br></pre></td></tr></table></figure><h3>3.有两个以上的参数,有返回值,并且 Lambda体中有多条语句</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Comparator&lt;Integer&gt; com =(x,y)-&gt;(System.out.print1n(<span class="string">&quot;函数式接口&quot;</span>) <span class="keyword">return</span> Integer.compare(x,y)</span><br></pre></td></tr></table></figure><p>…待续</p><h3></h3>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;Lambda表达式&quot;&gt;&lt;a href=&quot;#Lambda表达式&quot; class=&quot;headerlink&quot; title=&quot;Lambda表达式&quot;&gt;&lt;/a&gt;Lambda表达式&lt;/h1&gt;&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;Lambda 表达式&lt;/strong&gt; −</summary>
-      
-    
-    
-    
-    
-    <category term="java" scheme="http://example.com/tags/java/"/>
     
   </entry>
   
