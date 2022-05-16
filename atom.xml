@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-05-11T12:19:51.427Z</updated>
+  <updated>2022-05-12T00:32:51.652Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>最大公共子序列</title>
+    <link href="http://example.com/2022/05/11/%E6%9C%80%E5%A4%A7%E5%85%AC%E5%85%B1%E5%AD%90%E5%BA%8F%E5%88%97/"/>
+    <id>http://example.com/2022/05/11/%E6%9C%80%E5%A4%A7%E5%85%AC%E5%85%B1%E5%AD%90%E5%BA%8F%E5%88%97/</id>
+    <published>2022-05-11T12:37:38.210Z</published>
+    <updated>2022-05-12T00:32:51.652Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="最大公共子序列"><a href="#最大公共子序列" class="headerlink" title="最大公共子序列"></a>最大公共子序列</h1><p>leetcode </p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;最大公共子序列&quot;&gt;&lt;a href=&quot;#最大公共子序列&quot; class=&quot;headerlink&quot; title=&quot;最大公共子序列&quot;&gt;&lt;/a&gt;最大公共子序列&lt;/h1&gt;&lt;p&gt;leetcode &lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>通过rpm源安装RabbitMQ后 15672端口开放却访问不到网页(附安装方法)</title>
@@ -427,27 +448,6 @@
       
       
     <summary type="html">&lt;h1 id=&quot;操作系统&quot;&gt;&lt;a href=&quot;#操作系统&quot; class=&quot;headerlink&quot; title=&quot;操作系统&quot;&gt;&lt;/a&gt;操作系统&lt;/h1&gt;&lt;h2 id=&quot;什么是操作系统？&quot;&gt;&lt;a href=&quot;#什么是操作系统？&quot; class=&quot;headerlink&quot; title=&quot;什</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>分享会</title>
-    <link href="http://example.com/2022/03/13/%E6%95%99%E8%82%B2%E8%83%8C%E6%99%AF/"/>
-    <id>http://example.com/2022/03/13/%E6%95%99%E8%82%B2%E8%83%8C%E6%99%AF/</id>
-    <published>2022-03-13T12:12:20.422Z</published>
-    <updated>2022-03-14T06:04:03.626Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="教育背景"><a href="#教育背景" class="headerlink" title="教育背景"></a>教育背景</h1><p>学校 专业  GPA  top30%</p><h1 id="获奖情况"><a href="#获奖情况" class="headerlink" title="获奖情况"></a>获奖情况</h1><p>数学竞赛</p><p>算法竞赛</p><p>奖学金</p><h1 id="项目经历"><a href="#项目经历" class="headerlink" title="项目经历"></a>项目经历</h1><p>四二法则</p><p>项目背景  负责目标   结果（数据支撑） 解决了什么问题</p><p>提升了…</p><p>增加了…</p><p>优化了…</p><h1 id="实习经历"><a href="#实习经历" class="headerlink" title="实习经历"></a>实习经历</h1><p>公司   岗位</p><p>专业技能  Java   熟悉  掌握 了解</p><p>仅仅知道的不要写</p><h1 id="笔试"><a href="#笔试" class="headerlink" title="笔试"></a>笔试</h1><p>好好写简历     才有笔试机会</p><p>找熟人内推</p><p>计算机基础知识(408)   </p><p>算法题</p><h1 id="面试"><a href="#面试" class="headerlink" title="面试"></a>面试</h1><p>计算机基础知识</p><p>项目经历</p><p>算法题</p><p>无项目  问八股</p><p>八股范围广</p><p>先与面试官交流解法和思路</p><p>剑指Offer</p><p>Hot100</p><p>沟通能力</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;教育背景&quot;&gt;&lt;a href=&quot;#教育背景&quot; class=&quot;headerlink&quot; title=&quot;教育背景&quot;&gt;&lt;/a&gt;教育背景&lt;/h1&gt;&lt;p&gt;学校 专业  GPA  top30%&lt;/p&gt;
-&lt;h1 id=&quot;获奖情况&quot;&gt;&lt;a href=&quot;#获奖情况&quot; class=&quot;he</summary>
       
     
     
