@@ -30,6 +30,8 @@
 <meta name="twitter:card" content="summary_large_image">
   
   
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
   
   <title>Lambda表达式 - 这是一个记录着一个人成长的博客</title>
 
@@ -167,6 +169,18 @@
             </li>
           
         
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+            </li>
+          
+        
         
           <li class="nav-item" id="search-btn">
             <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
@@ -218,7 +232,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          undefined 字
+          467 字
         
       </span>
     
@@ -229,7 +243,7 @@
         
         
         
-          NaN 分钟
+          4 分钟
         
       </span>
     
@@ -277,16 +291,16 @@
 <p>Lambda 表达式的基础语法：Java8中引入了一个新的操作符表达式，”-&gt;” 该操作符为箭头操作符或Lambda操作符</p>
 <p>左侧：lambda表达式的参数列表</p>
 <p>右侧：lambda表达式中所需执行的功能，即 Lambda体</p>
-<h2 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h2><h3 id="1-无参数，无返回值"><a href="#1-无参数，无返回值" class="headerlink" title="1.无参数，无返回值"></a>1.无参数，无返回值</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Runnable t = () -&gt; System.out.println(<span class="string">&quot;Hello Lambda&quot;</span>)</span><br><span class="line">t.run();</span><br></pre></td></tr></table></figure>
+<h2 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h2><h3 id="1-无参数，无返回值"><a href="#1-无参数，无返回值" class="headerlink" title="1.无参数，无返回值"></a>1.无参数，无返回值</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">Runnable t = () -&gt; System.out.println(<span class="hljs-string">&quot;Hello Lambda&quot;</span>)<br>t.run();<br></code></pre></td></tr></table></figure>
 
-<h3 id="2-有参数，无返回值"><a href="#2-有参数，无返回值" class="headerlink" title="2.有参数，无返回值"></a>2.有参数，无返回值</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(x)-&gt; System.out.println(x)</span><br></pre></td></tr></table></figure>
+<h3 id="2-有参数，无返回值"><a href="#2-有参数，无返回值" class="headerlink" title="2.有参数，无返回值"></a>2.有参数，无返回值</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java">(x)-&gt; System.out.println(x)<br></code></pre></td></tr></table></figure>
 
 <p>若只有一个参数,小括号可以省略不写</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">x-&gt; System.out.println(x)</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java">x-&gt; System.out.println(x)<br></code></pre></td></tr></table></figure>
 
 <h3>3.有两个以上的参数,有返回值,并且 Lambda体中有多条语句</h3>
 
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Comparator&lt;Integer&gt; com =(x,y)-&gt;(System.out.print1n(<span class="string">&quot;函数式接口&quot;</span>) <span class="keyword">return</span> Integer.compare(x,y)</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java">Comparator&lt;Integer&gt; com =(x,y)-&gt;(System.out.print1n(<span class="hljs-string">&quot;函数式接口&quot;</span>) <span class="hljs-keyword">return</span> Integer.compare(x,y)<br></code></pre></td></tr></table></figure>
 
 <p>…待续</p>
 <h3></h3>
@@ -470,6 +484,30 @@
        <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
     </div>
   
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+  
+</div>
+
   
   
   
@@ -656,6 +694,8 @@
   <script>Fluid.plugins.imageCaption();</script>
 
   <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
 
 
 

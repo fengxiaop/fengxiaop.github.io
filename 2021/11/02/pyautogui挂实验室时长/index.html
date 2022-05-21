@@ -26,10 +26,12 @@
 <meta property="article:published_time" content="2021-11-02T05:00:59.000Z">
 <meta property="article:modified_time" content="2021-11-02T05:08:00.471Z">
 <meta property="article:author" content="fengxiao">
-<meta property="article:tag" content="python">
 <meta property="article:tag" content="小程序">
+<meta property="article:tag" content="python">
 <meta name="twitter:card" content="summary_large_image">
   
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
   
   
   <title>pyautogui挂实验室时长 - 这是一个记录着一个人成长的博客</title>
@@ -168,6 +170,18 @@
             </li>
           
         
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+            </li>
+          
+        
         
           <li class="nav-item" id="search-btn">
             <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
@@ -219,7 +233,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          undefined 字
+          265 字
         
       </span>
     
@@ -230,7 +244,7 @@
         
         
         
-          NaN 分钟
+          3 分钟
         
       </span>
     
@@ -278,10 +292,10 @@
 <h1>第一步
 
 <p>先导包</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pyautogui</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> time</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> pyautogui<br><br><span class="hljs-keyword">import</span> time<br></code></pre></td></tr></table></figure>
 
 <p>第二部写个for循环</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>,<span class="number">100</span>):</span><br><span class="line">    <span class="built_in">print</span>(i)</span><br><span class="line">    pyautogui.click(<span class="number">1113</span>,<span class="number">209</span>, clicks=<span class="number">5</span>,interval=<span class="number">1</span>,duration=<span class="number">0.5</span>)</span><br><span class="line">    time.sleep(<span class="number">298</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(<span class="hljs-number">0</span>,<span class="hljs-number">100</span>):<br>    <span class="hljs-built_in">print</span>(i)<br>    pyautogui.click(<span class="hljs-number">1113</span>,<span class="hljs-number">209</span>, clicks=<span class="hljs-number">5</span>,interval=<span class="hljs-number">1</span>,duration=<span class="hljs-number">0.5</span>)<br>    time.sleep(<span class="hljs-number">298</span>)<br></code></pre></td></tr></table></figure>
 
 <p>github仓库源代码  <a target="_blank" rel="noopener" href="https://github.com/fengxiaop/pyautogui">https://github.com/fengxiaop/pyautogui</a></p>
 <p>有用的话记得点个 star</p>
@@ -296,9 +310,9 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/python/">#python</a>
-      
         <a href="/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/">#小程序</a>
+      
+        <a href="/tags/python/">#python</a>
       
     </div>
   
@@ -466,6 +480,30 @@
        <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
     </div>
   
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+  
+</div>
+
   
   
   
@@ -652,6 +690,8 @@
   <script>Fluid.plugins.imageCaption();</script>
 
   <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
 
 
 

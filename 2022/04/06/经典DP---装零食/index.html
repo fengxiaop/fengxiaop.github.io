@@ -30,6 +30,8 @@
 <meta name="twitter:card" content="summary_large_image">
   
   
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
   
   <title>经典DP - 装零食 - 这是一个记录着一个人成长的博客</title>
 
@@ -167,6 +169,18 @@
             </li>
           
         
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+            </li>
+          
+        
         
           <li class="nav-item" id="search-btn">
             <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
@@ -218,7 +232,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          undefined 字
+          1.9k 字
         
       </span>
     
@@ -229,7 +243,7 @@
         
         
         
-          NaN 分钟
+          16 分钟
         
       </span>
     
@@ -272,24 +286,24 @@
             <div class="markdown-body">
               
               <p>题干</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">秋天快到啦，天气慢慢凉爽了下来，所以实验室要组织去骊山进行一次野餐活动。</span><br><span class="line"></span><br><span class="line">最底层的Lofipure被迫背背包给大家装各种零食，但是实验室的大佬们并不打算轻易放过Lofipure，他们打算把Lofipure的背包装的尽量满</span><br><span class="line"></span><br><span class="line">现在知道Lofipure的背包容量为 V（正整数，0 &lt;= V &lt;= 20000），同时有 n 件小零食（0＜n&lt;=30），每个小零食的重量。</span><br><span class="line">现在在 n 个小零食中，任取若干个装入Lofipure的背包内，使得Lofipure背包的剩余空间为最小。借此达到压榨Lofipure的目的。</span><br></pre></td></tr></table></figure>
+<figure class="highlight excel"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs excel">秋天快到啦，天气慢慢凉爽了下来，所以实验室要组织去骊山进行一次野餐活动。<br><br>最底层的Lofipure被迫背背包给大家装各种零食，但是实验室的大佬们并不打算轻易放过Lofipure，他们打算把Lofipure的背包装的尽量满<br><br>现在知道Lofipure的背包容量为 V（正整数，<span class="hljs-number">0</span> &lt;= V &lt;= <span class="hljs-number">20000</span>），同时有 <span class="hljs-built_in">n</span> 件小零食（<span class="hljs-number">0</span>＜<span class="hljs-built_in">n</span>&lt;=<span class="hljs-number">30</span>），每个小零食的重量。<br>现在在 <span class="hljs-built_in">n</span> 个小零食中，任取若干个装入Lofipure的背包内，使得Lofipure背包的剩余空间为最小。借此达到压榨Lofipure的目的。<br></code></pre></td></tr></table></figure>
 
 <p>Input</p>
 <p>输入：一个整数v，表示背包容量 一个整数n，表示有n个物品 接下来 n 个整数，分别表示这 n 个物品的各自体积</p>
 <p>Output</p>
 <p>输出：一个整数，表示背包最小的剩余空间</p>
 <p>Sample Input</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">24</span><br><span class="line">6</span><br><span class="line">8</span><br><span class="line">3</span><br><span class="line">12</span><br><span class="line">7</span><br><span class="line">9</span><br><span class="line">7</span><br></pre></td></tr></table></figure>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs">24<br>6<br>8<br>3<br>12<br>7<br>9<br>7<br></code></pre></td></tr></table></figure>
 
 <p>Sample Output</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">0</span><br></pre></td></tr></table></figure>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs">0<br></code></pre></td></tr></table></figure>
 
 <p>看到这道理的第一时刻想的是暴力枚举出所有零食混合装的重量  可复杂度太高 遂放弃。</p>
 <p>然后看了一下大佬们的代码</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> int long long</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MAXN 1000005</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">int</span> dp[<span class="number">20005</span>];</span><br><span class="line"><span class="function"><span class="keyword">signed</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    dp[<span class="number">0</span>]=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">int</span> v,n;cin&gt;&gt;v&gt;&gt;n;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">int</span> t;cin&gt;&gt;t;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=v;j&gt;=t;j--)</span><br><span class="line">            dp[j]|=dp[j-t];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=v;i&gt;=<span class="number">0</span>;i--)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span>(dp[i])</span><br><span class="line">        &#123;</span><br><span class="line">            cout&lt;&lt;v-i&lt;&lt;endl;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;bits/stdc++.h&gt;</span></span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> int long long</span><br><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> MAXN 1000005</span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><span class="hljs-keyword">int</span> dp[<span class="hljs-number">20005</span>];<br><span class="hljs-function"><span class="hljs-keyword">signed</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>    dp[<span class="hljs-number">0</span>]=<span class="hljs-number">1</span>;<br>    <span class="hljs-keyword">int</span> v,n;cin&gt;&gt;v&gt;&gt;n;<br>    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">1</span>;i&lt;=n;i++)<br>    &#123;<br>        <span class="hljs-keyword">int</span> t;cin&gt;&gt;t;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j=v;j&gt;=t;j--)<br>            dp[j]|=dp[j-t];<br>    &#125;<br>    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=v;i&gt;=<span class="hljs-number">0</span>;i--)<br>    &#123;<br>        <span class="hljs-keyword">if</span>(dp[i])<br>        &#123;<br>            cout&lt;&lt;v-i&lt;&lt;endl;<br>            <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>        &#125;<br>    &#125;<br>&#125;<br><br></code></pre></td></tr></table></figure>
 
 <p>刚开始我用Java实现的时候，</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">后面经过自己  ~~人眼比对~~ 发现这个错误  发现之后感到不解。</span><br><span class="line"></span><br><span class="line">```dp [j]|=dp[j-t]```这个式子用来干嘛的呢</span><br><span class="line"></span><br><span class="line">后面经过输出</span><br><span class="line"></span><br><span class="line">```java</span><br><span class="line">System.out.println(j+&quot; &quot;+(j-t)+&quot; &quot;+dp[j]+&quot; &quot;+dp[j - t]);</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs dp[j]|"><br>后面经过自己  ~~人眼比对~~ 发现这个错误  发现之后感到不解。<br><br>```dp [j]|=dp[j-t]```这个式子用来干嘛的呢<br><br>后面经过输出<br><br>```java<br>System.out.println(j+&quot; &quot;+(j-t)+&quot; &quot;+dp[j]+&quot; &quot;+dp[j - t]);<br></code></pre></td></tr></table></figure>
 
 <p>形式一下子就清楚了  dp是为了统计零食能够组成的重量</p>
 <p>拿本题例子来说  </p>
@@ -302,7 +316,7 @@
 <p>从最大的量递减便利 当dp[i] 不为0 时 也就是为1  代表着这是能够装载着最大的重量 直接输出V-i</p>
 <p>感叹算法的奇妙与精彩，只恨自己接触晚与学校氛围不好，蹉跎了许久时光。</p>
 <p>JAVA版代码</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.VG;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.Arrays;</span><br><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">C</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Scanner scanner = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">        <span class="keyword">int</span> V = scanner.nextInt();</span><br><span class="line">        <span class="keyword">int</span> N = scanner.nextInt();</span><br><span class="line">        <span class="keyword">int</span>[] dp = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">200005</span>];</span><br><span class="line">        dp[<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= N; i++) &#123;</span><br><span class="line">            <span class="keyword">int</span> t = scanner.nextInt();</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = V; j &gt;=t ; j--) &#123;</span><br><span class="line">                dp[j] |= dp[j - t];</span><br><span class="line">                System.out.println(j+<span class="string">&quot; &quot;</span>+(j-t)+<span class="string">&quot; &quot;</span>+dp[j]+<span class="string">&quot; &quot;</span>+dp[j - t]);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = V; i &gt;= <span class="number">0</span> ; i--) &#123;</span><br><span class="line">            <span class="keyword">if</span>(dp[i]!=<span class="number">0</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                System.out.println(V- i);</span><br><span class="line">                <span class="keyword">return</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">package</span> com.VG;<br><br><span class="hljs-keyword">import</span> java.util.Arrays;<br><span class="hljs-keyword">import</span> java.util.Scanner;<br><br><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">C</span> </span>&#123;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;<br>        Scanner scanner = <span class="hljs-keyword">new</span> Scanner(System.in);<br>        <span class="hljs-keyword">int</span> V = scanner.nextInt();<br>        <span class="hljs-keyword">int</span> N = scanner.nextInt();<br>        <span class="hljs-keyword">int</span>[] dp = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[<span class="hljs-number">200005</span>];<br>        dp[<span class="hljs-number">0</span>] = <span class="hljs-number">1</span>;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">1</span>; i &lt;= N; i++) &#123;<br>            <span class="hljs-keyword">int</span> t = scanner.nextInt();<br>            <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = V; j &gt;=t ; j--) &#123;<br>                dp[j] |= dp[j - t];<br>                System.out.println(j+<span class="hljs-string">&quot; &quot;</span>+(j-t)+<span class="hljs-string">&quot; &quot;</span>+dp[j]+<span class="hljs-string">&quot; &quot;</span>+dp[j - t]);<br>            &#125;<br>        &#125;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = V; i &gt;= <span class="hljs-number">0</span> ; i--) &#123;<br>            <span class="hljs-keyword">if</span>(dp[i]!=<span class="hljs-number">0</span>)<br>            &#123;<br>                System.out.println(V- i);<br>                <span class="hljs-keyword">return</span>;<br>            &#125;<br>        &#125;<br><br>    &#125;<br>&#125;<br><br></code></pre></td></tr></table></figure>
 
 
               
@@ -483,6 +497,30 @@
        <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
     </div>
   
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+  
+</div>
+
   
   
   
@@ -669,6 +707,8 @@
   <script>Fluid.plugins.imageCaption();</script>
 
   <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
 
 
 

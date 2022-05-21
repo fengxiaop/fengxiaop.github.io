@@ -30,6 +30,8 @@
 <meta name="twitter:card" content="summary_large_image">
   
   
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
   
   <title>北森实习一面凉经 - 这是一个记录着一个人成长的博客</title>
 
@@ -167,6 +169,18 @@
             </li>
           
         
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+            </li>
+          
+        
         
           <li class="nav-item" id="search-btn">
             <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
@@ -218,7 +232,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          undefined 字
+          2.8k 字
         
       </span>
     
@@ -229,7 +243,7 @@
         
         
         
-          NaN 分钟
+          24 分钟
         
       </span>
     
@@ -323,7 +337,7 @@
 <p>索引是关系数据库中对某一列或多个列的值进行预排序的数据结构。通过使用索引，可以让数据库系统不必扫描整个表，而是直接定位到符合条件的记录，这样就大大加快了查询速度。</p>
 <p>是一种能够加快查询速度的数据结构</p>
 <p>索引</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">CREATE INDEX index_name</span><br><span class="line">ON table_name (column_name)</span><br></pre></td></tr></table></figure>
+<figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs pgsql"><span class="hljs-keyword">CREATE</span> <span class="hljs-keyword">INDEX</span> index_name<br><span class="hljs-keyword">ON</span> <span class="hljs-built_in">table_name</span> (<span class="hljs-built_in">column_name</span>)<br></code></pre></td></tr></table></figure>
 
 <h2 id="聚集索引和非聚集索引的区别"><a href="#聚集索引和非聚集索引的区别" class="headerlink" title="聚集索引和非聚集索引的区别"></a>聚集索引和非聚集索引的区别</h2><p>我不知道 我试探性的问了一下是join有关的吗  面试官笑着说不太是  结果我也笑了</p>
 <p>两种索引相同点： 内部都是 B+ 树，高度平衡，叶子节点存放着所有的数据。</p>
@@ -540,6 +554,30 @@
     </div>
   
   
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+  
+</div>
+
+  
   
   
 </div>
@@ -725,6 +763,8 @@
   <script>Fluid.plugins.imageCaption();</script>
 
   <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
 
 
 

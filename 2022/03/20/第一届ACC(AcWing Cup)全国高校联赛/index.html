@@ -29,6 +29,8 @@
 <meta name="twitter:card" content="summary_large_image">
   
   
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
   
   <title>第一届ACC杯 - 这是一个记录着一个人成长的博客</title>
 
@@ -166,6 +168,18 @@
             </li>
           
         
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+            </li>
+          
+        
         
           <li class="nav-item" id="search-btn">
             <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
@@ -217,7 +231,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          undefined 字
+          2.3k 字
         
       </span>
     
@@ -228,7 +242,7 @@
         
         
         
-          NaN 分钟
+          20 分钟
         
       </span>
     
@@ -284,16 +298,16 @@
 <h4 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式"></a>输入格式</h4><p>一个整数 nn。</p>
 <h4 id="输出格式"><a href="#输出格式" class="headerlink" title="输出格式"></a>输出格式</h4><p>一个整数，表示整数 nn 的十六进制表示包含的圈圈总数。</p>
 <h4 id="数据范围"><a href="#数据范围" class="headerlink" title="数据范围"></a>数据范围</h4><p>前三个测试点满足 0≤n≤1000≤n≤100,<br>所有测试点满足 0≤n≤2×1090≤n≤2×109。</p>
-<h4 id="输入样例1："><a href="#输入样例1：" class="headerlink" title="输入样例1："></a>输入样例1：</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">11</span><br></pre></td></tr></table></figure>
+<h4 id="输入样例1："><a href="#输入样例1：" class="headerlink" title="输入样例1："></a>输入样例1：</h4><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs">11<br></code></pre></td></tr></table></figure>
 
-<h4 id="输出样例1："><a href="#输出样例1：" class="headerlink" title="输出样例1："></a>输出样例1：</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2</span><br></pre></td></tr></table></figure>
+<h4 id="输出样例1："><a href="#输出样例1：" class="headerlink" title="输出样例1："></a>输出样例1：</h4><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs">2<br></code></pre></td></tr></table></figure>
 
-<h4 id="输入样例2："><a href="#输入样例2：" class="headerlink" title="输入样例2："></a>输入样例2：</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">14</span><br></pre></td></tr></table></figure>
+<h4 id="输入样例2："><a href="#输入样例2：" class="headerlink" title="输入样例2："></a>输入样例2：</h4><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs">14<br></code></pre></td></tr></table></figure>
 
-<h4 id="输出样例2："><a href="#输出样例2：" class="headerlink" title="输出样例2："></a>输出样例2：</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">0</span><br></pre></td></tr></table></figure>
+<h4 id="输出样例2："><a href="#输出样例2：" class="headerlink" title="输出样例2："></a>输出样例2：</h4><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs">0<br></code></pre></td></tr></table></figure>
 
 <p>简单模拟即可  注意特判0  每次都在这里栽跟头…</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// package com.ACC;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Scanner scanner = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">        <span class="keyword">long</span> n = scanner.nextLong();</span><br><span class="line">        <span class="keyword">long</span> ans = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">if</span>(n == <span class="number">0</span>)     System.out.println(<span class="number">1</span>);</span><br><span class="line">        <span class="keyword">else</span>&#123;<span class="keyword">while</span>(n &gt; <span class="number">0</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">long</span> m = n% <span class="number">16</span>;</span><br><span class="line"><span class="comment">//            System.out.println(m);</span></span><br><span class="line">            <span class="keyword">if</span>(m == <span class="number">0</span>|| m == <span class="number">4</span> || m == <span class="number">6</span> || m==<span class="number">9</span> || m== <span class="number">10</span>||m == <span class="number">13</span>) ans++;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span>(m == <span class="number">8</span> || m == <span class="number">11</span>) ans +=<span class="number">2</span>;</span><br><span class="line">            n = n / <span class="number">16</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(ans);</span><br><span class="line">    &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">// package com.ACC;</span><br><br><span class="hljs-keyword">import</span> java.util.Scanner;<br><br><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>&#123;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;<br>        Scanner scanner = <span class="hljs-keyword">new</span> Scanner(System.in);<br>        <span class="hljs-keyword">long</span> n = scanner.nextLong();<br>        <span class="hljs-keyword">long</span> ans = <span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">if</span>(n == <span class="hljs-number">0</span>)     System.out.println(<span class="hljs-number">1</span>);<br>        <span class="hljs-keyword">else</span>&#123;<span class="hljs-keyword">while</span>(n &gt; <span class="hljs-number">0</span>)<br>        &#123;<br>            <span class="hljs-keyword">long</span> m = n% <span class="hljs-number">16</span>;<br><span class="hljs-comment">//            System.out.println(m);</span><br>            <span class="hljs-keyword">if</span>(m == <span class="hljs-number">0</span>|| m == <span class="hljs-number">4</span> || m == <span class="hljs-number">6</span> || m==<span class="hljs-number">9</span> || m== <span class="hljs-number">10</span>||m == <span class="hljs-number">13</span>) ans++;<br>            <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(m == <span class="hljs-number">8</span> || m == <span class="hljs-number">11</span>) ans +=<span class="hljs-number">2</span>;<br>            n = n / <span class="hljs-number">16</span>;<br>        &#125;<br>        System.out.println(ans);<br>    &#125;<br>    &#125;<br>&#125;<br><br></code></pre></td></tr></table></figure>
 
 <h2 id="题目B"><a href="#题目B" class="headerlink" title="题目B"></a>题目B</h2><p>农夫约翰有 nn 片连续的农田，编号依次为 1∼n1∼n。</p>
 <p>其中有 kk 片农田中装有洒水器。</p>
@@ -309,12 +323,12 @@
 <p>第二行包含 kk 个整数 x1,x2,…,xkx1,x2,…,xk。</p>
 <h4 id="输出格式-1"><a href="#输出格式-1" class="headerlink" title="输出格式"></a>输出格式</h4><p>每组数据输出一行答案。</p>
 <h4 id="数据范围-1"><a href="#数据范围-1" class="headerlink" title="数据范围"></a>数据范围</h4><p>前三个测试点满足 1≤n≤51≤n≤5,<br>所有测试点满足 1≤T≤2001≤T≤200，1≤n≤2001≤n≤200，1≤k≤n1≤k≤n，1≤xi≤n1≤xi≤n，xi−1&lt;xixi−1&lt;xi，TT 组数据的 nn 相加之和不超过 200200。</p>
-<h4 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">3</span><br><span class="line">5 1</span><br><span class="line">3</span><br><span class="line">3 3</span><br><span class="line">1 2 3</span><br><span class="line">4 1</span><br><span class="line">1</span><br></pre></td></tr></table></figure>
+<h4 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h4><figure class="highlight basic"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs basic"><span class="hljs-number">3</span><br><span class="hljs-symbol">5 </span><span class="hljs-number">1</span><br><span class="hljs-number">3</span><br><span class="hljs-symbol">3 </span><span class="hljs-number">3</span><br><span class="hljs-symbol">1 </span><span class="hljs-number">2</span> <span class="hljs-number">3</span><br><span class="hljs-symbol">4 </span><span class="hljs-number">1</span><br><span class="hljs-number">1</span><br></code></pre></td></tr></table></figure>
 
-<h4 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">3</span><br><span class="line">1</span><br><span class="line">4</span><br></pre></td></tr></table></figure>
+<h4 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h4><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs">3<br>1<br>4<br></code></pre></td></tr></table></figure>
 
 <p>模拟即可</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// package com.ACC;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Scanner scanner = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">        <span class="keyword">int</span> T = scanner.nextInt();</span><br><span class="line">        <span class="keyword">int</span>[] n = <span class="keyword">new</span> <span class="keyword">int</span>[T];</span><br><span class="line">        <span class="keyword">int</span>[] k = <span class="keyword">new</span> <span class="keyword">int</span>[T];</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; T; i++) &#123;</span><br><span class="line">            n[i] = scanner.nextInt();</span><br><span class="line">            k[i] = scanner.nextInt();</span><br><span class="line">            <span class="keyword">int</span>[] a = <span class="keyword">new</span> <span class="keyword">int</span>[k[i]];</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; k[i]; j++) &#123;</span><br><span class="line">                a[j] = scanner.nextInt();</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">int</span> q = n[i] - a[k[i] -<span class="number">1</span>]+<span class="number">1</span>;</span><br><span class="line">            <span class="keyword">int</span> ans = Math.max(a[<span class="number">0</span>],q);</span><br><span class="line">            <span class="keyword">if</span>(k[i] == <span class="number">1</span>)   ans =Math.max(a[<span class="number">0</span>],n[i] - a[<span class="number">0</span>]+<span class="number">1</span>);</span><br><span class="line">            <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j + <span class="number">1</span> &lt; k[i]; j++) &#123;</span><br><span class="line">                    ans = Math.max(ans, (a[j + <span class="number">1</span>] - a[j]+<span class="number">2</span>)/<span class="number">2</span>);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            System.out.println(ans);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">// package com.ACC;</span><br><br><span class="hljs-keyword">import</span> java.util.Scanner;<br><br><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Main</span> </span>&#123;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;<br>        Scanner scanner = <span class="hljs-keyword">new</span> Scanner(System.in);<br>        <span class="hljs-keyword">int</span> T = scanner.nextInt();<br>        <span class="hljs-keyword">int</span>[] n = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[T];<br>        <span class="hljs-keyword">int</span>[] k = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[T];<br>        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; T; i++) &#123;<br>            n[i] = scanner.nextInt();<br>            k[i] = scanner.nextInt();<br>            <span class="hljs-keyword">int</span>[] a = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[k[i]];<br>            <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>; j &lt; k[i]; j++) &#123;<br>                a[j] = scanner.nextInt();<br>            &#125;<br>            <span class="hljs-keyword">int</span> q = n[i] - a[k[i] -<span class="hljs-number">1</span>]+<span class="hljs-number">1</span>;<br>            <span class="hljs-keyword">int</span> ans = Math.max(a[<span class="hljs-number">0</span>],q);<br>            <span class="hljs-keyword">if</span>(k[i] == <span class="hljs-number">1</span>)   ans =Math.max(a[<span class="hljs-number">0</span>],n[i] - a[<span class="hljs-number">0</span>]+<span class="hljs-number">1</span>);<br>            <span class="hljs-keyword">else</span> &#123;<br>                <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>; j + <span class="hljs-number">1</span> &lt; k[i]; j++) &#123;<br>                    ans = Math.max(ans, (a[j + <span class="hljs-number">1</span>] - a[j]+<span class="hljs-number">2</span>)/<span class="hljs-number">2</span>);<br>                &#125;<br>            &#125;<br>            System.out.println(ans);<br>        &#125;<br>    &#125;<br>&#125;<br><br></code></pre></td></tr></table></figure>
 
 <p>题目C</p>
 
@@ -489,6 +503,30 @@
        <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
     </div>
   
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+  
+</div>
+
   
   
   
@@ -675,6 +713,8 @@
   <script>Fluid.plugins.imageCaption();</script>
 
   <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
 
 
 

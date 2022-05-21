@@ -36,6 +36,8 @@
 <meta name="twitter:image" content="http://windxiao-1307340949.cosgz.myqcloud.com/20220511201940.png">
   
   
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
   
   <title>通过rpm源安装RabbitMQ后 15672端口开放却访问不到网页(附安装方法) - 这是一个记录着一个人成长的博客</title>
 
@@ -173,6 +175,18 @@
             </li>
           
         
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                友链
+              </a>
+            </li>
+          
+        
         
           <li class="nav-item" id="search-btn">
             <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
@@ -224,7 +238,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          undefined 字
+          1.7k 字
         
       </span>
     
@@ -235,7 +249,7 @@
         
         
         
-          NaN 分钟
+          14 分钟
         
       </span>
     
@@ -302,9 +316,9 @@
 <p><code>[&#123;rabbit, [&#123;loopback_users, []&#125;]&#125;].</code></p>
 <p>重启rabbitmq服务</p>
 <p><code>systemctl restart rabbitmq-server.service</code></p>
-<h3 id="重新访问即可"><a href="#重新访问即可" class="headerlink" title="重新访问即可"></a>重新访问即可</h3><h3 id="Maven依赖"><a href="#Maven依赖" class="headerlink" title="Maven依赖"></a>Maven依赖</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- AMQP依赖 --&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">&lt;artifactId&gt;spring-boot-starter-amqp&lt;/artifactId&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="重新访问即可"><a href="#重新访问即可" class="headerlink" title="重新访问即可"></a>重新访问即可</h3><h3 id="Maven依赖"><a href="#Maven依赖" class="headerlink" title="Maven依赖"></a>Maven依赖</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs java">&lt;!-- AMQP依赖 --&gt;<br>&lt;dependency&gt;<br>&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;<br>&lt;artifactId&gt;spring-boot-starter-amqp&lt;/artifactId&gt;<br>&lt;/dependency&gt;<br></code></pre></td></tr></table></figure>
 
-<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br></pre></td><td class="code"><pre><span class="line">application.yml</span><br><span class="line"></span><br><span class="line">RabbitMQConfig.java</span><br><span class="line"></span><br><span class="line">spring:</span><br><span class="line"></span><br><span class="line">  \#RabbitMQ</span><br><span class="line"></span><br><span class="line"> rabbitmq:</span><br><span class="line"></span><br><span class="line">   \#服务器地址</span><br><span class="line"></span><br><span class="line">  host: <span class="number">192.168</span><span class="number">.10</span><span class="number">.100</span></span><br><span class="line"></span><br><span class="line">   \#用户名</span><br><span class="line"></span><br><span class="line">  username: guest</span><br><span class="line"></span><br><span class="line">   \#密码</span><br><span class="line"></span><br><span class="line">  password: guest</span><br><span class="line"></span><br><span class="line">   \#虚拟主机</span><br><span class="line"></span><br><span class="line">  virtual-host: /</span><br><span class="line"></span><br><span class="line">   \#端口</span><br><span class="line"></span><br><span class="line">  port: <span class="number">5672</span></span><br><span class="line"></span><br><span class="line">  listener:</span><br><span class="line"></span><br><span class="line">   simple:</span><br><span class="line"></span><br><span class="line">​     \#消费者最小数量</span><br><span class="line"></span><br><span class="line">​    concurrency: <span class="number">10</span></span><br><span class="line"></span><br><span class="line">​     \#消费者最大数量</span><br><span class="line"></span><br><span class="line">​    max-concurrency: <span class="number">10</span></span><br><span class="line"></span><br><span class="line">​     \#限制消费者每次只处理一条消息，处理完再继续下一条消息</span><br><span class="line"></span><br><span class="line">​    prefetch: <span class="number">1</span></span><br><span class="line"></span><br><span class="line">​     \#启动时是否默认启动容器，默认<span class="keyword">true</span></span><br><span class="line"></span><br><span class="line">​    auto-startup: <span class="keyword">true</span></span><br><span class="line"></span><br><span class="line">​     \#被拒绝时重新进入队列</span><br><span class="line"></span><br><span class="line">​    <span class="keyword">default</span>-requeue-rejected: <span class="keyword">true</span></span><br><span class="line"></span><br><span class="line">  template:</span><br><span class="line"></span><br><span class="line">   retry:</span><br><span class="line"></span><br><span class="line">​     \#发布重试，默认<span class="keyword">false</span></span><br><span class="line"></span><br><span class="line">​    enabled: <span class="keyword">true</span></span><br><span class="line"></span><br><span class="line">​     \#重试时间 默认1000ms</span><br><span class="line"></span><br><span class="line">​    initial-interval: <span class="number">1000</span></span><br><span class="line"></span><br><span class="line">​     \#重试最大次数，默认<span class="number">3</span>次</span><br><span class="line"></span><br><span class="line">​    max-attempts: <span class="number">3</span></span><br><span class="line"></span><br><span class="line">​     \#重试最大间隔时间，默认10000ms</span><br><span class="line"></span><br><span class="line">​    max-interval: <span class="number">10000</span></span><br><span class="line"></span><br><span class="line">​     \#重试间隔的乘数。比如配<span class="number">2.0</span> 第一次等10s，第二次等20s，第三次等40s</span><br><span class="line"></span><br><span class="line">​    multiplier: <span class="number">1.0</span></span><br></pre></td></tr></table></figure>
+<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br></pre></td><td class="code"><pre><code class="hljs java">application.yml<br><br>RabbitMQConfig.java<br><br>spring:<br><br>  \#RabbitMQ<br><br> rabbitmq:<br><br>   \#服务器地址<br><br>  host: <span class="hljs-number">192.168</span><span class="hljs-number">.10</span><span class="hljs-number">.100</span><br><br>   \#用户名<br><br>  username: guest<br><br>   \#密码<br><br>  password: guest<br><br>   \#虚拟主机<br><br>  virtual-host: /<br><br>   \#端口<br><br>  port: <span class="hljs-number">5672</span><br><br>  listener:<br><br>   simple:<br><br>​     \#消费者最小数量<br><br>​    concurrency: <span class="hljs-number">10</span><br><br>​     \#消费者最大数量<br><br>​    max-concurrency: <span class="hljs-number">10</span><br><br>​     \#限制消费者每次只处理一条消息，处理完再继续下一条消息<br><br>​    prefetch: <span class="hljs-number">1</span><br><br>​     \#启动时是否默认启动容器，默认<span class="hljs-keyword">true</span><br><br>​    auto-startup: <span class="hljs-keyword">true</span><br><br>​     \#被拒绝时重新进入队列<br><br>​    <span class="hljs-keyword">default</span>-requeue-rejected: <span class="hljs-keyword">true</span><br><br>  template:<br><br>   retry:<br><br>​     \#发布重试，默认<span class="hljs-keyword">false</span><br><br>​    enabled: <span class="hljs-keyword">true</span><br><br>​     \#重试时间 默认1000ms<br><br>​    initial-interval: <span class="hljs-number">1000</span><br><br>​     \#重试最大次数，默认<span class="hljs-number">3</span>次<br><br>​    max-attempts: <span class="hljs-number">3</span><br><br>​     \#重试最大间隔时间，默认10000ms<br><br>​    max-interval: <span class="hljs-number">10000</span><br><br>​     \#重试间隔的乘数。比如配<span class="hljs-number">2.0</span> 第一次等10s，第二次等20s，第三次等40s<br><br>​    multiplier: <span class="hljs-number">1.0</span><br></code></pre></td></tr></table></figure>
 
 
               
@@ -478,6 +492,30 @@
        <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
     </div>
   
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+  
+</div>
+
   
   
   
@@ -664,6 +702,8 @@
   <script>Fluid.plugins.imageCaption();</script>
 
   <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
 
 
 
