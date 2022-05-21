@@ -557,6 +557,13 @@
   </url>
   
   <url>
+    <loc>http://example.com/tags/leetcode/</loc>
+    <lastmod>2022-05-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://example.com/tags/java/</loc>
     <lastmod>2022-05-21</lastmod>
     <changefreq>daily</changefreq>
@@ -565,13 +572,6 @@
   
   <url>
     <loc>http://example.com/tags/Arrays/</loc>
-    <lastmod>2022-05-21</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/tags/leetcode/</loc>
     <lastmod>2022-05-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -641,6 +641,13 @@
   </url>
   
   <url>
+    <loc>http://example.com/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/</loc>
+    <lastmod>2022-05-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://example.com/tags/%E6%95%B0%E7%BB%84/</loc>
     <lastmod>2022-05-21</lastmod>
     <changefreq>daily</changefreq>
@@ -649,13 +656,6 @@
   
   <url>
     <loc>http://example.com/tags/%E5%BC%82%E6%88%96/</loc>
-    <lastmod>2022-05-21</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/</loc>
     <lastmod>2022-05-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
