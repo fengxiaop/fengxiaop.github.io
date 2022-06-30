@@ -29,7 +29,7 @@
 <meta property="og:image" content="http://windxiao-1307340949.cosgz.myqcloud.com/20220629151158.png">
 <meta property="og:image" content="http://windxiao-1307340949.cosgz.myqcloud.com/20220629152545.png">
 <meta property="article:published_time" content="2022-06-29T07:27:15.543Z">
-<meta property="article:modified_time" content="2022-06-29T07:28:40.105Z">
+<meta property="article:modified_time" content="2022-06-30T03:10:57.836Z">
 <meta property="article:author" content="fengxiao">
 <meta property="article:tag" content="JAVA">
 <meta name="twitter:card" content="summary_large_image">
@@ -226,7 +226,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          3.7k 字
+          4k 字
         
       </span>
     
@@ -237,7 +237,7 @@
         
         
         
-          31 分钟
+          34 分钟
         
       </span>
     
@@ -348,6 +348,29 @@
 <p><img src="http://windxiao-1307340949.cosgz.myqcloud.com/20220629152545.png" srcset="/img/loading.gif" lazyload></p>
 <p>但是输入 它内部就有机构形成 无论你是输出十遍还是一百遍 他都是输出一样的顺序 </p>
 <p>这就是HashMap的无序性和有序性</p>
+<p>采用拉链法解决哈希冲突</p>
+<p>JDK1.8之前采用头插法，有可能形成回路 </p>
+<p>JDK1.8以后采用尾插法</p>
+<p>HashMap的默认初始容量为16</p>
+<ul>
+<li><p>必须是 2 的次幂，这也是 jdk 官⽅推荐的 </p>
+</li>
+<li><p>这是因为达到散列均匀，为了提⾼ HashMap 集合的存取效率，所必须的 </p>
+</li>
+</ul>
+<p> HashMap 默认加载因⼦：0.75 </p>
+<p>数组容器达到 3/4 时，开始扩容 </p>
+<p> JDK 8 之后，对 HashMap 底层数据结构（单链表）进⾏了改进 </p>
+<ul>
+<li><p>如果单链表元素超过8个，则将单链表转变为红⿊树； </p>
+</li>
+<li><p>如果红⿊树节点数量⼩于6时，会将红⿊树重新变为单链表。</p>
+</li>
+</ul>
+<p>hashcode() :通过调用Hashcode()方法得到key的哈希值</p>
+<p>通过哈希函数/哈希算法 转换成数组的下表</p>
+<p>重写Hashcode()和equals()的原因是</p>
+<p>需要达到散列分布均匀</p>
 
               
             </div>
