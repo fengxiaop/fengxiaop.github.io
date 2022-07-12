@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>JUC Java并发编程</title>
+    <link href="/2022/07/12/JUC%20Java%E5%B9%B6%E5%8F%91/"/>
+    <url>/2022/07/12/JUC%20Java%E5%B9%B6%E5%8F%91/</url>
+    
+    <content type="html"><![CDATA[<h1 id="JUC-Java并发"><a href="#JUC-Java并发" class="headerlink" title="JUC Java并发"></a>JUC Java并发</h1><h2 id="预备知识"><a href="#预备知识" class="headerlink" title="预备知识"></a>预备知识</h2><p>Java Web开发 Web服务器</p><p>slf4j打印日志是好的实践</p><p>才用lombok简化Java bean编写</p><p>给线程取一个好名字</p><h2 id="并发与并行"><a href="#并发与并行" class="headerlink" title="并发与并行"></a>并发与并行</h2><p>Rob Pike(Golang语言创始者)的一段描述</p><ul><li>并发(concurrent)是同一时间应对多件事情的能力</li><li>并行是同一时间动手做多件事情的能力</li></ul><h2 id="synchronized关键字"><a href="#synchronized关键字" class="headerlink" title="synchronized关键字"></a>synchronized关键字</h2><p><code>synchronized</code>关键字解决的是多个线程之间访问资源的同步性</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>Java</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>JAVA基础复习</title>
     <link href="/2022/06/29/Java%E5%9F%BA%E7%A1%80%E5%A4%8D%E4%B9%A0/"/>
     <url>/2022/06/29/Java%E5%9F%BA%E7%A1%80%E5%A4%8D%E4%B9%A0/</url>
