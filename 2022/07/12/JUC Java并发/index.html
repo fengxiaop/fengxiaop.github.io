@@ -16,18 +16,21 @@
   <meta name="author" content="fengxiao">
   <meta name="keywords" content="">
   
-    <meta name="description" content="JUC Java并发预备知识Java Web开发 Web服务器 slf4j打印日志是好的实践 才用lombok简化Java bean编写 给线程取一个好名字 并发与并行Rob Pike(Golang语言创始者)的一段描述  并发(concurrent)是同一时间应对多件事情的能力 并行是同一时间动手做多件事情的能力  synchronized关键字synchronized关键字解决的是多个线程之间">
+    <meta name="description" content="JUC Java并发预备知识Java Web开发 Web服务器 slf4j打印日志是好的实践 才用lombok简化Java bean编写 给线程取一个好名字 并发与并行Rob Pike(Golang语言创始者)的一段描述  并发(concurrent)是同一时间应对多件事情的能力 并行是同一时间动手做多件事情的能力  进程与线程多线程demo 123456789101112131415161718">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JUC Java并发编程">
 <meta property="og:url" content="http://example.com/2022/07/12/JUC%20Java%E5%B9%B6%E5%8F%91/index.html">
 <meta property="og:site_name" content="这是一个记录着一个人成长的博客">
-<meta property="og:description" content="JUC Java并发预备知识Java Web开发 Web服务器 slf4j打印日志是好的实践 才用lombok简化Java bean编写 给线程取一个好名字 并发与并行Rob Pike(Golang语言创始者)的一段描述  并发(concurrent)是同一时间应对多件事情的能力 并行是同一时间动手做多件事情的能力  synchronized关键字synchronized关键字解决的是多个线程之间">
+<meta property="og:description" content="JUC Java并发预备知识Java Web开发 Web服务器 slf4j打印日志是好的实践 才用lombok简化Java bean编写 给线程取一个好名字 并发与并行Rob Pike(Golang语言创始者)的一段描述  并发(concurrent)是同一时间应对多件事情的能力 并行是同一时间动手做多件事情的能力  进程与线程多线程demo 123456789101112131415161718">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://windxiao-1307340949.cosgz.myqcloud.com/20220712205613.png">
+<meta property="og:image" content="http://windxiao-1307340949.cosgz.myqcloud.com/20220712205702.png">
 <meta property="article:published_time" content="2022-07-12T12:38:41.275Z">
-<meta property="article:modified_time" content="2022-07-12T12:39:50.016Z">
+<meta property="article:modified_time" content="2022-07-12T13:00:47.570Z">
 <meta property="article:author" content="fengxiao">
 <meta property="article:tag" content="Java">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://windxiao-1307340949.cosgz.myqcloud.com/20220712205613.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
@@ -220,7 +223,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          194 字
+          632 字
         
       </span>
     
@@ -231,7 +234,7 @@
         
         
         
-          2 分钟
+          6 分钟
         
       </span>
     
@@ -298,6 +301,19 @@
 <li>并发(concurrent)是同一时间应对多件事情的能力</li>
 <li>并行是同一时间动手做多件事情的能力</li>
 </ul>
+<h2 id="进程与线程"><a href="#进程与线程" class="headerlink" title="进程与线程"></a>进程与线程</h2><p>多线程demo</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">deno01</span> </span>&#123;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;<br>        <span class="hljs-keyword">new</span> Thread(() -&gt;&#123;<br>            <span class="hljs-keyword">while</span> (<span class="hljs-keyword">true</span>)<br>            &#123;<br>                System.out.println(<span class="hljs-number">1</span>);<br>            &#125;<br>        &#125;,<span class="hljs-string">&quot;t1&quot;</span>).start();<br><br>        <span class="hljs-keyword">new</span> Thread(() -&gt;&#123;<br>            <span class="hljs-keyword">while</span> (<span class="hljs-keyword">true</span>)<br>            &#123;<br>                System.out.println(<span class="hljs-number">2</span>);<br>            &#125;<br>        &#125;,<span class="hljs-string">&quot;t2&quot;</span>).start();<br>    &#125;<br><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>很明显得到的结果是交替打印1 和 2。</p>
+<p>拓展</p>
+<p> tasklist 查看进程</p>
+<p>taskkill 杀死进程</p>
+<p>Jdk自带的命令  jps</p>
+<p>可以查看java运行的程序类名</p>
+<p><img src="http://windxiao-1307340949.cosgz.myqcloud.com/20220712205613.png" srcset="/img/loading.gif" lazyload></p>
+<p><code>tasklist | findstr java</code> 可以查看java的程序</p>
+<p><img src="http://windxiao-1307340949.cosgz.myqcloud.com/20220712205702.png" srcset="/img/loading.gif" lazyload></p>
+<p><code>taskkill /F /PID pid端口号</code> 可以杀死进程</p>
 <h2 id="synchronized关键字"><a href="#synchronized关键字" class="headerlink" title="synchronized关键字"></a>synchronized关键字</h2><p><code>synchronized</code>关键字解决的是多个线程之间访问资源的同步性</p>
 
               
