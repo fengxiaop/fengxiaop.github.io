@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-08-10T12:00:49.953Z</updated>
+  <updated>2022-09-09T13:11:36.056Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JUC</title>
+    <link href="http://example.com/2022/09/09/JUC/"/>
+    <id>http://example.com/2022/09/09/JUC/</id>
+    <published>2022-09-09T12:03:23.784Z</published>
+    <updated>2022-09-09T13:11:36.056Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="JUC概述"><a href="#JUC概述" class="headerlink" title="JUC概述"></a>JUC概述</h1><p>即<code>java.util.concurren</code>工具包的简称 Java工程师进阶的必须课之一</p><h1 id="进程与线程的区别"><a href="#进程与线程的区别" class="headerlink" title="进程与线程的区别"></a>进程与线程的区别</h1><p>进程：指在系统中正在运行的一个应用程序，程序一旦运行就是进程。进程是资源分配的最小单位</p><p>线程：系统分配处理器时间资源的基本单元，或者说进程之内独立执行的一个单元执行流。线程–程序执行的最小单位。</p><h1 id="线程的状态"><a href="#线程的状态" class="headerlink" title="线程的状态"></a>线程的状态</h1><p>Thread.State 线程枚举类</p><p>NEW</p><p>RUNNABLE</p><p>BLOCKED</p><p>WAITING</p><p>TIME_WAITING</p><p>TERMINATED</p><h1 id="wait与sleep的区别"><a href="#wait与sleep的区别" class="headerlink" title="wait与sleep的区别"></a>wait与sleep的区别</h1><p>sleep是Thread的静态方法 wait是Object的方法 任何对象实例都能调用</p><p>sleep 不占用锁  所以不会释放锁</p><p>wait 会释放锁 但调用它的前提是当前线程占用锁 即代码要在synchronized 中</p><p>它们都可以被interrupted打断</p><h1 id="并发与并行"><a href="#并发与并行" class="headerlink" title="并发与并行"></a>并发与并行</h1><p>串行是指一件一件事情来 </p><p>例如 先切西瓜 在吃西瓜 在整理厨房</p><p>并行是指 在同一时间点 做多件事情</p><p>比如 打电话的时候在切菜</p><p>并发 ：同一个时刻多个线程在访问同一个资源，多个线程对一个点</p><p>例子 春运抢票 电商秒杀</p><p>并行：多项工作一起执行 之后再汇总</p><p>泡方便面 的同时在烧水 最后倒调料</p><h1 id="Synchronized"><a href="#Synchronized" class="headerlink" title="Synchronized"></a>Synchronized</h1><p>卖票简单实例</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">package</span> com.JUC;<br><br><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@description</span>:</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@author</span>: pengjin</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@date</span>: 2022/9/9 20:45</span><br><span class="hljs-comment"> */</span><br><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Ticker</span></span><br><span class="hljs-class"></span>&#123;<br>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> number = <span class="hljs-number">30</span> ;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">synchronized</span> <span class="hljs-keyword">void</span> <span class="hljs-title">sale</span><span class="hljs-params">()</span></span><br><span class="hljs-function">    </span>&#123;<br>        <span class="hljs-comment">//判断:是否有票000</span><br>        <span class="hljs-keyword">if</span>(number &gt; <span class="hljs-number">0</span>)<br>        &#123;<br>            System.out.println(Thread.currentThread().getName()+<span class="hljs-string">&quot; :卖出：&quot;</span>+(number--) + <span class="hljs-string">&quot;剩下：&quot;</span>);<br><br>        &#125;<br>    &#125;<br><br>&#125;<br><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">demo02</span> </span>&#123;<br>    <span class="hljs-comment">// 创建多个线程 调用资源类的方法</span><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;<br>        Ticker ticker = <span class="hljs-keyword">new</span> Ticker();<br>        <span class="hljs-keyword">new</span> Thread(<span class="hljs-keyword">new</span> Runnable() &#123;<br>            <span class="hljs-meta">@Override</span><br>            <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">run</span><span class="hljs-params">()</span> </span>&#123;<br>                <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">40</span>; i++) &#123;<br>                    ticker.sale();<br>                &#125;<br>            &#125;<br>        &#125;, <span class="hljs-string">&quot;AA&quot;</span>).start();<br>        <span class="hljs-keyword">new</span> Thread(<span class="hljs-keyword">new</span> Runnable() &#123;<br>            <span class="hljs-meta">@Override</span><br>            <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">run</span><span class="hljs-params">()</span> </span>&#123;<br>                <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">40</span>; i++) &#123;<br>                    ticker.sale();<br>                &#125;<br>            &#125;<br>        &#125;, <span class="hljs-string">&quot;BB&quot;</span>).start();<br>        <span class="hljs-keyword">new</span> Thread(<span class="hljs-keyword">new</span> Runnable() &#123;<br>            <span class="hljs-meta">@Override</span><br>            <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">run</span><span class="hljs-params">()</span> </span>&#123;<br>                <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">40</span>; i++) &#123;<br>                    ticker.sale();<br>                &#125;<br>            &#125;<br>        &#125;, <span class="hljs-string">&quot;BB&quot;</span>).start();<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;JUC概述&quot;&gt;&lt;a href=&quot;#JUC概述&quot; class=&quot;headerlink&quot; title=&quot;JUC概述&quot;&gt;&lt;/a&gt;JUC概述&lt;/h1&gt;&lt;p&gt;即&lt;code&gt;java.util.concurren&lt;/code&gt;工具包的简称 Java工程师进阶的必须课之一&lt;/p</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>leetcode五百题以及实习接近了尾声</title>
@@ -438,26 +458,6 @@
     
     
     <category term="数据库" scheme="http://example.com/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Spring</title>
-    <link href="http://example.com/2022/03/22/Spring/"/>
-    <id>http://example.com/2022/03/22/Spring/</id>
-    <published>2022-03-22T12:36:51.644Z</published>
-    <updated>2022-03-23T07:14:52.653Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="Spring"><a href="#Spring" class="headerlink" title="Spring"></a>Spring</h1><h2 id="IOC"><a href="#IOC" class="headerlink" title="IOC"></a>IOC</h2><h3 id="IOC概念和-原理"><a href="#IOC概念和-原理" class="headerlink" title="IOC概念和 原理"></a>IOC概念和 原理</h3><h4 id="什么是IOC"><a href="#什么是IOC" class="headerlink" title="什么是IOC"></a>什么是IOC</h4><p>IOC是Inversion of Control 的缩写，就是控制反转的意思，把对象创建和对象之间的调用过程都交给Spring进行管理。</p><h4 id="使用IOC的目的是"><a href="#使用IOC的目的是" class="headerlink" title="使用IOC的目的是"></a>使用IOC的目的是</h4><p>降低耦合度</p><p>IOC底层原理</p><p>主要有三个</p><ul><li>xml解析</li><li>工厂模式</li><li>反射</li></ul><h3 id="IOC的两个主要接口"><a href="#IOC的两个主要接口" class="headerlink" title="IOC的两个主要接口"></a>IOC的两个主要接口</h3><h4 id="1-IOC思想基于IOC容器完成，IOC底层是对象工厂。"><a href="#1-IOC思想基于IOC容器完成，IOC底层是对象工厂。" class="headerlink" title="1. IOC思想基于IOC容器完成，IOC底层是对象工厂。"></a>1. IOC思想基于IOC容器完成，IOC底层是对象工厂。</h4><h4 id="2-Spring提供IOC容器实现的两种方式-两个接口"><a href="#2-Spring提供IOC容器实现的两种方式-两个接口" class="headerlink" title="2.Spring提供IOC容器实现的两种方式:(两个接口)"></a>2.Spring提供IOC容器实现的两种方式:(两个接口)</h4><ul><li><p>BeanFactory 接口</p><p>1.在IOC容器基本实现，是Spring内部的使用接口，不提供开发人员进行使用。</p><p>2.在加载配置文件时候不会创建对象，在获取对象(使用)时才去创建对象。</p></li><li><p>AplicationContext接口 (常用)</p><p>1.它是BeanFactory 接口的子接口，提供更多更强大的功能，一般由开发人员进行使用</p><p>2.在加载配置文件时候就会把在配置对象进行创建。</p></li></ul><h4 id="3-AplicationContext接口有实现类"><a href="#3-AplicationContext接口有实现类" class="headerlink" title="3.AplicationContext接口有实现类"></a>3.AplicationContext接口有实现类</h4><p><img src="https://s2.loli.net/2022/03/22/O67FiqgyHRa9ZXL.png"></p><ul><li><p><code>FileSystemXmlApplicationContext</code> 对应系统盘路径（绝对路径）</p></li><li><p><code>ClassPathXmlApplicationContext</code> 对应类路径（相对路径）</p></li></ul><h2 id="AOP"><a href="#AOP" class="headerlink" title="AOP"></a>AOP</h2>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;Spring&quot;&gt;&lt;a href=&quot;#Spring&quot; class=&quot;headerlink&quot; title=&quot;Spring&quot;&gt;&lt;/a&gt;Spring&lt;/h1&gt;&lt;h2 id=&quot;IOC&quot;&gt;&lt;a href=&quot;#IOC&quot; class=&quot;headerlink&quot; title=&quot;IOC</summary>
-      
-    
-    
-    
     
   </entry>
   

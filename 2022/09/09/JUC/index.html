@@ -16,26 +16,23 @@
   <meta name="author" content="fengxiao">
   <meta name="keywords" content="">
   
-    <meta name="description" content="leetcode五百题以及实习接近了尾声六月中旬 自己坐高铁独自北上,人生中第一次离开了自己生活了20年没离开过的湖南省。 遥想三年前，自己和当时一起考入一个大学的同桌坐高铁一起从那个湘西南的小县城去往湖南株洲。 当时两个从来没有离开过那个小县城的我们用着惊叹的眼神看着高铁站外面的高楼大厦，人来人往以及车让我们迷失了方向。 好在学校在高铁站有接待点，上了学校包的公交车，和不同地方五湖四海不同学院，">
+    <meta name="description" content="JUC概述即java.util.concurren工具包的简称 Java工程师进阶的必须课之一 进程与线程的区别进程：指在系统中正在运行的一个应用程序，程序一旦运行就是进程。进程是资源分配的最小单位 线程：系统分配处理器时间资源的基本单元，或者说进程之内独立执行的一个单元执行流。线程–程序执行的最小单位。 线程的状态Thread.State 线程枚举类 NEW RUNNABLE BLOCKED W">
 <meta property="og:type" content="article">
-<meta property="og:title" content="leetcode五百题以及实习接近了尾声">
-<meta property="og:url" content="http://example.com/2022/08/10/leetcode%E4%BA%94%E7%99%BE%E9%A2%98%E4%BB%A5%E5%8F%8A%E5%AE%9E%E4%B9%A0%E6%8E%A5%E8%BF%91%E4%BA%86%E5%B0%BE%E5%A3%B0/index.html">
+<meta property="og:title" content="JUC">
+<meta property="og:url" content="http://example.com/2022/09/09/JUC/index.html">
 <meta property="og:site_name" content="这是一个记录着一个人成长的博客">
-<meta property="og:description" content="leetcode五百题以及实习接近了尾声六月中旬 自己坐高铁独自北上,人生中第一次离开了自己生活了20年没离开过的湖南省。 遥想三年前，自己和当时一起考入一个大学的同桌坐高铁一起从那个湘西南的小县城去往湖南株洲。 当时两个从来没有离开过那个小县城的我们用着惊叹的眼神看着高铁站外面的高楼大厦，人来人往以及车让我们迷失了方向。 好在学校在高铁站有接待点，上了学校包的公交车，和不同地方五湖四海不同学院，">
+<meta property="og:description" content="JUC概述即java.util.concurren工具包的简称 Java工程师进阶的必须课之一 进程与线程的区别进程：指在系统中正在运行的一个应用程序，程序一旦运行就是进程。进程是资源分配的最小单位 线程：系统分配处理器时间资源的基本单元，或者说进程之内独立执行的一个单元执行流。线程–程序执行的最小单位。 线程的状态Thread.State 线程枚举类 NEW RUNNABLE BLOCKED W">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://windxiao-1307340949.cosgz.myqcloud.com/20220810194831.png">
-<meta property="article:published_time" content="2022-08-10T11:46:39.417Z">
-<meta property="article:modified_time" content="2022-08-10T12:00:49.953Z">
+<meta property="article:published_time" content="2022-09-09T12:03:23.784Z">
+<meta property="article:modified_time" content="2022-09-09T13:11:36.056Z">
 <meta property="article:author" content="fengxiao">
-<meta property="article:tag" content="所想">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://windxiao-1307340949.cosgz.myqcloud.com/20220810194831.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
   
   
-  <title>leetcode五百题以及实习接近了尾声 - 这是一个记录着一个人成长的博客</title>
+  <title>JUC - 这是一个记录着一个人成长的博客</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -199,7 +196,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="leetcode五百题以及实习接近了尾声"></span>
+            <span id="subtitle" data-typed-text="JUC"></span>
           
         </div>
 
@@ -210,8 +207,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-08-10 19:46" pubdate>
-          2022年8月10日 晚上
+        <time datetime="2022-09-09 20:03" pubdate>
+          2022年9月9日 晚上
         </time>
       </span>
     
@@ -222,7 +219,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          883 字
+          1.4k 字
         
       </span>
     
@@ -233,7 +230,7 @@
         
         
         
-          8 分钟
+          12 分钟
         
       </span>
     
@@ -279,36 +276,43 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">leetcode五百题以及实习接近了尾声</h1>
+            <h1 style="display: none">JUC</h1>
             
               <p class="note note-info">
                 
                   
-                    本文最后更新于：2022年8月10日 晚上
+                    本文最后更新于：2022年9月9日 晚上
                   
                 
               </p>
             
             <div class="markdown-body">
               
-              <h1 id="leetcode五百题以及实习接近了尾声"><a href="#leetcode五百题以及实习接近了尾声" class="headerlink" title="leetcode五百题以及实习接近了尾声"></a>leetcode五百题以及实习接近了尾声</h1><p>六月中旬 自己坐高铁独自北上,人生中第一次离开了自己生活了20年没离开过的湖南省。</p>
-<p>遥想三年前，自己和当时一起考入一个大学的同桌坐高铁一起从那个湘西南的小县城去往湖南株洲。</p>
-<p>当时两个从来没有离开过那个小县城的我们用着惊叹的眼神看着高铁站外面的高楼大厦，人来人往以及车让我们迷失了方向。</p>
-<p>好在学校在高铁站有接待点，上了学校包的公交车，和不同地方五湖四海不同学院，和他们一起前往了那个我大学生涯待在那里的学校</p>
-<p>如果八月中旬，我决定结束我的实习之旅 本周五完成工作交接并且正式离职。今天自己刷leetocde也达到了500道题 也想发点什么给自己记录一下，也想大学毕业的时候还能够继续看一下这些记录</p>
-<p><img src="http://windxiao-1307340949.cosgz.myqcloud.com/20220810194831.png" srcset="/img/loading.gif" lazyload></p>
-<p>自己刷力扣是从9月份那时候大三刚开学 感觉自己要为工作准备一些 以前一直知道leetcode这个网站。</p>
-<p>但是一直没有勇气坚持下去，我记得我大二的时候尝试过，但是被我想像中的两数之和以及核心代码不适应劝退了。</p>
-<p>  大二一年忙着家教挣生活费，当时没时间去弄这样。记得刷了力扣两个月 大概11月份的样子 我去参加了学院组织的程序竞赛 获得了非新生组的二等奖 。</p>
-<p> 离一等奖仅有一名只差 当然这要感谢我们学校的ACM大神们不屑于来欺负我们。但是的那个二等奖给了我很大的信心，后面断断续续的刷了一些题目。</p>
-<p>后面加了<strong>宫水三叶姐</strong>的刷题群后，发现氛围真的是一个极其重要的东西。那里们有很多人细心的指导着新手对一些很常见问题的提问。</p>
-<p>再后面跟着做每日一题 但是题太难了就会直接copy 老是想着有时间再去复习 实际上并没有坐到。</p>
-<p>自己的水平再慢慢的提升，但是进步的空间依旧很大。</p>
-<p>需要自己继续努力 秋招已经开始了。今年好像是过去十年最难的一届 好像也是将来十年最好的一年，听的人很焦虑，除了工作压力大之外 我承受受了这个的影响 想早一点的准备秋招。</p>
-<p>在实习遇见了很多nice的同事 当然也会遇见很多不是很高兴的事情 比如比较push的组长 自己一直是一个想做到工作生活分离的人 不想在下班的时候被打扰 结果生活往往不是那么的如意。</p>
-<p>也给我要步入社会的我上了一课。</p>
-<p>在这里希望秋招顺利！工作顺心 万事如意。</p>
-<p>也祝各位看到这的人<strong>天天开心</strong>！</p>
+              <h1 id="JUC概述"><a href="#JUC概述" class="headerlink" title="JUC概述"></a>JUC概述</h1><p>即<code>java.util.concurren</code>工具包的简称 Java工程师进阶的必须课之一</p>
+<h1 id="进程与线程的区别"><a href="#进程与线程的区别" class="headerlink" title="进程与线程的区别"></a>进程与线程的区别</h1><p>进程：指在系统中正在运行的一个应用程序，程序一旦运行就是进程。进程是资源分配的最小单位</p>
+<p>线程：系统分配处理器时间资源的基本单元，或者说进程之内独立执行的一个单元执行流。线程–程序执行的最小单位。</p>
+<h1 id="线程的状态"><a href="#线程的状态" class="headerlink" title="线程的状态"></a>线程的状态</h1><p>Thread.State 线程枚举类</p>
+<p>NEW</p>
+<p>RUNNABLE</p>
+<p>BLOCKED</p>
+<p>WAITING</p>
+<p>TIME_WAITING</p>
+<p>TERMINATED</p>
+<h1 id="wait与sleep的区别"><a href="#wait与sleep的区别" class="headerlink" title="wait与sleep的区别"></a>wait与sleep的区别</h1><p>sleep是Thread的静态方法 wait是Object的方法 任何对象实例都能调用</p>
+<p>sleep 不占用锁  所以不会释放锁</p>
+<p>wait 会释放锁 但调用它的前提是当前线程占用锁 即代码要在synchronized 中</p>
+<p>它们都可以被interrupted打断</p>
+<h1 id="并发与并行"><a href="#并发与并行" class="headerlink" title="并发与并行"></a>并发与并行</h1><p>串行是指一件一件事情来 </p>
+<p>例如 先切西瓜 在吃西瓜 在整理厨房</p>
+<p>并行是指 在同一时间点 做多件事情</p>
+<p>比如 打电话的时候在切菜</p>
+<p>并发 ：同一个时刻多个线程在访问同一个资源，多个线程对一个点</p>
+<p>例子 春运抢票 电商秒杀</p>
+<p>并行：多项工作一起执行 之后再汇总</p>
+<p>泡方便面 的同时在烧水 最后倒调料</p>
+<h1 id="Synchronized"><a href="#Synchronized" class="headerlink" title="Synchronized"></a>Synchronized</h1><p>卖票简单实例</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">package</span> com.JUC;<br><br><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@description</span>:</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@author</span>: pengjin</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@date</span>: 2022/9/9 20:45</span><br><span class="hljs-comment"> */</span><br><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Ticker</span></span><br><span class="hljs-class"></span>&#123;<br>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> number = <span class="hljs-number">30</span> ;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">synchronized</span> <span class="hljs-keyword">void</span> <span class="hljs-title">sale</span><span class="hljs-params">()</span></span><br><span class="hljs-function">    </span>&#123;<br>        <span class="hljs-comment">//判断:是否有票000</span><br>        <span class="hljs-keyword">if</span>(number &gt; <span class="hljs-number">0</span>)<br>        &#123;<br>            System.out.println(Thread.currentThread().getName()+<span class="hljs-string">&quot; :卖出：&quot;</span>+(number--) + <span class="hljs-string">&quot;剩下：&quot;</span>);<br><br>        &#125;<br>    &#125;<br><br>&#125;<br><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">demo02</span> </span>&#123;<br>    <span class="hljs-comment">// 创建多个线程 调用资源类的方法</span><br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;<br>        Ticker ticker = <span class="hljs-keyword">new</span> Ticker();<br>        <span class="hljs-keyword">new</span> Thread(<span class="hljs-keyword">new</span> Runnable() &#123;<br>            <span class="hljs-meta">@Override</span><br>            <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">run</span><span class="hljs-params">()</span> </span>&#123;<br>                <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">40</span>; i++) &#123;<br>                    ticker.sale();<br>                &#125;<br>            &#125;<br>        &#125;, <span class="hljs-string">&quot;AA&quot;</span>).start();<br>        <span class="hljs-keyword">new</span> Thread(<span class="hljs-keyword">new</span> Runnable() &#123;<br>            <span class="hljs-meta">@Override</span><br>            <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">run</span><span class="hljs-params">()</span> </span>&#123;<br>                <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">40</span>; i++) &#123;<br>                    ticker.sale();<br>                &#125;<br>            &#125;<br>        &#125;, <span class="hljs-string">&quot;BB&quot;</span>).start();<br>        <span class="hljs-keyword">new</span> Thread(<span class="hljs-keyword">new</span> Runnable() &#123;<br>            <span class="hljs-meta">@Override</span><br>            <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">run</span><span class="hljs-params">()</span> </span>&#123;<br>                <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">40</span>; i++) &#123;<br>                    ticker.sale();<br>                &#125;<br>            &#125;<br>        &#125;, <span class="hljs-string">&quot;BB&quot;</span>).start();<br>    &#125;<br>&#125;	<br></code></pre></td></tr></table></figure>
+
 
               
             </div>
@@ -316,13 +320,6 @@
             <div>
               <div class="post-metas my-3">
   
-  
-    <div class="post-meta">
-      <i class="iconfont icon-tags"></i>
-      
-        <a href="/tags/%E6%89%80%E6%83%B3/">#所想</a>
-      
-    </div>
   
 </div>
 
@@ -332,8 +329,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>leetcode五百题以及实习接近了尾声</div>
-      <div>http://example.com/2022/08/10/leetcode五百题以及实习接近了尾声/</div>
+      <div>JUC</div>
+      <div>http://example.com/2022/09/09/JUC/</div>
     </div>
     <div class="license-meta">
       
@@ -345,13 +342,13 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2022年8月10日</div>
+          <div>2022年9月9日</div>
         </div>
       
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2022年8月10日</div>
+          <div>2022年9月9日</div>
         </div>
       
       <div class="license-meta-item">
@@ -380,18 +377,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2022/09/09/JUC/" title="JUC">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">JUC</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2022/08/10/HttpClient/" title="HttpClient模拟浏览器发送请求">
-                        <span class="hidden-mobile">HttpClient模拟浏览器发送请求</span>
+                      <a href="/2022/08/10/leetcode%E4%BA%94%E7%99%BE%E9%A2%98%E4%BB%A5%E5%8F%8A%E5%AE%9E%E4%B9%A0%E6%8E%A5%E8%BF%91%E4%BA%86%E5%B0%BE%E5%A3%B0/" title="leetcode五百题以及实习接近了尾声">
+                        <span class="hidden-mobile">leetcode五百题以及实习接近了尾声</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
