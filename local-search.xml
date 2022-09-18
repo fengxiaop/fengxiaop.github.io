@@ -4,13 +4,19 @@
   
   
   <entry>
-    <title></title>
+    <title>哈啰出行</title>
     <link href="/2022/09/18/%E5%93%88%E5%95%B0%E5%87%BA%E8%A1%8C/"/>
     <url>/2022/09/18/%E5%93%88%E5%95%B0%E5%87%BA%E8%A1%8C/</url>
     
-    <content type="html"><![CDATA[<p>哈啰出行 </p><p>简单的自我介绍</p><p>项目</p><ul><li><p>模糊查询是怎么样设计</p></li><li><p>%模糊查询性能比较差 有没有更好的方法 es</p></li><li><p>Excel 导入与导出</p></li><li><p>10w行的excel导入会出现什么问题 </p></li><li><p>如果中间解析失败 导致整个异常怎么办</p></li><li><p>提高接口响应速度  </p></li></ul><p>基础问题</p><ul><li><p>怎么理解操作系统当中的进程和线程 在你的实习当中有用到哪一个吗</p></li><li><p>spring是怎么工作的</p></li><li><p>有看过spring相关的书吗</p></li><li><p>书看了多少呢 里面讲了多少知识呢</p></li><li><p>你学的计算机网络大概分几层  每层的作用大概是做什么</p></li><li><p>堆和栈有什么区别吗</p></li><li><p>你能简述一个你所熟悉的排序算法 + 原理</p></li><li><p>写SQL</p><table><thead><tr><th align="left">学生表</th><th>考试得分表</th><th>班级表</th></tr></thead><tbody><tr><td align="left">学生id</td><td>学生id</td><td>班级id</td></tr><tr><td align="left">学生姓名</td><td>课程名</td><td>班级名</td></tr><tr><td align="left">班级id</td><td>得分</td><td></td></tr></tbody></table><p>求语文平均分最高的班级名</p></li><li><p>代码管理工具 怎么提交代码 以及 解决代码冲突</p></li><li><p>怎样保证你自己开发的质量</p></li><li><p>有了解过程序员这个职业吗 后面有什么自己的职业规划</p></li><li><p>怎么样实现你所说的这个目标呢</p></li><li><p>上一份工作为什么辞职了呢</p></li><li><p>主要是看上海还是杭州啊</p></li></ul><p>反问</p><ul><li>主要业务是哪一块</li><li>校招生需要加强哪一块</li><li>觉得表现怎么样</li></ul>]]></content>
+    <content type="html"><![CDATA[<p>简单的自我介绍</p><p>项目</p><ul><li><p>模糊查询是怎么样设计</p></li><li><p>%模糊查询性能比较差 有没有更好的方法 es</p></li><li><p>Excel 导入与导出</p></li><li><p>10w行的excel导入会出现什么问题 </p></li><li><p>如果中间解析失败 导致整个异常怎么办</p></li><li><p>提高接口响应速度  </p></li></ul><p>基础问题</p><ul><li><p>怎么理解操作系统当中的进程和线程 在你的实习当中有用到哪一个吗</p></li><li><p>spring是怎么工作的</p></li><li><p>有看过spring相关的书吗</p></li><li><p>书看了多少呢 里面讲了多少知识呢</p></li><li><p>你学的计算机网络大概分几层  每层的作用大概是做什么</p></li><li><p>堆和栈有什么区别吗</p></li><li><p>你能简述一个你所熟悉的排序算法 + 原理</p></li><li><p>写SQL</p><table><thead><tr><th align="left">学生表</th><th>考试得分表</th><th>班级表</th></tr></thead><tbody><tr><td align="left">学生id</td><td>学生id</td><td>班级id</td></tr><tr><td align="left">学生姓名</td><td>课程名</td><td>班级名</td></tr><tr><td align="left">班级id</td><td>得分</td><td></td></tr></tbody></table><p>求语文平均分最高的班级名</p></li><li><p>代码管理工具 怎么提交代码 以及 解决代码冲突</p></li><li><p>怎样保证你自己开发的质量</p></li><li><p>有了解过程序员这个职业吗 后面有什么自己的职业规划</p></li><li><p>怎么样实现你所说的这个目标呢</p></li><li><p>上一份工作为什么辞职了呢</p></li><li><p>主要是看上海还是杭州啊</p></li></ul><p>反问</p><ul><li>主要业务是哪一块</li><li>校招生需要加强哪一块</li><li>觉得表现怎么样</li></ul>]]></content>
     
     
+    
+    <tags>
+      
+      <tag>实习</tag>
+      
+    </tags>
     
   </entry>
   
