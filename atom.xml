@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-09-22T09:16:43.198Z</updated>
+  <updated>2022-09-22T09:17:03.546Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -21,23 +21,18 @@
     <link href="http://example.com/2022/09/22/%E5%85%91%E5%90%A7%E4%B8%80%E9%9D%A2/"/>
     <id>http://example.com/2022/09/22/%E5%85%91%E5%90%A7%E4%B8%80%E9%9D%A2/</id>
     <published>2022-09-22T07:53:50.134Z</published>
-    <updated>2022-09-22T09:16:43.198Z</updated>
+    <updated>2022-09-22T09:17:03.546Z</updated>
     
-    <content type="html"><![CDATA[<p>兑吧一面</p><p>自我介绍</p><ul><li><p>Java集合认识的多吗</p></li><li><p>ArrayList和LinkedList的区别</p></li><li><p>HashMap有了解吗</p></li><li><p> 你刚刚 说了HashMap的put方法 详细讲讲</p></li><li><p>得到下标是异或和位运算 讲讲为什么这样设计</p></li><li><p>怎么保证得到的数组下标在范围里面</p></li><li><p>随着你不断的放元素  他会有什么变化吗</p></li><li><p>为什么是双倍的扩张</p></li><li><p>它是不安全的类 那我们考虑线程安全的时候有什么替代方案吗</p></li><li><p>currentHashMap怎么做到线程安全的 数组 + segment + 分段锁 </p></li><li><p>哪些方式实现线程安全</p></li><li><p>sychronize你认识多少呢</p></li><li><p>有了解过他底层的实现吗</p></li><li><p>在你去使用sychronize的时候会注意什么 </p></li><li><p>Java除了sychronize还有其他的方式实现线程安全</p></li><li><p>除了volatile+juc.automic还有其他的吗？</p></li><li><p>有听说过Lock吗 Java中有哪些</p></li><li><p>AQS是什么？怎么用？</p></li><li><p>有听说过ReentrantLock吗</p></li><li><p>你对JVM的认识有多少</p></li><li><p>JVM五个区域哪几个区域会发生内存泄露呢</p></li><li><p>静态成员变量 在哪个区域 方法区</p></li><li><p>类的成员变量在哪个区域</p></li><li><p>垃圾回收算法</p></li><li><p>标记清除和标记整理来说他的好处在哪里</p></li><li><p>线程池有了解吗  什么是线程池有了解</p></li><li><p>做项目的时候有用到过线程池吗</p></li><li><p>有没有如何去了解过去创建一个线程池</p></li><li><p>mysql用的是什么搜索引擎</p></li><li><p>innodb和myisam有什么区别</p></li><li><p>事务有什么特性</p></li><li><p>innodb是怎么做的事务的 四个隔离级别</p></li><li><p>默认的隔离级别</p></li><li><p>可重复读解决了哪些问题</p></li><li><p>什么是幻读</p></li><li><p>mysql是索引怎么分</p></li><li><p>Hash索引和b+树索引有什么区别</p></li><li><p>单向链表的作用呢</p></li><li><p>where id &lt; 5是怎么查询的</p></li><li><p>刚刚讲到索盖覆盖 索引覆盖是什么场景</p></li><li><p>在使用覆盖索引需要注意什么 最左浅醉原则 </p></li><li><p>以前项目讲到接口速度优化？</p></li><li><p>有接触过分布锁吗？怎么实现？</p></li><li><p>数据库是怎么实现分布式锁的？</p></li><li><p>redis实现分布式锁</p></li><li><p>使用redis分布式锁需要注意的地方</p></li><li><p>会设计分布式锁的过期时间吗</p></li><li><p>如何保证 redis 可重入锁</p></li><li><p>或者可以简单说一下什么是可重入吗 没有听过</p></li><li><p>如果让你去猜 你觉得他应该是什么样的性质</p></li><li><p>git的命令有哪些</p></li><li><p>聊下Spring, 你对Spring的认知</p></li><li><p>日志功能怎么实现呢</p></li><li><p>redis在项目里面主要做什么</p></li><li><p>常用的数据结构</p></li><li><p>zest是什么结构</p></li><li><p>平时的学习途径和频率</p></li><li><p>技术栈 springcloud + redis</p></li><li><p>底层是否需要钻研？ 需要有一个认知</p></li><li><p>工程经验和基础扎实哪个更重要 更侧重哪方面 基础扎实</p><p>反问</p></li></ul>]]></content>
+    <content type="html"><![CDATA[<h1 id="兑吧一面"><a href="#兑吧一面" class="headerlink" title="兑吧一面"></a>兑吧一面</h1><p>自我介绍</p><ul><li><p>Java集合认识的多吗</p></li><li><p>ArrayList和LinkedList的区别</p></li><li><p>HashMap有了解吗</p></li><li><p> 你刚刚 说了HashMap的put方法 详细讲讲</p></li><li><p>得到下标是异或和位运算 讲讲为什么这样设计</p></li><li><p>怎么保证得到的数组下标在范围里面</p></li><li><p>随着你不断的放元素  他会有什么变化吗</p></li><li><p>为什么是双倍的扩张</p></li><li><p>它是不安全的类 那我们考虑线程安全的时候有什么替代方案吗</p></li><li><p>currentHashMap怎么做到线程安全的 数组 + segment + 分段锁 </p></li><li><p>哪些方式实现线程安全</p></li><li><p>sychronize你认识多少呢</p></li><li><p>有了解过他底层的实现吗</p></li><li><p>在你去使用sychronize的时候会注意什么 </p></li><li><p>Java除了sychronize还有其他的方式实现线程安全</p></li><li><p>除了volatile+juc.automic还有其他的吗？</p></li><li><p>有听说过Lock吗 Java中有哪些</p></li><li><p>AQS是什么？怎么用？</p></li><li><p>有听说过ReentrantLock吗</p></li><li><p>你对JVM的认识有多少</p></li><li><p>JVM五个区域哪几个区域会发生内存泄露呢</p></li><li><p>静态成员变量 在哪个区域 方法区</p></li><li><p>类的成员变量在哪个区域</p></li><li><p>垃圾回收算法</p></li><li><p>标记清除和标记整理来说他的好处在哪里</p></li><li><p>线程池有了解吗  什么是线程池有了解</p></li><li><p>做项目的时候有用到过线程池吗</p></li><li><p>有没有如何去了解过去创建一个线程池</p></li><li><p>mysql用的是什么搜索引擎</p></li><li><p>innodb和myisam有什么区别</p></li><li><p>事务有什么特性</p></li><li><p>innodb是怎么做的事务的 四个隔离级别</p></li><li><p>默认的隔离级别</p></li><li><p>可重复读解决了哪些问题</p></li><li><p>什么是幻读</p></li><li><p>mysql是索引怎么分</p></li><li><p>Hash索引和b+树索引有什么区别</p></li><li><p>单向链表的作用呢</p></li><li><p>where id &lt; 5是怎么查询的</p></li><li><p>刚刚讲到索盖覆盖 索引覆盖是什么场景</p></li><li><p>在使用覆盖索引需要注意什么 最左浅醉原则 </p></li><li><p>以前项目讲到接口速度优化？</p></li><li><p>有接触过分布锁吗？怎么实现？</p></li><li><p>数据库是怎么实现分布式锁的？</p></li><li><p>redis实现分布式锁</p></li><li><p>使用redis分布式锁需要注意的地方</p></li><li><p>会设计分布式锁的过期时间吗</p></li><li><p>如何保证 redis 可重入锁</p></li><li><p>或者可以简单说一下什么是可重入吗 没有听过</p></li><li><p>如果让你去猜 你觉得他应该是什么样的性质</p></li><li><p>git的命令有哪些</p></li><li><p>聊下Spring, 你对Spring的认知</p></li><li><p>日志功能怎么实现呢</p></li><li><p>redis在项目里面主要做什么</p></li><li><p>常用的数据结构</p></li><li><p>zest是什么结构</p></li><li><p>平时的学习途径和频率</p></li><li><p>技术栈 springcloud + redis</p></li><li><p>底层是否需要钻研？ 需要有一个认知</p></li><li><p>工程经验和基础扎实哪个更重要 更侧重哪方面 基础扎实</p><p>反问</p></li></ul>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;兑吧一面&lt;/p&gt;
-&lt;p&gt;自我介绍&lt;/p&gt;
+    <summary type="html">&lt;h1 id=&quot;兑吧一面&quot;&gt;&lt;a href=&quot;#兑吧一面&quot; class=&quot;headerlink&quot; title=&quot;兑吧一面&quot;&gt;&lt;/a&gt;兑吧一面&lt;/h1&gt;&lt;p&gt;自我介绍&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;Java集合认识的多吗&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;ArrayList和LinkedList的区别&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;HashMap有了解吗&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt; 你刚刚 </summary>
+&lt;li&gt;&lt;p&gt;ArrayList和Li</summary>
       
     
     
