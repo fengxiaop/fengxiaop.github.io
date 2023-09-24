@@ -20,12 +20,14 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="这是一个记录着一个人成长的博客">
+  <meta name="description" content="INFJ">
+<meta property="og:type" content="website">
+<meta property="og:title" content="这是一个记录成长的博客">
 <meta property="og:url" content="http://example.com/page/8/index.html">
-<meta property="og:site_name" content="这是一个记录着一个人成长的博客">
+<meta property="og:site_name" content="这是一个记录成长的博客">
+<meta property="og:description" content="INFJ">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:author" content="fengxiao">
+<meta property="article:author" content="wind">
 <meta name="twitter:card" content="summary">
 
 <link rel="canonical" href="http://example.com/page/8/">
@@ -41,7 +43,7 @@
   };
 </script>
 
-  <title>这是一个记录着一个人成长的博客</title>
+  <title>这是一个记录成长的博客</title>
   
 
 
@@ -72,7 +74,7 @@
   </style>
 </noscript>
 
-<link rel="alternate" href="/atom.xml" title="这是一个记录着一个人成长的博客" type="application/atom+xml">
+<link rel="alternate" href="/atom.xml" title="这是一个记录成长的博客" type="application/atom+xml">
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
@@ -93,7 +95,7 @@
 
     <a href="/" class="brand" rel="start">
       <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">这是一个记录着一个人成长的博客</h1>
+      <h1 class="site-title">这是一个记录成长的博客</h1>
       <span class="logo-line-after"><i></i></span>
     </a>
   </div>
@@ -155,12 +157,12 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fsafe-img.xhscdn.com%2Fbw1%2F5b826fa0-563d-45ed-8ba7-2357e54a158f%3FimageView2%2F2%2Fw%2F1080%2Fformat%2Fjpg&refer=http%3A%2F%2Fsafe-img.xhscdn.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1698076311&t=b844a3ac136d203583a56088ea6ce17e">
-      <meta itemprop="name" content="fengxiao">
-      <meta itemprop="description" content="">
+      <meta itemprop="name" content="wind">
+      <meta itemprop="description" content="INFJ">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="这是一个记录着一个人成长的博客">
+      <meta itemprop="name" content="这是一个记录成长的博客">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -221,39 +223,14 @@
 <p>但本题求的是峰顶索引值，如果我们选定数组头部或者尾部元素，其实无法根据大小关系“直接”将数组分成两段。</p>
 <p>但可以利用题目发现如下性质：由于 arr 数值各不相同，因此峰顶元素左侧必然满足严格单调递增，峰顶元素右侧必然不满足。</p>
 <p>因此 以峰顶元素为分割点的 arr 数组，根据与 前一元素/后一元素 的大小关系，具有二段性：</p>
-<p>峰顶元素左侧满足 arr[i-1] &lt; arr[i]arr[i−1]&lt;arr[i] 性质，右侧不满足<br>峰顶元素右侧满足 arr[i] &gt; arr[i+1]arr[i]&gt;arr[i+1] 性质，左侧不满足<br>因此我们可以选择任意条件，写出若干「二分」版本。</p>
-<p>代码：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 根据 arr[i-1] &lt; arr[i] 在 [1,n-1] 范围内找值</span></span><br><span class="line">    <span class="comment">// 峰顶元素为符合条件的最靠近中心的元素</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">peakIndexInMountainArray</span><span class="params">(<span class="keyword">int</span>[] arr)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> n = arr.length;</span><br><span class="line">        <span class="keyword">int</span> l = <span class="number">1</span>, r = n - <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span> (l &lt; r) &#123;</span><br><span class="line">            <span class="keyword">int</span> mid = l + r + <span class="number">1</span> &gt;&gt; <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">if</span> (arr[mid - <span class="number">1</span>] &lt; arr[mid]) l = mid;</span><br><span class="line">            <span class="keyword">else</span> r = mid - <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> r;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><p>时间复杂度：O(\log{n})<em>O</em>(log<em>n</em>)</p>
-</li>
-<li><p>空间复杂度：O(1)<em>O</em>(1)</p>
-</li>
-<li><p>三分和k分</p>
-</li>
-<li><pre><code class="java">class Solution &#123;
-    public int peakIndexInMountainArray(int[] arr) &#123;
-        int n = arr.length;
-        int l = 0, r = n - 1;
-        while (l &lt; r) &#123;
-            int m1 = l + (r - l) / 3;
-            int m2 = r - (r - l) / 3;
-            if (arr[m1] &gt; arr[m2]) r = m2 - 1;
-            else l = m1 + 1;
-        &#125;
-        return r;
-    &#125;
-&#125;
-
-作者：AC_OIer
-链接：https://leetcode-cn.com/problems/B1IidL/solution/gong-shui-san-xie-er-fen-san-fen-ji-zhi-lc8zl/
-来源：力扣（LeetCode）
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
-</code></pre>
-</li>
-</ul>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/10/14/%E5%89%91%E6%8C%87offer2_69/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -276,12 +253,12 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fsafe-img.xhscdn.com%2Fbw1%2F5b826fa0-563d-45ed-8ba7-2357e54a158f%3FimageView2%2F2%2Fw%2F1080%2Fformat%2Fjpg&refer=http%3A%2F%2Fsafe-img.xhscdn.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1698076311&t=b844a3ac136d203583a56088ea6ce17e">
-      <meta itemprop="name" content="fengxiao">
-      <meta itemprop="description" content="">
+      <meta itemprop="name" content="wind">
+      <meta itemprop="description" content="INFJ">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="这是一个记录着一个人成长的博客">
+      <meta itemprop="name" content="这是一个记录成长的博客">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -340,6 +317,14 @@
 
 <p>功能样图<br><img src="https://img-blog.csdnimg.cn/20200520142248247.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3BqMjAwMjAzMTg=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>欢迎关注微信公众号  ：打码少年风萧<br>程序链接<br>链接：<a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1MzkRQ3XCtWadlWFxFDef4g">https://pan.baidu.com/s/1MzkRQ3XCtWadlWFxFDef4g</a><br>提取码：30qf </p>
 
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/10/13/%E7%BB%A9%E7%82%B9%E8%AE%A1%E7%AE%97%E5%99%A8/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -362,12 +347,12 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fsafe-img.xhscdn.com%2Fbw1%2F5b826fa0-563d-45ed-8ba7-2357e54a158f%3FimageView2%2F2%2Fw%2F1080%2Fformat%2Fjpg&refer=http%3A%2F%2Fsafe-img.xhscdn.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1698076311&t=b844a3ac136d203583a56088ea6ce17e">
-      <meta itemprop="name" content="fengxiao">
-      <meta itemprop="description" content="">
+      <meta itemprop="name" content="wind">
+      <meta itemprop="description" content="INFJ">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="这是一个记录着一个人成长的博客">
+      <meta itemprop="name" content="这是一个记录成长的博客">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -427,6 +412,14 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> List&lt;String&gt; <span class="title">fizzBuzz</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">        List&lt;String&gt; li = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        <span class="keyword">for</span>(Integer i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">      &#123;  </span><br><span class="line">        <span class="keyword">if</span>(i % <span class="number">3</span> == <span class="number">0</span> &amp;&amp; i % <span class="number">5</span> == <span class="number">0</span>) li.add(<span class="string">&quot;FizzBuzz&quot;</span>);</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(i%<span class="number">3</span>==<span class="number">0</span>)li.add(<span class="string">&quot;Fizz&quot;</span>);</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(i%<span class="number">5</span>==<span class="number">0</span>)li.add(<span class="string">&quot;Buzz&quot;</span>);</span><br><span class="line">        <span class="keyword">else</span> li.add(i.toString());</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> li;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/10/13/leetcode_412/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -449,12 +442,12 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fsafe-img.xhscdn.com%2Fbw1%2F5b826fa0-563d-45ed-8ba7-2357e54a158f%3FimageView2%2F2%2Fw%2F1080%2Fformat%2Fjpg&refer=http%3A%2F%2Fsafe-img.xhscdn.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1698076311&t=b844a3ac136d203583a56088ea6ce17e">
-      <meta itemprop="name" content="fengxiao">
-      <meta itemprop="description" content="">
+      <meta itemprop="name" content="wind">
+      <meta itemprop="description" content="INFJ">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="这是一个记录着一个人成长的博客">
+      <meta itemprop="name" content="这是一个记录成长的博客">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -513,27 +506,15 @@
 <p>只需要左右拖拽文件即刻互相传输</p>
 <h4 id="1-首先在Xshell上利用yum工具下载nginx"><a href="#1-首先在Xshell上利用yum工具下载nginx" class="headerlink" title="1.首先在Xshell上利用yum工具下载nginx"></a><strong>1.首先在Xshell上利用yum工具下载nginx</strong></h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install nginx -y</span><br></pre></td></tr></table></figure>
 
-<h4 id="2-测试启动nginx"><a href="#2-测试启动nginx" class="headerlink" title="2.测试启动nginx"></a><strong>2.测试启动nginx</strong></h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nginx</span><br></pre></td></tr></table></figure>
-
-<h4 id="3-配置nginx配置文件"><a href="#3-配置nginx配置文件" class="headerlink" title="3.配置nginx配置文件"></a>3.配置nginx配置文件</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">1.进入/etc/nginx文件夹</span><br><span class="line">cd /etc/nginx</span><br><span class="line">2.编辑nginx.conf</span><br><span class="line">vim nginx.conf</span><br><span class="line">3.添加一个server</span><br><span class="line">server实例：</span><br><span class="line">server &#123;</span><br><span class="line">        listen       80 default_server;</span><br><span class="line">        listen       [::]:80 default_server;</span><br><span class="line">        server_name  _;</span><br><span class="line">        </span><br><span class="line">        root         /usr/share/nginx/html;        #修改为root         /data/www;</span><br><span class="line">        </span><br><span class="line">        include /etc/nginx/default.d/*.conf;</span><br><span class="line"></span><br><span class="line">        location / &#123;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        error_page 404 /404.html;</span><br><span class="line">            location = /40x.html &#123;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        error_page 500 502 503 504 /50x.html;</span><br><span class="line">            location = /50x.html &#123;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h4 id="4-贴上我自己的nginx-conf完整配置"><a href="#4-贴上我自己的nginx-conf完整配置" class="headerlink" title="4.贴上我自己的nginx.conf完整配置"></a>4.贴上我自己的nginx.conf完整配置</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br></pre></td><td class="code"><pre><span class="line"># For more information on configuration, see:</span><br><span class="line">#   * Official English Documentation: http://nginx.org/en/docs/</span><br><span class="line">#   * Official Russian Documentation: http://nginx.org/ru/docs/</span><br><span class="line"></span><br><span class="line">user nginx;</span><br><span class="line">worker_processes auto;</span><br><span class="line">error_log /var/log/nginx/error.log;</span><br><span class="line">pid /run/nginx.pid;</span><br><span class="line"></span><br><span class="line"># Load dynamic modules. See /usr/share/nginx/README.dynamic.</span><br><span class="line">include /usr/share/nginx/modules/*.conf;</span><br><span class="line"></span><br><span class="line">events &#123;</span><br><span class="line">    worker_connections 1024;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">http &#123;</span><br><span class="line">    log_format  main  &#x27;$remote_addr - $remote_user [$time_local] &quot;$request&quot; &#x27;</span><br><span class="line">                      &#x27;$status $body_bytes_sent &quot;$http_referer&quot; &#x27;</span><br><span class="line">                      &#x27;&quot;$http_user_agent&quot; &quot;$http_x_forwarded_for&quot;&#x27;;</span><br><span class="line"></span><br><span class="line">    access_log  /var/log/nginx/access.log  main;</span><br><span class="line"></span><br><span class="line">    sendfile            on;</span><br><span class="line">    tcp_nopush          on;</span><br><span class="line">    tcp_nodelay         on;</span><br><span class="line">    keepalive_timeout   65;</span><br><span class="line">    types_hash_max_size 2048;</span><br><span class="line"></span><br><span class="line">    include             /etc/nginx/mime.types;</span><br><span class="line">    default_type        application/octet-stream;</span><br><span class="line"></span><br><span class="line">    # Load modular configuration files from the /etc/nginx/conf.d directory.</span><br><span class="line">    # See http://nginx.org/en/docs/ngx_core_module.html#include</span><br><span class="line">    # for more information.</span><br><span class="line">    include /etc/nginx/conf.d/*.conf;</span><br><span class="line"></span><br><span class="line">    server &#123;</span><br><span class="line">        listen       80 default_server;</span><br><span class="line">        listen       [::]:80 default_server;</span><br><span class="line">        server_name  _;</span><br><span class="line">        root         /usr/share/nginx/html;</span><br><span class="line"></span><br><span class="line">        # Load configuration files for the default server block.</span><br><span class="line">        include /etc/nginx/default.d/*.conf;</span><br><span class="line"></span><br><span class="line">        location / &#123;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        error_page 404 /404.html;</span><br><span class="line">            location = /40x.html &#123;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        error_page 500 502 503 504 /50x.html;</span><br><span class="line">            location = /50x.html &#123;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    server &#123;</span><br><span class="line">        listen       8001 default_server;</span><br><span class="line">        listen       [::]:8001 default_server;</span><br><span class="line">        server_name  _;</span><br><span class="line">        </span><br><span class="line">        root         /usr/local/java/resources;        #修改为root         /data/www;</span><br><span class="line">        </span><br><span class="line">        include /etc/nginx/default.d/*.conf;</span><br><span class="line"></span><br><span class="line">        location / &#123;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        error_page 404 /404.html;</span><br><span class="line">            location = /40x.html &#123;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        error_page 500 502 503 504 /50x.html;</span><br><span class="line">            location = /50x.html &#123;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"># Settings for a TLS enabled server.</span><br><span class="line">#</span><br><span class="line">#    server &#123;</span><br><span class="line">#        listen       443 ssl http2 default_server;</span><br><span class="line">#        listen       [::]:443 ssl http2 default_server;</span><br><span class="line">#        server_name  _;</span><br><span class="line">#        root         /usr/share/nginx/html;</span><br><span class="line">#</span><br><span class="line">#        ssl_certificate &quot;/etc/pki/nginx/server.crt&quot;;</span><br><span class="line">#        ssl_certificate_key &quot;/etc/pki/nginx/private/server.key&quot;;</span><br><span class="line">#        ssl_session_cache shared:SSL:1m;</span><br><span class="line">#        ssl_session_timeout  10m;</span><br><span class="line">#        ssl_ciphers HIGH:!aNULL:!MD5;</span><br><span class="line">#        ssl_prefer_server_ciphers on;</span><br><span class="line">#</span><br><span class="line">#        # Load configuration files for the default server block.</span><br><span class="line">#        include /etc/nginx/default.d/*.conf;</span><br><span class="line">#</span><br><span class="line">#        location / &#123;</span><br><span class="line">#        &#125;</span><br><span class="line">#</span><br><span class="line">#        error_page 404 /404.html;</span><br><span class="line">#            location = /40x.html &#123;</span><br><span class="line">#        &#125;</span><br><span class="line">#</span><br><span class="line">#        error_page 500 502 503 504 /50x.html;</span><br><span class="line">#            location = /50x.html &#123;</span><br><span class="line">#        &#125;</span><br><span class="line">#    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>其中8001端口为我的静态资源访问端口<br>/usr/local/java/resources 为我的静态资源存放位置</p>
-<h4 id="5-重启nginx"><a href="#5-重启nginx" class="headerlink" title="5.重启nginx"></a>5.重启nginx</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nginx -s reload</span><br></pre></td></tr></table></figure>
-
-<h4 id="6-测试nginx静态资源访问是否成功"><a href="#6-测试nginx静态资源访问是否成功" class="headerlink" title="6.测试nginx静态资源访问是否成功"></a>6.测试nginx静态资源访问是否成功</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">例如：/usr/local/java/resources下有一个index.html文件</span><br><span class="line">访问则是：www.huhdcc.top:8001/index.html</span><br></pre></td></tr></table></figure>
-
-<p>如果还不能使用的话 是服务器没有开放端口问题  </p>
-<p>进入阿里云</p>
-<p>进入找到域名</p>
-<p>添加一个子域名</p>
-<p><img src="https://github.com/fengxiaop/gallery/blob/master/image/image-20211012104756836.png?raw=true" alt="image-20211012104756836"></p>
-<p>添加域名解析</p>
-<p><img src="https://github.com/fengxiaop/gallery/blob/master/image/image-20211012104811440.png?raw=true"></p>
-<p>开放服务器端口</p>
-<p><img src="https://github.com/fengxiaop/gallery/blob/master/image/image-20211012104914746.png?raw=true" alt="image-20211012104914746"></p>
-
+<h4 id="2-测试启动nginx"><a href="#2-测试启动nginx" class="headerlink" title="2.测试启动nginx"></a><strong>2.测试启动nginx</strong></h4>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/10/12/nginx%E6%90%AD%E5%BB%BA%E5%89%8D%E7%AB%AF%E9%A1%B9%E7%9B%AE/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -556,12 +537,12 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fsafe-img.xhscdn.com%2Fbw1%2F5b826fa0-563d-45ed-8ba7-2357e54a158f%3FimageView2%2F2%2Fw%2F1080%2Fformat%2Fjpg&refer=http%3A%2F%2Fsafe-img.xhscdn.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1698076311&t=b844a3ac136d203583a56088ea6ce17e">
-      <meta itemprop="name" content="fengxiao">
-      <meta itemprop="description" content="">
+      <meta itemprop="name" content="wind">
+      <meta itemprop="description" content="INFJ">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="这是一个记录着一个人成长的博客">
+      <meta itemprop="name" content="这是一个记录成长的博客">
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
@@ -620,7 +601,15 @@
 <h1>PrintStream类
 
 <h3 id="java-io-PrintStream-提供了printf-方法"><a href="#java-io-PrintStream-提供了printf-方法" class="headerlink" title="java.io.PrintStream 提供了printf()方法"></a>java.io.PrintStream 提供了printf()方法</h3><h1 id="正则表达式-重点"><a href="#正则表达式-重点" class="headerlink" title="正则表达式(重点)"></a>正则表达式(重点)</h1><h3 id="java-util-regex"><a href="#java-util-regex" class="headerlink" title="java.util.regex"></a>java.util.regex</h3><p>两个重要的类<em>Pattern<strong>与</strong>Matcher*</em>()</p>
-<h1 id="java多线程-Thread待续"><a href="#java多线程-Thread待续" class="headerlink" title="java多线程 Thread待续"></a>java多线程 Thread待续</h1>
+<h1 id="java多线程-Thread待续"><a href="#java多线程-Thread待续" class="headerlink" title="java多线程 Thread待续"></a>java多线程 Thread待续</h1></h1></h3></h1>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/09/26/java/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -696,10 +685,10 @@
 
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="fengxiao"
+    <img class="site-author-image" itemprop="image" alt="wind"
       src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fsafe-img.xhscdn.com%2Fbw1%2F5b826fa0-563d-45ed-8ba7-2357e54a158f%3FimageView2%2F2%2Fw%2F1080%2Fformat%2Fjpg&refer=http%3A%2F%2Fsafe-img.xhscdn.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1698076311&t=b844a3ac136d203583a56088ea6ce17e">
-  <p class="site-author-name" itemprop="name">fengxiao</p>
-  <div class="site-description" itemprop="description"></div>
+  <p class="site-author-name" itemprop="name">wind</p>
+  <div class="site-description" itemprop="description">INFJ</div>
 </div>
 <div class="site-state-wrap motion-element">
   <nav class="site-state">
@@ -752,7 +741,7 @@
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">fengxiao</span>
+  <span class="author" itemprop="copyrightHolder">wind</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
   </div>
