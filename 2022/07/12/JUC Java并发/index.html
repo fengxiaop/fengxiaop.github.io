@@ -31,7 +31,7 @@
 <meta property="og:image" content="http://windxiao-1307340949.cosgz.myqcloud.com/20220712205702.png">
 <meta property="og:image" content="http://windxiao-1307340949.cosgz.myqcloud.com/20220712210727.png">
 <meta property="article:published_time" content="2022-07-12T12:38:41.275Z">
-<meta property="article:modified_time" content="2022-07-12T13:08:03.810Z">
+<meta property="article:modified_time" content="2022-07-12T23:43:05.451Z">
 <meta property="article:author" content="fengxiao">
 <meta property="article:tag" content="Java">
 <meta name="twitter:card" content="summary">
@@ -183,10 +183,16 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2022-07-12 20:38:41 / 修改时间：21:08:03" itemprop="dateCreated datePublished" datetime="2022-07-12T20:38:41+08:00">2022-07-12</time>
+              <time title="创建时间：2022-07-12 20:38:41" itemprop="dateCreated datePublished" datetime="2022-07-12T20:38:41+08:00">2022-07-12</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-07-13 07:43:05" itemprop="dateModified" datetime="2022-07-13T07:43:05+08:00">2022-07-13</time>
+              </span>
 
           
   
@@ -223,7 +229,7 @@
 <li>并行是同一时间动手做多件事情的能力</li>
 </ul>
 <h2 id="进程与线程"><a href="#进程与线程" class="headerlink" title="进程与线程"></a>进程与线程</h2><p>多线程demo</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">deno01</span> </span>&#123;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>&#123;<br>        <span class="hljs-keyword">new</span> Thread(() -&gt;&#123;<br>            <span class="hljs-keyword">while</span> (<span class="hljs-keyword">true</span>)<br>            &#123;<br>                System.out.println(<span class="hljs-number">1</span>);<br>            &#125;<br>        &#125;,<span class="hljs-string">&quot;t1&quot;</span>).start();<br><br>        <span class="hljs-keyword">new</span> Thread(() -&gt;&#123;<br>            <span class="hljs-keyword">while</span> (<span class="hljs-keyword">true</span>)<br>            &#123;<br>                System.out.println(<span class="hljs-number">2</span>);<br>            &#125;<br>        &#125;,<span class="hljs-string">&quot;t2&quot;</span>).start();<br>    &#125;<br><br>&#125;<br></code></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">deno01</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">new</span> Thread(() -&gt;&#123;</span><br><span class="line">            <span class="keyword">while</span> (<span class="keyword">true</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                System.out.println(<span class="number">1</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;,<span class="string">&quot;t1&quot;</span>).start();</span><br><span class="line"></span><br><span class="line">        <span class="keyword">new</span> Thread(() -&gt;&#123;</span><br><span class="line">            <span class="keyword">while</span> (<span class="keyword">true</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                System.out.println(<span class="number">2</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;,<span class="string">&quot;t2&quot;</span>).start();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>很明显得到的结果是交替打印1 和 2。</p>
 <p>拓展</p>

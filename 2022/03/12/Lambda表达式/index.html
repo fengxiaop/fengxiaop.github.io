@@ -221,16 +221,16 @@
 <p>Lambda 表达式的基础语法：Java8中引入了一个新的操作符表达式，”-&gt;” 该操作符为箭头操作符或Lambda操作符</p>
 <p>左侧：lambda表达式的参数列表</p>
 <p>右侧：lambda表达式中所需执行的功能，即 Lambda体</p>
-<h2 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h2><h3 id="1-无参数，无返回值"><a href="#1-无参数，无返回值" class="headerlink" title="1.无参数，无返回值"></a>1.无参数，无返回值</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">Runnable t = () -&gt; System.out.println(<span class="hljs-string">&quot;Hello Lambda&quot;</span>)<br>t.run();<br></code></pre></td></tr></table></figure>
+<h2 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h2><h3 id="1-无参数，无返回值"><a href="#1-无参数，无返回值" class="headerlink" title="1.无参数，无返回值"></a>1.无参数，无返回值</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Runnable t = () -&gt; System.out.println(<span class="string">&quot;Hello Lambda&quot;</span>)</span><br><span class="line">t.run();</span><br></pre></td></tr></table></figure>
 
-<h3 id="2-有参数，无返回值"><a href="#2-有参数，无返回值" class="headerlink" title="2.有参数，无返回值"></a>2.有参数，无返回值</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java">(x)-&gt; System.out.println(x)<br></code></pre></td></tr></table></figure>
+<h3 id="2-有参数，无返回值"><a href="#2-有参数，无返回值" class="headerlink" title="2.有参数，无返回值"></a>2.有参数，无返回值</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(x)-&gt; System.out.println(x)</span><br></pre></td></tr></table></figure>
 
 <p>若只有一个参数,小括号可以省略不写</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java">x-&gt; System.out.println(x)<br></code></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">x-&gt; System.out.println(x)</span><br></pre></td></tr></table></figure>
 
 <h3>3.有两个以上的参数,有返回值,并且 Lambda体中有多条语句</h3>
 
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java">Comparator&lt;Integer&gt; com =(x,y)-&gt;(System.out.print1n(<span class="hljs-string">&quot;函数式接口&quot;</span>) <span class="hljs-keyword">return</span> Integer.compare(x,y)<br></code></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Comparator&lt;Integer&gt; com =(x,y)-&gt;(System.out.print1n(<span class="string">&quot;函数式接口&quot;</span>) <span class="keyword">return</span> Integer.compare(x,y)</span><br></pre></td></tr></table></figure>
 
 <p>…待续</p>
 <h3></h3>

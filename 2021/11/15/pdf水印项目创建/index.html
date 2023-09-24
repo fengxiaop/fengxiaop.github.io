@@ -222,17 +222,17 @@
         <p>  所需要的工具 一台服务器  一个可以编译jar的java环境 nginx用来正向代理</p>
 <p>xshell连接服务器</p>
 <p>安装java环境</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">yum install java-1.8.0-openjdk<br></code></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install java-1.8.0-openjdk</span><br></pre></td></tr></table></figure>
 
 <p>查看java是否安装好</p>
-<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs applescript">java -<span class="hljs-built_in">version</span><br></code></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -version</span><br></pre></td></tr></table></figure>
 
 <p>创建自己项目的路径并且cd到该路径</p>
-<figure class="highlight dos"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs dos"><span class="hljs-built_in">mkdir</span> java<br><span class="hljs-built_in">cd</span> java<br></code></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mkdir java</span><br><span class="line">cd java</span><br></pre></td></tr></table></figure>
 
 <p>用命令让他跑起来</p>
 <p>Linux启动</p>
-<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs routeros">nohup java -jar pdf-service-0.0.1-SNAPSHOT.jar  <br><span class="hljs-attribute">--host</span>=http://161.117.229.248/<br><span class="hljs-attribute">--pdfPassword</span>=2021 <span class="hljs-attribute">--footerDesc</span>=\u9875\u811a\u6587\u5b57  <br><span class="hljs-attribute">--watermarkPic</span>=https://www.wwei.cn/yasuotu/images/logo.png  <br><span class="hljs-attribute">--basicUrl</span>=tmp/resources/static/pdf/    <br><span class="hljs-attribute">--location</span>=10,10,30,30 &gt; nohup.out 2&gt;&amp;1 &amp;<br></code></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">nohup java -jar pdf-service-0.0.1-SNAPSHOT.jar  </span><br><span class="line">--host=http://161.117.229.248/</span><br><span class="line">--pdfPassword=2021 --footerDesc=\u9875\u811a\u6587\u5b57  </span><br><span class="line">--watermarkPic=https://www.wwei.cn/yasuotu/images/logo.png  </span><br><span class="line">--basicUrl=tmp/resources/static/pdf/    </span><br><span class="line">--location=10,10,30,30 &gt; nohup.out 2&gt;&amp;1 &amp;</span><br></pre></td></tr></table></figure>
 
 <p>这里注意把它copy去浏览器 变成一行去粘贴 这里只是方便看的参数的意义</p>
 <p>Linux查看日志<br><code>tail -f nohup.out</code></p>

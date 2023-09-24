@@ -215,7 +215,7 @@
 <li>有接口情况：使用 JDK 动态代理，创建接口实现类代理对象，增强类的方法。</li>
 <li>没有接口情况：使用 CGLIB 动态代理，创建子类的代理对象，增强类的方法。</li>
 </ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java">newProxyInstance(ClassLoader loader,类&lt;?&gt;[] interfaces,InvacationHandle)<br></code></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">newProxyInstance(ClassLoader loader,类&lt;?&gt;[] interfaces,InvacationHandle)</span><br></pre></td></tr></table></figure>
 
 <p>方法有三个参数</p>
 <p>第一个参数：类加载器</p>
