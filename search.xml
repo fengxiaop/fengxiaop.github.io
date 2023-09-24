@@ -383,7 +383,7 @@
   <entry>
     <title>JUC Java并发编程</title>
     <url>/2022/07/12/JUC%20Java%E5%B9%B6%E5%8F%91/</url>
-    <content><![CDATA[<h1 id="JUC-Java并发"><a href="#JUC-Java并发" class="headerlink" title="JUC Java并发"></a>JUC Java并发</h1><h2 id="预备知识"><a href="#预备知识" class="headerlink" title="预备知识"></a>预备知识</h2><p>Java Web开发 Web服务器</p>
+    <content><![CDATA[<h1 id="JUC-Java并发"><a href="#JUC-Java并发" class="headerlink" title="JUC Java并发"></a>JUC Java并发</h1><h2 id=""><a href="#" class="headerlink" title=""></a><span id="more"></span></h2><h2 id="预备知识"><a href="#预备知识" class="headerlink" title="预备知识"></a>预备知识</h2><p>Java Web开发 Web服务器</p>
 <p>slf4j打印日志是好的实践</p>
 <p>才用lombok简化Java bean编写</p>
 <p>给线程取一个好名字</p>
@@ -463,7 +463,7 @@
   <entry>
     <title>JAVA基础复习</title>
     <url>/2022/06/29/Java%E5%9F%BA%E7%A1%80%E5%A4%8D%E4%B9%A0/</url>
-    <content><![CDATA[<h1 id="Java基础复习"><a href="#Java基础复习" class="headerlink" title="Java基础复习"></a>Java基础复习</h1><h2 id="1、-与equals方法"><a href="#1、-与equals方法" class="headerlink" title="1、== 与equals方法"></a>1、== 与equals方法</h2><p>对于八种基本数据类型来说(byte short int long float double boolean char) == 是比较的值  而八种基本数据类型 是没有equals方法的</p>
+    <content><![CDATA[<h1 id="Java基础复习"><a href="#Java基础复习" class="headerlink" title="Java基础复习"></a>Java基础复习</h1><h2 id=""><a href="#" class="headerlink" title=""></a><span id="more"></span></h2><h2 id="1、-与equals方法"><a href="#1、-与equals方法" class="headerlink" title="1、== 与equals方法"></a>1、== 与equals方法</h2><p>对于八种基本数据类型来说(byte short int long float double boolean char) == 是比较的值  而八种基本数据类型 是没有equals方法的</p>
 <p>对于引用数据类型来说  == 比较的是对象的内存地址 而equals比较的字面值(例:String类型)</p>
 <h2 id="2、Synchronized关键字"><a href="#2、Synchronized关键字" class="headerlink" title="2、Synchronized关键字"></a>2、Synchronized关键字</h2><h3 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h3><ul>
 <li><strong>原子性</strong>：<strong>所谓原子性就是指一个操作或者多个操作，要么全部执行并且执行的过程不会被任何因素打断，要么就都不执行。</strong>被<code>synchronized</code>修饰的类或对象的所有操作都是原子的，因为在执行操作之前必须先获得类或对象的锁，直到执行完才能释放。</li>
@@ -855,9 +855,42 @@
       </tags>
   </entry>
   <entry>
+    <title>Spring</title>
+    <url>/2022/03/22/Spring/</url>
+    <content><![CDATA[<h1 id="Spring"><a href="#Spring" class="headerlink" title="Spring"></a>Spring</h1><h2 id="IOC"><a href="#IOC" class="headerlink" title="IOC"></a>IOC</h2><h3 id="IOC概念和-原理"><a href="#IOC概念和-原理" class="headerlink" title="IOC概念和 原理"></a>IOC概念和 原理</h3><h4 id="什么是IOC"><a href="#什么是IOC" class="headerlink" title="什么是IOC"></a>什么是IOC</h4><p>IOC是Inversion of Control 的缩写，就是控制反转的意思，把对象创建和对象之间的调用过程都交给Spring进行管理。</p>
+<h4 id="使用IOC的目的是"><a href="#使用IOC的目的是" class="headerlink" title="使用IOC的目的是"></a>使用IOC的目的是</h4><p>降低耦合度</p>
+<p>IOC底层原理</p>
+<p>主要有三个</p>
+<ul>
+<li>xml解析</li>
+<li>工厂模式</li>
+<li>反射</li>
+</ul>
+<h3 id="IOC的两个主要接口"><a href="#IOC的两个主要接口" class="headerlink" title="IOC的两个主要接口"></a>IOC的两个主要接口</h3><h4 id="1-IOC思想基于IOC容器完成，IOC底层是对象工厂。"><a href="#1-IOC思想基于IOC容器完成，IOC底层是对象工厂。" class="headerlink" title="1. IOC思想基于IOC容器完成，IOC底层是对象工厂。"></a>1. IOC思想基于IOC容器完成，IOC底层是对象工厂。</h4><h4 id="2-Spring提供IOC容器实现的两种方式-两个接口"><a href="#2-Spring提供IOC容器实现的两种方式-两个接口" class="headerlink" title="2.Spring提供IOC容器实现的两种方式:(两个接口)"></a>2.Spring提供IOC容器实现的两种方式:(两个接口)</h4><ul>
+<li><p>BeanFactory 接口</p>
+<p>1.在IOC容器基本实现，是Spring内部的使用接口，不提供开发人员进行使用。</p>
+<p>2.在加载配置文件时候不会创建对象，在获取对象(使用)时才去创建对象。</p>
+</li>
+<li><p>AplicationContext接口 (常用)</p>
+<p>1.它是BeanFactory 接口的子接口，提供更多更强大的功能，一般由开发人员进行使用</p>
+<p>2.在加载配置文件时候就会把在配置对象进行创建。</p>
+</li>
+</ul>
+<h4 id="3-AplicationContext接口有实现类"><a href="#3-AplicationContext接口有实现类" class="headerlink" title="3.AplicationContext接口有实现类"></a>3.AplicationContext接口有实现类</h4><p><img src="https://s2.loli.net/2022/03/22/O67FiqgyHRa9ZXL.png"></p>
+<ul>
+<li><p><code>FileSystemXmlApplicationContext</code> 对应系统盘路径（绝对路径）</p>
+</li>
+<li><p><code>ClassPathXmlApplicationContext</code> 对应类路径（相对路径）</p>
+</li>
+</ul>
+<h2 id="AOP"><a href="#AOP" class="headerlink" title="AOP"></a>AOP</h2>]]></content>
+  </entry>
+  <entry>
     <title>SpringMvc</title>
     <url>/2021/10/20/SpringMvc/</url>
-    <content><![CDATA[<h1 id="SpringMVC"><a href="#SpringMVC" class="headerlink" title="SpringMVC"></a>SpringMVC</h1><h2 id="Spring-MVc-Model-View-Controller"><a href="#Spring-MVc-Model-View-Controller" class="headerlink" title="Spring+MVc(Model View Controller)"></a>Spring+MVc(Model View Controller)</h2><p>Model :实体类Bean     专门做存储业务数据  </p>
+    <content><![CDATA[<h1 id="SpringMVC"><a href="#SpringMVC" class="headerlink" title="SpringMVC"></a>SpringMVC</h1><span id="more"></span>
+
+<h2 id="Spring-MVc-Model-View-Controller"><a href="#Spring-MVc-Model-View-Controller" class="headerlink" title="Spring+MVc(Model View Controller)"></a>Spring+MVc(Model View Controller)</h2><p>Model :实体类Bean     专门做存储业务数据  </p>
 <pre><code>         业务处理Bean 指Servicw或Dao对象，专门用于处理业务逻辑和数据访问
 </code></pre>
 <p>View :视图层  指工程中的html+jsp等页面  </p>
@@ -965,37 +998,6 @@
       <tags>
         <tag>String</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>Spring</title>
-    <url>/2022/03/22/Spring/</url>
-    <content><![CDATA[<h1 id="Spring"><a href="#Spring" class="headerlink" title="Spring"></a>Spring</h1><h2 id="IOC"><a href="#IOC" class="headerlink" title="IOC"></a>IOC</h2><h3 id="IOC概念和-原理"><a href="#IOC概念和-原理" class="headerlink" title="IOC概念和 原理"></a>IOC概念和 原理</h3><h4 id="什么是IOC"><a href="#什么是IOC" class="headerlink" title="什么是IOC"></a>什么是IOC</h4><p>IOC是Inversion of Control 的缩写，就是控制反转的意思，把对象创建和对象之间的调用过程都交给Spring进行管理。</p>
-<h4 id="使用IOC的目的是"><a href="#使用IOC的目的是" class="headerlink" title="使用IOC的目的是"></a>使用IOC的目的是</h4><p>降低耦合度</p>
-<p>IOC底层原理</p>
-<p>主要有三个</p>
-<ul>
-<li>xml解析</li>
-<li>工厂模式</li>
-<li>反射</li>
-</ul>
-<h3 id="IOC的两个主要接口"><a href="#IOC的两个主要接口" class="headerlink" title="IOC的两个主要接口"></a>IOC的两个主要接口</h3><h4 id="1-IOC思想基于IOC容器完成，IOC底层是对象工厂。"><a href="#1-IOC思想基于IOC容器完成，IOC底层是对象工厂。" class="headerlink" title="1. IOC思想基于IOC容器完成，IOC底层是对象工厂。"></a>1. IOC思想基于IOC容器完成，IOC底层是对象工厂。</h4><h4 id="2-Spring提供IOC容器实现的两种方式-两个接口"><a href="#2-Spring提供IOC容器实现的两种方式-两个接口" class="headerlink" title="2.Spring提供IOC容器实现的两种方式:(两个接口)"></a>2.Spring提供IOC容器实现的两种方式:(两个接口)</h4><ul>
-<li><p>BeanFactory 接口</p>
-<p>1.在IOC容器基本实现，是Spring内部的使用接口，不提供开发人员进行使用。</p>
-<p>2.在加载配置文件时候不会创建对象，在获取对象(使用)时才去创建对象。</p>
-</li>
-<li><p>AplicationContext接口 (常用)</p>
-<p>1.它是BeanFactory 接口的子接口，提供更多更强大的功能，一般由开发人员进行使用</p>
-<p>2.在加载配置文件时候就会把在配置对象进行创建。</p>
-</li>
-</ul>
-<h4 id="3-AplicationContext接口有实现类"><a href="#3-AplicationContext接口有实现类" class="headerlink" title="3.AplicationContext接口有实现类"></a>3.AplicationContext接口有实现类</h4><p><img src="https://s2.loli.net/2022/03/22/O67FiqgyHRa9ZXL.png"></p>
-<ul>
-<li><p><code>FileSystemXmlApplicationContext</code> 对应系统盘路径（绝对路径）</p>
-</li>
-<li><p><code>ClassPathXmlApplicationContext</code> 对应类路径（相对路径）</p>
-</li>
-</ul>
-<h2 id="AOP"><a href="#AOP" class="headerlink" title="AOP"></a>AOP</h2>]]></content>
   </entry>
   <entry>
     <title>Git命令</title>
@@ -1672,72 +1674,6 @@
       </tags>
   </entry>
   <entry>
-    <title>leetcode_剑指offer2 69</title>
-    <url>/2021/10/14/%E5%89%91%E6%8C%87offer2_69/</url>
-    <content><![CDATA[<h4 id="剑指-Offer-II-069-山峰数组的顶部"><a href="#剑指-Offer-II-069-山峰数组的顶部" class="headerlink" title="剑指 Offer II 069. 山峰数组的顶部"></a><a href="https://leetcode-cn.com/problems/B1IidL/">剑指 Offer II 069. 山峰数组的顶部</a></h4><p>题目</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">符合下列属性的数组 arr 称为 山峰数组（山脉数组） ：</span><br><span class="line"></span><br><span class="line">arr.length &gt;= 3</span><br><span class="line">存在 i（0 &lt; i &lt; arr.length - 1）使得：</span><br><span class="line">arr[0] &lt; arr[1] &lt; ... arr[i-1] &lt; arr[i]</span><br><span class="line">arr[i] &gt; arr[i+1] &gt; ... &gt; arr[arr.length - 1]</span><br><span class="line">给定由整数组成的山峰数组 arr ，返回任何满足 arr[0] &lt; arr[1] &lt; ... arr[i - 1] &lt; arr[i] &gt; arr[i + 1] &gt; ... &gt; arr[arr.length - 1] 的下标 i ，即山峰顶部。</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">示例 1：</span><br><span class="line"></span><br><span class="line">输入：arr = [0,1,0]</span><br><span class="line">输出：1</span><br><span class="line">示例 2：</span><br><span class="line"></span><br><span class="line">输入：arr = [1,3,5,4,2]</span><br><span class="line">输出：2</span><br><span class="line">示例 3：</span><br><span class="line"></span><br><span class="line">输入：arr = [0,10,5,2]</span><br><span class="line">输出：1</span><br><span class="line">示例 4：</span><br><span class="line"></span><br><span class="line">输入：arr = [3,4,5,1]</span><br><span class="line">输出：2</span><br><span class="line">示例 5：</span><br><span class="line"></span><br><span class="line">输入：arr = [24,69,100,99,79,78,67,36,26,19]</span><br><span class="line">输出：2</span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">提示：</span><br><span class="line"></span><br><span class="line">3 &lt;= arr.length &lt;= 104</span><br><span class="line">0 &lt;= arr[i] &lt;= 106</span><br><span class="line">题目数据保证 arr 是一个山脉数组</span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">进阶：很容易想到时间复杂度 O(n) 的解决方案，你可以设计一个 O(log(n)) 的解决方案吗？</span><br></pre></td></tr></table></figure>
-
-<p>我写的想法 第一次就想到for循环遍历  写出了O（n）的学法</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">peakIndexInMountainArray</span><span class="params">(<span class="keyword">int</span>* arr, <span class="keyword">int</span> arrSize)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> temp=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(;temp&lt;arrSize-<span class="number">1</span>;temp++)&#123;</span><br><span class="line">        <span class="keyword">if</span>(arr[temp]&gt;arr[temp+<span class="number">1</span>])</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> temp;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>三叶姐姐的解法</p>
-<p>二分<br>往常我们使用「二分」进行查值，需要确保序列本身满足「二段性」：当选定一个端点（基准值）后，结合「一段满足 &amp; 另一段不满足」的特性来实现“折半”的查找效果。</p>
-<p>但本题求的是峰顶索引值，如果我们选定数组头部或者尾部元素，其实无法根据大小关系“直接”将数组分成两段。</p>
-<p>但可以利用题目发现如下性质：由于 arr 数值各不相同，因此峰顶元素左侧必然满足严格单调递增，峰顶元素右侧必然不满足。</p>
-<p>因此 以峰顶元素为分割点的 arr 数组，根据与 前一元素/后一元素 的大小关系，具有二段性：</p>
-<p>峰顶元素左侧满足 arr[i-1] &lt; arr[i]arr[i−1]&lt;arr[i] 性质，右侧不满足<br>峰顶元素右侧满足 arr[i] &gt; arr[i+1]arr[i]&gt;arr[i+1] 性质，左侧不满足<br>因此我们可以选择任意条件，写出若干「二分」版本。</p>
-<p>代码：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 根据 arr[i-1] &lt; arr[i] 在 [1,n-1] 范围内找值</span></span><br><span class="line">    <span class="comment">// 峰顶元素为符合条件的最靠近中心的元素</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">peakIndexInMountainArray</span><span class="params">(<span class="keyword">int</span>[] arr)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> n = arr.length;</span><br><span class="line">        <span class="keyword">int</span> l = <span class="number">1</span>, r = n - <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span> (l &lt; r) &#123;</span><br><span class="line">            <span class="keyword">int</span> mid = l + r + <span class="number">1</span> &gt;&gt; <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">if</span> (arr[mid - <span class="number">1</span>] &lt; arr[mid]) l = mid;</span><br><span class="line">            <span class="keyword">else</span> r = mid - <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> r;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><p>时间复杂度：O(\log{n})<em>O</em>(log<em>n</em>)</p>
-</li>
-<li><p>空间复杂度：O(1)<em>O</em>(1)</p>
-</li>
-<li><p>三分和k分</p>
-</li>
-<li><pre><code class="java">class Solution &#123;
-    public int peakIndexInMountainArray(int[] arr) &#123;
-        int n = arr.length;
-        int l = 0, r = n - 1;
-        while (l &lt; r) &#123;
-            int m1 = l + (r - l) / 3;
-            int m2 = r - (r - l) / 3;
-            if (arr[m1] &gt; arr[m2]) r = m2 - 1;
-            else l = m1 + 1;
-        &#125;
-        return r;
-    &#125;
-&#125;
-
-作者：AC_OIer
-链接：https://leetcode-cn.com/problems/B1IidL/solution/gong-shui-san-xie-er-fen-san-fen-ji-zhi-lc8zl/
-来源：力扣（LeetCode）
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
-</code></pre>
-</li>
-</ul>
-]]></content>
-      <tags>
-        <tag>leetcode</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>双指针</title>
-    <url>/2021/11/10/%E5%8F%8C%E6%8C%87%E9%92%88/</url>
-    <content><![CDATA[<h2 id="双指针"><a href="#双指针" class="headerlink" title="双指针"></a>双指针</h2><h4 id="26-删除有序数组中的重复项"><a href="#26-删除有序数组中的重复项" class="headerlink" title="26. 删除有序数组中的重复项"></a><a href="https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/">26. 删除有序数组中的重复项</a></h4><p>这题典型的双指针 一个指针是用来遍历  另外一个用来存储</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">removeDuplicates</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> t = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nums.length; i ++ ) &#123;</span><br><span class="line">            <span class="keyword">if</span> (i == <span class="number">0</span> || nums[i] != nums[i - <span class="number">1</span>]) </span><br><span class="line">            &#123;</span><br><span class="line">                nums[t] = nums[i];</span><br><span class="line">                t++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> t;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>​    i用来遍历数组  而t用来存储新的数组</p>
-<p>通用解法拓展</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">removeDuplicates</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> n = nums.length;</span><br><span class="line">        <span class="keyword">if</span> (n &lt;= <span class="number">1</span>) <span class="keyword">return</span> n;   </span><br><span class="line">        <span class="keyword">return</span> process(nums, <span class="number">1</span>, nums[n - <span class="number">1</span>]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">process</span><span class="params">(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> k, <span class="keyword">int</span> max)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> idx = <span class="number">0</span>; </span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> x : nums) &#123;</span><br><span class="line">            <span class="keyword">if</span> (idx &lt; k || nums[idx - k] != x) nums[idx++] = x;</span><br><span class="line">            <span class="keyword">if</span> (idx - k &gt;= <span class="number">0</span> &amp;&amp; nums[idx - k] == max) <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> idx;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">作者：AC_OIer</span><br><span class="line">链接：https:<span class="comment">//leetcode-cn.com/problems/remove-duplicates-from-sorted-array/solution/shua-chuan-lc-jian-ji-shuang-zhi-zhen-ji-2eg8/</span></span><br><span class="line">来源：力扣（LeetCode）</span><br><span class="line">著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <tags>
-        <tag>java</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>回溯问题</title>
     <url>/2022/04/02/%E5%85%A8%E6%8E%92%E5%88%97/</url>
     <content><![CDATA[<h1 id="回溯问题"><a href="#回溯问题" class="headerlink" title="回溯问题"></a>回溯问题</h1><p>解决一个回溯问题,实际上就是一个决策树的遍历过程，需要思考三个问题</p>
@@ -1803,6 +1739,72 @@
 ]]></content>
       <tags>
         <tag>回溯</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>leetcode_剑指offer2 69</title>
+    <url>/2021/10/14/%E5%89%91%E6%8C%87offer2_69/</url>
+    <content><![CDATA[<h4 id="剑指-Offer-II-069-山峰数组的顶部"><a href="#剑指-Offer-II-069-山峰数组的顶部" class="headerlink" title="剑指 Offer II 069. 山峰数组的顶部"></a><a href="https://leetcode-cn.com/problems/B1IidL/">剑指 Offer II 069. 山峰数组的顶部</a></h4><p>题目</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">符合下列属性的数组 arr 称为 山峰数组（山脉数组） ：</span><br><span class="line"></span><br><span class="line">arr.length &gt;= 3</span><br><span class="line">存在 i（0 &lt; i &lt; arr.length - 1）使得：</span><br><span class="line">arr[0] &lt; arr[1] &lt; ... arr[i-1] &lt; arr[i]</span><br><span class="line">arr[i] &gt; arr[i+1] &gt; ... &gt; arr[arr.length - 1]</span><br><span class="line">给定由整数组成的山峰数组 arr ，返回任何满足 arr[0] &lt; arr[1] &lt; ... arr[i - 1] &lt; arr[i] &gt; arr[i + 1] &gt; ... &gt; arr[arr.length - 1] 的下标 i ，即山峰顶部。</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">示例 1：</span><br><span class="line"></span><br><span class="line">输入：arr = [0,1,0]</span><br><span class="line">输出：1</span><br><span class="line">示例 2：</span><br><span class="line"></span><br><span class="line">输入：arr = [1,3,5,4,2]</span><br><span class="line">输出：2</span><br><span class="line">示例 3：</span><br><span class="line"></span><br><span class="line">输入：arr = [0,10,5,2]</span><br><span class="line">输出：1</span><br><span class="line">示例 4：</span><br><span class="line"></span><br><span class="line">输入：arr = [3,4,5,1]</span><br><span class="line">输出：2</span><br><span class="line">示例 5：</span><br><span class="line"></span><br><span class="line">输入：arr = [24,69,100,99,79,78,67,36,26,19]</span><br><span class="line">输出：2</span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">提示：</span><br><span class="line"></span><br><span class="line">3 &lt;= arr.length &lt;= 104</span><br><span class="line">0 &lt;= arr[i] &lt;= 106</span><br><span class="line">题目数据保证 arr 是一个山脉数组</span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">进阶：很容易想到时间复杂度 O(n) 的解决方案，你可以设计一个 O(log(n)) 的解决方案吗？</span><br></pre></td></tr></table></figure>
+
+<p>我写的想法 第一次就想到for循环遍历  写出了O（n）的学法</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">peakIndexInMountainArray</span><span class="params">(<span class="keyword">int</span>* arr, <span class="keyword">int</span> arrSize)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> temp=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(;temp&lt;arrSize-<span class="number">1</span>;temp++)&#123;</span><br><span class="line">        <span class="keyword">if</span>(arr[temp]&gt;arr[temp+<span class="number">1</span>])</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> temp;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>三叶姐姐的解法</p>
+<p>二分<br>往常我们使用「二分」进行查值，需要确保序列本身满足「二段性」：当选定一个端点（基准值）后，结合「一段满足 &amp; 另一段不满足」的特性来实现“折半”的查找效果。</p>
+<p>但本题求的是峰顶索引值，如果我们选定数组头部或者尾部元素，其实无法根据大小关系“直接”将数组分成两段。</p>
+<p>但可以利用题目发现如下性质：由于 arr 数值各不相同，因此峰顶元素左侧必然满足严格单调递增，峰顶元素右侧必然不满足。</p>
+<p>因此 以峰顶元素为分割点的 arr 数组，根据与 前一元素/后一元素 的大小关系，具有二段性：</p>
+<p>峰顶元素左侧满足 arr[i-1] &lt; arr[i]arr[i−1]&lt;arr[i] 性质，右侧不满足<br>峰顶元素右侧满足 arr[i] &gt; arr[i+1]arr[i]&gt;arr[i+1] 性质，左侧不满足<br>因此我们可以选择任意条件，写出若干「二分」版本。</p>
+<p>代码：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 根据 arr[i-1] &lt; arr[i] 在 [1,n-1] 范围内找值</span></span><br><span class="line">    <span class="comment">// 峰顶元素为符合条件的最靠近中心的元素</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">peakIndexInMountainArray</span><span class="params">(<span class="keyword">int</span>[] arr)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> n = arr.length;</span><br><span class="line">        <span class="keyword">int</span> l = <span class="number">1</span>, r = n - <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span> (l &lt; r) &#123;</span><br><span class="line">            <span class="keyword">int</span> mid = l + r + <span class="number">1</span> &gt;&gt; <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">if</span> (arr[mid - <span class="number">1</span>] &lt; arr[mid]) l = mid;</span><br><span class="line">            <span class="keyword">else</span> r = mid - <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> r;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>时间复杂度：O(\log{n})<em>O</em>(log<em>n</em>)</p>
+</li>
+<li><p>空间复杂度：O(1)<em>O</em>(1)</p>
+</li>
+<li><p>三分和k分</p>
+</li>
+<li><pre><code class="java">class Solution &#123;
+    public int peakIndexInMountainArray(int[] arr) &#123;
+        int n = arr.length;
+        int l = 0, r = n - 1;
+        while (l &lt; r) &#123;
+            int m1 = l + (r - l) / 3;
+            int m2 = r - (r - l) / 3;
+            if (arr[m1] &gt; arr[m2]) r = m2 - 1;
+            else l = m1 + 1;
+        &#125;
+        return r;
+    &#125;
+&#125;
+
+作者：AC_OIer
+链接：https://leetcode-cn.com/problems/B1IidL/solution/gong-shui-san-xie-er-fen-san-fen-ji-zhi-lc8zl/
+来源：力扣（LeetCode）
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+</code></pre>
+</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>leetcode</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>双指针</title>
+    <url>/2021/11/10/%E5%8F%8C%E6%8C%87%E9%92%88/</url>
+    <content><![CDATA[<h2 id="双指针"><a href="#双指针" class="headerlink" title="双指针"></a>双指针</h2><h4 id="26-删除有序数组中的重复项"><a href="#26-删除有序数组中的重复项" class="headerlink" title="26. 删除有序数组中的重复项"></a><a href="https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/">26. 删除有序数组中的重复项</a></h4><p>这题典型的双指针 一个指针是用来遍历  另外一个用来存储</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">removeDuplicates</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> t = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nums.length; i ++ ) &#123;</span><br><span class="line">            <span class="keyword">if</span> (i == <span class="number">0</span> || nums[i] != nums[i - <span class="number">1</span>]) </span><br><span class="line">            &#123;</span><br><span class="line">                nums[t] = nums[i];</span><br><span class="line">                t++;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> t;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>​    i用来遍历数组  而t用来存储新的数组</p>
+<p>通用解法拓展</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">removeDuplicates</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> n = nums.length;</span><br><span class="line">        <span class="keyword">if</span> (n &lt;= <span class="number">1</span>) <span class="keyword">return</span> n;   </span><br><span class="line">        <span class="keyword">return</span> process(nums, <span class="number">1</span>, nums[n - <span class="number">1</span>]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">process</span><span class="params">(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> k, <span class="keyword">int</span> max)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> idx = <span class="number">0</span>; </span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> x : nums) &#123;</span><br><span class="line">            <span class="keyword">if</span> (idx &lt; k || nums[idx - k] != x) nums[idx++] = x;</span><br><span class="line">            <span class="keyword">if</span> (idx - k &gt;= <span class="number">0</span> &amp;&amp; nums[idx - k] == max) <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> idx;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">作者：AC_OIer</span><br><span class="line">链接：https:<span class="comment">//leetcode-cn.com/problems/remove-duplicates-from-sorted-array/solution/shua-chuan-lc-jian-ji-shuang-zhi-zhen-ji-2eg8/</span></span><br><span class="line">来源：力扣（LeetCode）</span><br><span class="line">著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <tags>
+        <tag>java</tag>
       </tags>
   </entry>
   <entry>
@@ -2028,6 +2030,68 @@
       </tags>
   </entry>
   <entry>
+    <title>快速幂</title>
+    <url>/2021/12/05/%E5%BF%AB%E9%80%9F%E5%B9%82/</url>
+    <content><![CDATA[<p>快速幂</p>
+<h4 id="50-Pow-x-n"><a href="#50-Pow-x-n" class="headerlink" title="50. Pow(x, n)"></a><a href="https://leetcode-cn.com/problems/powx-n/">50. Pow(x, n)</a></h4><p>难度中等8 </p>
+<p>实现 <a href="https://www.cplusplus.com/reference/valarray/pow/">pow(<em>x</em>, <em>n</em>)</a> ，即计算 x 的 n 次幂函数（即，xn）。</p>
+<p><strong>示例 1：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">输入：x = 2.00000, n = 10</span><br><span class="line">输出：1024.00000</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例 2：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">输入：x = 2.10000, n = 3</span><br><span class="line">输出：9.26100</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例 3：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">输入：x = 2.00000, n = -2</span><br><span class="line">输出：0.25000</span><br><span class="line">解释：2-2 = 1/22 = 1/4 = 0.25</span><br></pre></td></tr></table></figure>
+
+<p><strong>提示：</strong></p>
+<ul>
+<li><code>-100.0 &lt; x &lt; 100.0</code></li>
+<li><code>-231 &lt;= n &lt;= 231-1</code></li>
+<li><code>-104 &lt;= xn &lt;= 104</code></li>
+</ul>
+<p>如果要计算2 的 1024 次方  我们用朴素算法要乘以1024次 算法复杂法O（1024） O（10）</p>
+<p>如果每次都平方一下</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1-&gt;2-&gt;4-&gt;8-&gt;16-&gt;32-&gt;64-&gt;128-&gt;256-&gt;512-&gt;1024 </span><br></pre></td></tr></table></figure>
+
+<p>时间复杂的为O（log 1024）也就是10</p>
+<p><img src="https://s2.loli.net/2021/12/05/LwoEReQn2zqDHuJ.png"></p>
+<p>算法板子</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">double</span> <span class="title">myPow</span><span class="params">(<span class="keyword">double</span> x, <span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">long</span> N = n;</span><br><span class="line">        <span class="keyword">return</span> N &gt;= <span class="number">0</span> ? quickMul(x, N) : <span class="number">1.0</span> / quickMul(x, -N);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">double</span> <span class="title">quickMul</span><span class="params">(<span class="keyword">double</span> x, <span class="keyword">long</span> N)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (N == <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">1.0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">double</span> y = quickMul(x, N / <span class="number">2</span>);</span><br><span class="line">        <span class="keyword">return</span> N % <span class="number">2</span> == <span class="number">0</span> ? y * y : y * y * x;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">double</span> <span class="title">myPow</span><span class="params">(<span class="keyword">double</span> x, <span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">long</span> N = n;</span><br><span class="line">       <span class="keyword">double</span> ans = quickMul(x,N);</span><br><span class="line">        <span class="keyword">if</span>(N&gt;=<span class="number">0</span>) <span class="keyword">return</span> ans;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">return</span> <span class="number">1.0</span>/ans;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">double</span> <span class="title">quickMul</span><span class="params">(<span class="keyword">double</span> x, <span class="keyword">long</span> N)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (N == <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">1.0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">double</span> y = quickMul(x, N / <span class="number">2</span>);</span><br><span class="line">        <span class="keyword">if</span>(N%<span class="number">2</span>==<span class="number">0</span>) <span class="keyword">return</span> y*y;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">return</span> y*y*x;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>进阶</p>
+<h4 id="372-超级次方"><a href="#372-超级次方" class="headerlink" title="372. 超级次方"></a><a href="https://leetcode-cn.com/problems/super-pow/">372. 超级次方</a></h4><p>难度 中等</p>
+<p>你的任务是计算 <code>ab</code> 对 <code>1337</code> 取模，<code>a</code> 是一个正整数，<code>b</code> 是一个非常大的正整数且会以数组形式给出。</p>
+<p><strong>示例 1：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">输入：a = 2, b = [3]</span><br><span class="line">输出：8</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例 2：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">输入：a = 2, b = [1,0]</span><br><span class="line">输出：1024</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例 3：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">输入：a = 1, b = [4,3,3,8,5,2]</span><br><span class="line">输出：1</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例 4：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">输入：a = 2147483647, b = [2,0,0]</span><br><span class="line">输出：1198</span><br></pre></td></tr></table></figure>
+
+<p><strong>提示：</strong></p>
+<ul>
+<li><code>1 &lt;= a &lt;= 231 - 1</code></li>
+<li><code>1 &lt;= b.length &lt;= 2000</code></li>
+<li><code>0 &lt;= b[i] &lt;= 9</code></li>
+<li><code>b</code> 不含前导 0</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> MOD = <span class="number">1337</span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">superPow</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span>[] b)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> ans = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = b.length - <span class="number">1</span>; i &gt;= <span class="number">0</span>; --i) &#123;</span><br><span class="line">            ans = (<span class="keyword">int</span>) ((<span class="keyword">long</span>) ans * pow(a, b[i]) % MOD);</span><br><span class="line">            a = pow(a, <span class="number">10</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">pow</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> res = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span> (n != <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">if</span> (n % <span class="number">2</span> != <span class="number">0</span>) &#123;</span><br><span class="line">                res = (<span class="keyword">int</span>) ((<span class="keyword">long</span>) res * x % MOD);</span><br><span class="line">            &#125;</span><br><span class="line">            x = (<span class="keyword">int</span>) ((<span class="keyword">long</span>) x * x % MOD);</span><br><span class="line">            n /= <span class="number">2</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>作者：LeetCode-Solution<br>链接：<a href="https://leetcode-cn.com/problems/super-pow/solution/chao-ji-ci-fang-by-leetcode-solution-ow8j/">https://leetcode-cn.com/problems/super-pow/solution/chao-ji-ci-fang-by-leetcode-solution-ow8j/</a></p>
+]]></content>
+      <tags>
+        <tag>算法</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>操作系统</title>
     <url>/2022/03/14/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</url>
     <content><![CDATA[<h1 id="操作系统"><a href="#操作系统" class="headerlink" title="操作系统"></a>操作系统</h1><h2 id="什么是操作系统？"><a href="#什么是操作系统？" class="headerlink" title="什么是操作系统？"></a>什么是操作系统？</h2><ul>
@@ -2094,68 +2158,6 @@
 <li>循环等待</li>
 </ul>
 ]]></content>
-  </entry>
-  <entry>
-    <title>快速幂</title>
-    <url>/2021/12/05/%E5%BF%AB%E9%80%9F%E5%B9%82/</url>
-    <content><![CDATA[<p>快速幂</p>
-<h4 id="50-Pow-x-n"><a href="#50-Pow-x-n" class="headerlink" title="50. Pow(x, n)"></a><a href="https://leetcode-cn.com/problems/powx-n/">50. Pow(x, n)</a></h4><p>难度中等8 </p>
-<p>实现 <a href="https://www.cplusplus.com/reference/valarray/pow/">pow(<em>x</em>, <em>n</em>)</a> ，即计算 x 的 n 次幂函数（即，xn）。</p>
-<p><strong>示例 1：</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">输入：x = 2.00000, n = 10</span><br><span class="line">输出：1024.00000</span><br></pre></td></tr></table></figure>
-
-<p><strong>示例 2：</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">输入：x = 2.10000, n = 3</span><br><span class="line">输出：9.26100</span><br></pre></td></tr></table></figure>
-
-<p><strong>示例 3：</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">输入：x = 2.00000, n = -2</span><br><span class="line">输出：0.25000</span><br><span class="line">解释：2-2 = 1/22 = 1/4 = 0.25</span><br></pre></td></tr></table></figure>
-
-<p><strong>提示：</strong></p>
-<ul>
-<li><code>-100.0 &lt; x &lt; 100.0</code></li>
-<li><code>-231 &lt;= n &lt;= 231-1</code></li>
-<li><code>-104 &lt;= xn &lt;= 104</code></li>
-</ul>
-<p>如果要计算2 的 1024 次方  我们用朴素算法要乘以1024次 算法复杂法O（1024） O（10）</p>
-<p>如果每次都平方一下</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1-&gt;2-&gt;4-&gt;8-&gt;16-&gt;32-&gt;64-&gt;128-&gt;256-&gt;512-&gt;1024 </span><br></pre></td></tr></table></figure>
-
-<p>时间复杂的为O（log 1024）也就是10</p>
-<p><img src="https://s2.loli.net/2021/12/05/LwoEReQn2zqDHuJ.png"></p>
-<p>算法板子</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">double</span> <span class="title">myPow</span><span class="params">(<span class="keyword">double</span> x, <span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">long</span> N = n;</span><br><span class="line">        <span class="keyword">return</span> N &gt;= <span class="number">0</span> ? quickMul(x, N) : <span class="number">1.0</span> / quickMul(x, -N);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">double</span> <span class="title">quickMul</span><span class="params">(<span class="keyword">double</span> x, <span class="keyword">long</span> N)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (N == <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">1.0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">double</span> y = quickMul(x, N / <span class="number">2</span>);</span><br><span class="line">        <span class="keyword">return</span> N % <span class="number">2</span> == <span class="number">0</span> ? y * y : y * y * x;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">double</span> <span class="title">myPow</span><span class="params">(<span class="keyword">double</span> x, <span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">long</span> N = n;</span><br><span class="line">       <span class="keyword">double</span> ans = quickMul(x,N);</span><br><span class="line">        <span class="keyword">if</span>(N&gt;=<span class="number">0</span>) <span class="keyword">return</span> ans;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">return</span> <span class="number">1.0</span>/ans;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">double</span> <span class="title">quickMul</span><span class="params">(<span class="keyword">double</span> x, <span class="keyword">long</span> N)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (N == <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">1.0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">double</span> y = quickMul(x, N / <span class="number">2</span>);</span><br><span class="line">        <span class="keyword">if</span>(N%<span class="number">2</span>==<span class="number">0</span>) <span class="keyword">return</span> y*y;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">return</span> y*y*x;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>进阶</p>
-<h4 id="372-超级次方"><a href="#372-超级次方" class="headerlink" title="372. 超级次方"></a><a href="https://leetcode-cn.com/problems/super-pow/">372. 超级次方</a></h4><p>难度 中等</p>
-<p>你的任务是计算 <code>ab</code> 对 <code>1337</code> 取模，<code>a</code> 是一个正整数，<code>b</code> 是一个非常大的正整数且会以数组形式给出。</p>
-<p><strong>示例 1：</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">输入：a = 2, b = [3]</span><br><span class="line">输出：8</span><br></pre></td></tr></table></figure>
-
-<p><strong>示例 2：</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">输入：a = 2, b = [1,0]</span><br><span class="line">输出：1024</span><br></pre></td></tr></table></figure>
-
-<p><strong>示例 3：</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">输入：a = 1, b = [4,3,3,8,5,2]</span><br><span class="line">输出：1</span><br></pre></td></tr></table></figure>
-
-<p><strong>示例 4：</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">输入：a = 2147483647, b = [2,0,0]</span><br><span class="line">输出：1198</span><br></pre></td></tr></table></figure>
-
-<p><strong>提示：</strong></p>
-<ul>
-<li><code>1 &lt;= a &lt;= 231 - 1</code></li>
-<li><code>1 &lt;= b.length &lt;= 2000</code></li>
-<li><code>0 &lt;= b[i] &lt;= 9</code></li>
-<li><code>b</code> 不含前导 0</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> MOD = <span class="number">1337</span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">superPow</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span>[] b)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> ans = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = b.length - <span class="number">1</span>; i &gt;= <span class="number">0</span>; --i) &#123;</span><br><span class="line">            ans = (<span class="keyword">int</span>) ((<span class="keyword">long</span>) ans * pow(a, b[i]) % MOD);</span><br><span class="line">            a = pow(a, <span class="number">10</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">pow</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> res = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span> (n != <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">if</span> (n % <span class="number">2</span> != <span class="number">0</span>) &#123;</span><br><span class="line">                res = (<span class="keyword">int</span>) ((<span class="keyword">long</span>) res * x % MOD);</span><br><span class="line">            &#125;</span><br><span class="line">            x = (<span class="keyword">int</span>) ((<span class="keyword">long</span>) x * x % MOD);</span><br><span class="line">            n /= <span class="number">2</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>作者：LeetCode-Solution<br>链接：<a href="https://leetcode-cn.com/problems/super-pow/solution/chao-ji-ci-fang-by-leetcode-solution-ow8j/">https://leetcode-cn.com/problems/super-pow/solution/chao-ji-ci-fang-by-leetcode-solution-ow8j/</a></p>
-]]></content>
-      <tags>
-        <tag>算法</tag>
-      </tags>
   </entry>
   <entry>
     <title>分享会</title>
@@ -2296,7 +2298,7 @@
     <title>正量数字复盘</title>
     <url>/2022/04/24/%E6%AD%A3%E9%87%8F%E6%95%B0%E5%AD%97%E5%A4%8D%E7%9B%98/</url>
     <content><![CDATA[<h1 id="正量数字复盘"><a href="#正量数字复盘" class="headerlink" title="正量数字复盘"></a>正量数字复盘</h1><p>自我介绍(2 min) </p>
-<h2 id="Java基础"><a href="#Java基础" class="headerlink" title="Java基础"></a>Java基础</h2><h3 id="String类的方法"><a href="#String类的方法" class="headerlink" title="String类的方法"></a>String类的方法</h3><p>刚开始只想起<code>equals</code>方法</p>
+<h2 id="Java基础"><a href="#Java基础" class="headerlink" title="Java基础"></a>Java基础</h2><h3 id=""><a href="#" class="headerlink" title=""></a><span id="more"></span></h3><h3 id="String类的方法"><a href="#String类的方法" class="headerlink" title="String类的方法"></a>String类的方法</h3><p>刚开始只想起<code>equals</code>方法</p>
 <p>后面问截取 我答成<code>split</code>方法了  实际上应该是<code>substring</code></p>
 <p>又问了个切割  应该是上面的<code>split</code> 这里我把<code>substring</code>方面说了 </p>
 <p>其实还有很多 面试完之后IDEA里面敲了一下 发现还有很多常用的方法</p>
@@ -2375,24 +2377,6 @@
       </tags>
   </entry>
   <entry>
-    <title>湖南省财务大学生竞赛</title>
-    <url>/2021/10/23/%E6%B9%96%E5%8D%97%E7%9C%81%E8%B4%A2%E5%8A%A1%E5%A4%A7%E5%AD%A6%E7%94%9F%E7%AB%9E%E8%B5%9B/</url>
-    <content><![CDATA[<p>  被拉去参加财务大学生竞赛 让我当大数据分析师</p>
-<p>  刷了几套题发现是考查找数据能力以及利用python tushare库做分析</p>
-<p><img src="https://i.loli.net/2021/10/25/WJw6t4ONUVsgobP.png"></p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> tushare <span class="keyword">as</span> ts</span><br><span class="line">ts.set_token(<span class="string">&#x27;41addd8c3955aea5623099855def5d5ae794632258ad289d8fd02fb6&#x27;</span>)</span><br><span class="line">ds = ts.pro_bar(ts_code=<span class="string">&#x27;000425.SZ&#x27;</span>, start_date=<span class="string">&#x27;20130101&#x27;</span>, end_date=<span class="string">&#x27;20171231&#x27;</span>, freq=<span class="string">&#x27;M&#x27;</span>, adj=<span class="string">&#x27;hfq&#x27;</span>)</span><br><span class="line">ds = ds[[<span class="string">&#x27;trade_date&#x27;</span>, <span class="string">&#x27;close&#x27;</span>]]</span><br><span class="line">ds.to_excel(<span class="string">&#x27;D:/bigdata/000425.xlsx&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(ds)</span><br></pre></td></tr></table></figure>
-
-<p>​    刚好在1024节这天参加了学校的校赛，讲讲这次作为大数据分析师的感受把 ，题目不难，但是有些题数据很多很费时间，我就是因为没有正确的选择以及没有得知大数据分析师考完后其他人能看到正确答案的要求，不然我也不会死耗在第一题第二题数据多分少但是对队友很重要的地方了。两个利用tushare库的问题，其实编程很简单，简单导个库，然后找到接口依葫芦画瓢就好了。</p>
-<p>​    虽然过程很曲折，但是结果还是比较符合人意的，队伍排名10/102 刚好拿到三等奖的最后一个名次  刚出来成绩的时候看到分数还是很自责的 因为要是我发挥稳定的话，可能我们就是第一了 或者没看错那个题 我们就是二等奖了 好在队友小雪 佳佳 子怡都挺好的  也很高兴经过四天训练之后能拿到这一个校奖。虽然自己的大数据分析师好像被别人拉爆了 已经被拉到10名开外了 有点丢我们计院的脸了hhh。但是好像也免了去拒绝停课去打这个几乎和我本专业无关的比赛了。</p>
-<p>​    还是很满意这一次的竞赛之行的 让我重新感受到许久未有的成就感，什么时候我也能像高中那样在班上也那样耀眼呢？</p>
-<p>​    教资考试就5天啦，每次自己对于这种大考来说，都要好好准备，但是每次无疑但是临时突击。希望这次的教资考试也一样的充满幸运吧</p>
-<p>~没想到还有后续  后面和小雪替补进了省赛选拨赛，佳佳是以前就进去了的  可是佳佳已经和别人组成一对，我也不太想继续下去了 可能选择放弃吧  小雪自成一队，希望她们两个可以取得更好的成绩吧。</p>
-]]></content>
-      <tags>
-        <tag>竞赛</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>泛型的一点粗略理解</title>
     <url>/2022/06/28/%E6%B3%9B%E5%9E%8B/</url>
     <content><![CDATA[<h1 id="泛型"><a href="#泛型" class="headerlink" title="泛型"></a>泛型</h1><h2 id="前言之ArrayList"><a href="#前言之ArrayList" class="headerlink" title="前言之ArrayList"></a>前言之ArrayList</h2><p>ArrayList大家都肯定很熟悉  在需要存储一个不定长度的时候，我们通常第一时间想的就是ArrayList。</p>
@@ -2448,13 +2432,21 @@
       </tags>
   </entry>
   <entry>
-    <title>爬虫</title>
-    <url>/2021/10/14/%E7%88%AC%E8%99%AB/</url>
-    <content><![CDATA[<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> testthread41;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.apache.commons.io.FileUtils;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.io.File;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"><span class="keyword">import</span> java.net.URL;</span><br><span class="line"></span><br><span class="line"><span class="comment">//练习Thread 实现多线程同步下载</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestThread2</span> <span class="keyword">extends</span> <span class="title">Thread</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> String url;<span class="comment">//图片地址</span></span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">TestThread2</span> <span class="params">(String url,String name)</span></span>&#123;</span><br><span class="line">     <span class="keyword">this</span>.url = url;</span><br><span class="line">     <span class="keyword">this</span>.name = name;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        WebDownload webDownload = <span class="keyword">new</span> WebDownload();</span><br><span class="line">        webDownload.downloader(url,name);</span><br><span class="line">        System.out.println(<span class="string">&quot;下载了文件名：&quot;</span>+name);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        TestThread2 t1 = <span class="keyword">new</span> TestThread2(<span class="string">&quot;https://img.lianzhixiu.com/uploads/allimg/150827/9-150RH11Z00-L.jpg&quot;</span>,<span class="string">&quot;美女1.jpg&quot;</span>);</span><br><span class="line">        TestThread2 t2 = <span class="keyword">new</span> TestThread2(<span class="string">&quot;https://img.lianzhixiu.com/uploads/allimg/202105/9999/rnf45aa76447.jpg&quot;</span>,<span class="string">&quot;美女2.jpg&quot;</span>);</span><br><span class="line">        TestThread2 t3 = <span class="keyword">new</span> TestThread2(<span class="string">&quot;https://img.lianzhixiu.com/uploads/allimg/202104/9999/rndb598b8b76.jpg&quot;</span>,<span class="string">&quot;美女3.jpg&quot;</span>);</span><br><span class="line"></span><br><span class="line">        t1.start();</span><br><span class="line">        t2.start();</span><br><span class="line">        t3.start();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"> <span class="class"><span class="keyword">class</span> <span class="title">WebDownload</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">downloader</span><span class="params">(String url,String name)</span></span>&#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            FileUtils.copyURLToFile(<span class="keyword">new</span> URL(url),<span class="keyword">new</span> File(name));</span><br><span class="line">        &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">            System.out.println(<span class="string">&quot;IO异常,downloader方法出现问题&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"> &#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+    <title>湖南省财务大学生竞赛</title>
+    <url>/2021/10/23/%E6%B9%96%E5%8D%97%E7%9C%81%E8%B4%A2%E5%8A%A1%E5%A4%A7%E5%AD%A6%E7%94%9F%E7%AB%9E%E8%B5%9B/</url>
+    <content><![CDATA[<p>  被拉去参加财务大学生竞赛 让我当大数据分析师</p>
+<p>  刷了几套题发现是考查找数据能力以及利用python tushare库做分析</p>
+<p><img src="https://i.loli.net/2021/10/25/WJw6t4ONUVsgobP.png"></p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> tushare <span class="keyword">as</span> ts</span><br><span class="line">ts.set_token(<span class="string">&#x27;41addd8c3955aea5623099855def5d5ae794632258ad289d8fd02fb6&#x27;</span>)</span><br><span class="line">ds = ts.pro_bar(ts_code=<span class="string">&#x27;000425.SZ&#x27;</span>, start_date=<span class="string">&#x27;20130101&#x27;</span>, end_date=<span class="string">&#x27;20171231&#x27;</span>, freq=<span class="string">&#x27;M&#x27;</span>, adj=<span class="string">&#x27;hfq&#x27;</span>)</span><br><span class="line">ds = ds[[<span class="string">&#x27;trade_date&#x27;</span>, <span class="string">&#x27;close&#x27;</span>]]</span><br><span class="line">ds.to_excel(<span class="string">&#x27;D:/bigdata/000425.xlsx&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(ds)</span><br></pre></td></tr></table></figure>
 
+<p>​    刚好在1024节这天参加了学校的校赛，讲讲这次作为大数据分析师的感受把 ，题目不难，但是有些题数据很多很费时间，我就是因为没有正确的选择以及没有得知大数据分析师考完后其他人能看到正确答案的要求，不然我也不会死耗在第一题第二题数据多分少但是对队友很重要的地方了。两个利用tushare库的问题，其实编程很简单，简单导个库，然后找到接口依葫芦画瓢就好了。</p>
+<p>​    虽然过程很曲折，但是结果还是比较符合人意的，队伍排名10/102 刚好拿到三等奖的最后一个名次  刚出来成绩的时候看到分数还是很自责的 因为要是我发挥稳定的话，可能我们就是第一了 或者没看错那个题 我们就是二等奖了 好在队友小雪 佳佳 子怡都挺好的  也很高兴经过四天训练之后能拿到这一个校奖。虽然自己的大数据分析师好像被别人拉爆了 已经被拉到10名开外了 有点丢我们计院的脸了hhh。但是好像也免了去拒绝停课去打这个几乎和我本专业无关的比赛了。</p>
+<p>​    还是很满意这一次的竞赛之行的 让我重新感受到许久未有的成就感，什么时候我也能像高中那样在班上也那样耀眼呢？</p>
+<p>​    教资考试就5天啦，每次自己对于这种大考来说，都要好好准备，但是每次无疑但是临时突击。希望这次的教资考试也一样的充满幸运吧</p>
+<p>~没想到还有后续  后面和小雪替补进了省赛选拨赛，佳佳是以前就进去了的  可是佳佳已经和别人组成一对，我也不太想继续下去了 可能选择放弃吧  小雪自成一队，希望她们两个可以取得更好的成绩吧。</p>
 ]]></content>
       <tags>
-        <tag>爬虫</tag>
+        <tag>竞赛</tag>
       </tags>
   </entry>
   <entry>
@@ -2509,6 +2501,16 @@
 ]]></content>
       <tags>
         <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>爬虫</title>
+    <url>/2021/10/14/%E7%88%AC%E8%99%AB/</url>
+    <content><![CDATA[<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> testthread41;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.apache.commons.io.FileUtils;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.io.File;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"><span class="keyword">import</span> java.net.URL;</span><br><span class="line"></span><br><span class="line"><span class="comment">//练习Thread 实现多线程同步下载</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestThread2</span> <span class="keyword">extends</span> <span class="title">Thread</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> String url;<span class="comment">//图片地址</span></span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">TestThread2</span> <span class="params">(String url,String name)</span></span>&#123;</span><br><span class="line">     <span class="keyword">this</span>.url = url;</span><br><span class="line">     <span class="keyword">this</span>.name = name;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        WebDownload webDownload = <span class="keyword">new</span> WebDownload();</span><br><span class="line">        webDownload.downloader(url,name);</span><br><span class="line">        System.out.println(<span class="string">&quot;下载了文件名：&quot;</span>+name);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        TestThread2 t1 = <span class="keyword">new</span> TestThread2(<span class="string">&quot;https://img.lianzhixiu.com/uploads/allimg/150827/9-150RH11Z00-L.jpg&quot;</span>,<span class="string">&quot;美女1.jpg&quot;</span>);</span><br><span class="line">        TestThread2 t2 = <span class="keyword">new</span> TestThread2(<span class="string">&quot;https://img.lianzhixiu.com/uploads/allimg/202105/9999/rnf45aa76447.jpg&quot;</span>,<span class="string">&quot;美女2.jpg&quot;</span>);</span><br><span class="line">        TestThread2 t3 = <span class="keyword">new</span> TestThread2(<span class="string">&quot;https://img.lianzhixiu.com/uploads/allimg/202104/9999/rndb598b8b76.jpg&quot;</span>,<span class="string">&quot;美女3.jpg&quot;</span>);</span><br><span class="line"></span><br><span class="line">        t1.start();</span><br><span class="line">        t2.start();</span><br><span class="line">        t3.start();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"> <span class="class"><span class="keyword">class</span> <span class="title">WebDownload</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">downloader</span><span class="params">(String url,String name)</span></span>&#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            FileUtils.copyURLToFile(<span class="keyword">new</span> URL(url),<span class="keyword">new</span> File(name));</span><br><span class="line">        &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">            System.out.println(<span class="string">&quot;IO异常,downloader方法出现问题&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"> &#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <tags>
+        <tag>爬虫</tag>
       </tags>
   </entry>
   <entry>

@@ -20,18 +20,18 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="JUC Java并发预备知识Java Web开发 Web服务器 slf4j打印日志是好的实践 才用lombok简化Java bean编写 给线程取一个好名字 并发与并行Rob Pike(Golang语言创始者)的一段描述  并发(concurrent)是同一时间应对多件事情的能力 并行是同一时间动手做多件事情的能力  进程与线程">
+  <meta name="description" content="JUC Java并发">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JUC Java并发编程">
 <meta property="og:url" content="http://example.com/2022/07/12/JUC%20Java%E5%B9%B6%E5%8F%91/index.html">
 <meta property="og:site_name" content="这是一个记录成长的博客">
-<meta property="og:description" content="JUC Java并发预备知识Java Web开发 Web服务器 slf4j打印日志是好的实践 才用lombok简化Java bean编写 给线程取一个好名字 并发与并行Rob Pike(Golang语言创始者)的一段描述  并发(concurrent)是同一时间应对多件事情的能力 并行是同一时间动手做多件事情的能力  进程与线程">
+<meta property="og:description" content="JUC Java并发">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://windxiao-1307340949.cosgz.myqcloud.com/20220712205613.png">
 <meta property="og:image" content="http://windxiao-1307340949.cosgz.myqcloud.com/20220712205702.png">
 <meta property="og:image" content="http://windxiao-1307340949.cosgz.myqcloud.com/20220712210727.png">
 <meta property="article:published_time" content="2022-07-12T12:38:41.275Z">
-<meta property="article:modified_time" content="2022-07-12T23:43:05.451Z">
+<meta property="article:modified_time" content="2023-09-24T03:03:18.498Z">
 <meta property="article:author" content="wind">
 <meta property="article:tag" content="Java">
 <meta name="twitter:card" content="summary">
@@ -219,7 +219,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-07-13 07:43:05" itemprop="dateModified" datetime="2022-07-13T07:43:05+08:00">2022-07-13</time>
+                <time title="修改时间：2023-09-24 11:03:18" itemprop="dateModified" datetime="2023-09-24T11:03:18+08:00">2023-09-24</time>
               </span>
 
           
@@ -247,7 +247,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="JUC-Java并发"><a href="#JUC-Java并发" class="headerlink" title="JUC Java并发"></a>JUC Java并发</h1><h2 id="预备知识"><a href="#预备知识" class="headerlink" title="预备知识"></a>预备知识</h2><p>Java Web开发 Web服务器</p>
+        <h1 id="JUC-Java并发"><a href="#JUC-Java并发" class="headerlink" title="JUC Java并发"></a>JUC Java并发</h1><h2 id=""><a href="#" class="headerlink" title=""></a><span id="more"></span></h2><h2 id="预备知识"><a href="#预备知识" class="headerlink" title="预备知识"></a>预备知识</h2><p>Java Web开发 Web服务器</p>
 <p>slf4j打印日志是好的实践</p>
 <p>才用lombok简化Java bean编写</p>
 <p>给线程取一个好名字</p>
@@ -356,7 +356,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#JUC-Java%E5%B9%B6%E5%8F%91"><span class="nav-number">1.</span> <span class="nav-text">JUC Java并发</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%84%E5%A4%87%E7%9F%A5%E8%AF%86"><span class="nav-number">1.1.</span> <span class="nav-text">预备知识</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B9%B6%E5%8F%91%E4%B8%8E%E5%B9%B6%E8%A1%8C"><span class="nav-number">1.2.</span> <span class="nav-text">并发与并行</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%9B%E7%A8%8B%E4%B8%8E%E7%BA%BF%E7%A8%8B"><span class="nav-number">1.3.</span> <span class="nav-text">进程与线程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#synchronized%E5%85%B3%E9%94%AE%E5%AD%97"><span class="nav-number">1.4.</span> <span class="nav-text">synchronized关键字</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#JUC-Java%E5%B9%B6%E5%8F%91"><span class="nav-number">1.</span> <span class="nav-text">JUC Java并发</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">1.1.</span> <span class="nav-text"></span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A2%84%E5%A4%87%E7%9F%A5%E8%AF%86"><span class="nav-number">1.2.</span> <span class="nav-text">预备知识</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B9%B6%E5%8F%91%E4%B8%8E%E5%B9%B6%E8%A1%8C"><span class="nav-number">1.3.</span> <span class="nav-text">并发与并行</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%9B%E7%A8%8B%E4%B8%8E%E7%BA%BF%E7%A8%8B"><span class="nav-number">1.4.</span> <span class="nav-text">进程与线程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#synchronized%E5%85%B3%E9%94%AE%E5%AD%97"><span class="nav-number">1.5.</span> <span class="nav-text">synchronized关键字</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 

@@ -2,6 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://example.com/2021/10/20/SpringMvc/</loc>
+    
+    <lastmod>2023-09-24</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/2022/04/24/%E6%AD%A3%E9%87%8F%E6%95%B0%E5%AD%97%E5%A4%8D%E7%9B%98/</loc>
+    
+    <lastmod>2023-09-24</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/2022/06/29/Java%E5%9F%BA%E7%A1%80%E5%A4%8D%E4%B9%A0/</loc>
+    
+    <lastmod>2023-09-24</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://example.com/2022/07/12/JUC%20Java%E5%B9%B6%E5%8F%91/</loc>
+    
+    <lastmod>2023-09-24</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://example.com/2022/06/28/%E6%B3%9B%E5%9E%8B/</loc>
     
     <lastmod>2023-09-24</lastmod>
@@ -33,34 +61,6 @@
     <loc>http://example.com/2022/09/18/%E5%93%88%E5%95%B0%E5%87%BA%E8%A1%8C/</loc>
     
     <lastmod>2023-09-24</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://example.com/2022/07/12/JUC%20Java%E5%B9%B6%E5%8F%91/</loc>
-    
-    <lastmod>2022-07-12</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://example.com/2022/06/29/Java%E5%9F%BA%E7%A1%80%E5%A4%8D%E4%B9%A0/</loc>
-    
-    <lastmod>2022-07-07</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://example.com/2022/04/24/%E6%AD%A3%E9%87%8F%E6%95%B0%E5%AD%97%E5%A4%8D%E7%9B%98/</loc>
-    
-    <lastmod>2022-06-01</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://example.com/2021/10/20/SpringMvc/</loc>
-    
-    <lastmod>2022-05-24</lastmod>
     
   </url>
   

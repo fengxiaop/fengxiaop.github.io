@@ -556,7 +556,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-07-13 07:43:05" itemprop="dateModified" datetime="2022-07-13T07:43:05+08:00">2022-07-13</time>
+                <time title="修改时间：2023-09-24 11:03:18" itemprop="dateModified" datetime="2023-09-24T11:03:18+08:00">2023-09-24</time>
               </span>
 
           
@@ -584,16 +584,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="JUC-Java并发"><a href="#JUC-Java并发" class="headerlink" title="JUC Java并发"></a>JUC Java并发</h1><h2 id="预备知识"><a href="#预备知识" class="headerlink" title="预备知识"></a>预备知识</h2><p>Java Web开发 Web服务器</p>
-<p>slf4j打印日志是好的实践</p>
-<p>才用lombok简化Java bean编写</p>
-<p>给线程取一个好名字</p>
-<h2 id="并发与并行"><a href="#并发与并行" class="headerlink" title="并发与并行"></a>并发与并行</h2><p>Rob Pike(Golang语言创始者)的一段描述</p>
-<ul>
-<li>并发(concurrent)是同一时间应对多件事情的能力</li>
-<li>并行是同一时间动手做多件事情的能力</li>
-</ul>
-<h2 id="进程与线程"><a href="#进程与线程" class="headerlink" title="进程与线程"></a>进程与线程</h2>
+          <h1 id="JUC-Java并发"><a href="#JUC-Java并发" class="headerlink" title="JUC Java并发"></a>JUC Java并发</h1><h2 id=""><a href="#" class="headerlink" title=""></a>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2022/07/12/JUC%20Java%E5%B9%B6%E5%8F%91/#more" rel="contents">
@@ -651,7 +642,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-07-07 18:13:55" itemprop="dateModified" datetime="2022-07-07T18:13:55+08:00">2022-07-07</time>
+                <time title="修改时间：2023-09-24 11:03:23" itemprop="dateModified" datetime="2023-09-24T11:03:23+08:00">2023-09-24</time>
               </span>
 
           
@@ -679,18 +670,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="Java基础复习"><a href="#Java基础复习" class="headerlink" title="Java基础复习"></a>Java基础复习</h1><h2 id="1、-与equals方法"><a href="#1、-与equals方法" class="headerlink" title="1、== 与equals方法"></a>1、== 与equals方法</h2><p>对于八种基本数据类型来说(byte short int long float double boolean char) == 是比较的值  而八种基本数据类型 是没有equals方法的</p>
-<p>对于引用数据类型来说  == 比较的是对象的内存地址 而equals比较的字面值(例:String类型)</p>
-<h2 id="2、Synchronized关键字"><a href="#2、Synchronized关键字" class="headerlink" title="2、Synchronized关键字"></a>2、Synchronized关键字</h2><h3 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h3><ul>
-<li><strong>原子性</strong>：<strong>所谓原子性就是指一个操作或者多个操作，要么全部执行并且执行的过程不会被任何因素打断，要么就都不执行。</strong>被<code>synchronized</code>修饰的类或对象的所有操作都是原子的，因为在执行操作之前必须先获得类或对象的锁，直到执行完才能释放。</li>
-<li><strong>可见性</strong>：**可见性是指多个线程访问一个资源时，该资源的状态、值信息等对于其他线程都是可见的。 **synchronized和volatile都具有可见性，其中synchronized对一个类或对象加锁时，一个线程如果要访问该类或对象必须先获得它的锁，而这个锁的状态对于其他任何线程都是可见的，并且在释放锁之前会将对变量的修改刷新到共享内存当中，保证资源变量的可见性。</li>
-<li><strong>有序性</strong>：<strong>有序性值程序执行的顺序按照代码先后执行。</strong> synchronized和volatile都具有有序性，Java允许编译器和处理器对指令进行重排，但是指令重排并不会影响单线程的顺序，它影响的是多线程并发执行的顺序性。synchronized保证了每个时刻都只有一个线程访问同步代码块，也就确定了线程执行同步代码块是分先后顺序的，保证了有序性。</li>
-</ul>
-<p><strong>Synchronized主要有三种用法</strong>：</p>
-<ul>
-<li>修饰实例方法: 作用于当前对象实例加锁，进入同步代码前要获得 当前对象实例的锁</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">synchronized</span> <span class="keyword">void</span> <span class="title">method</span><span class="params">()</span> </span>&#123;</span><br><span class="line">  <span class="comment">//业务代码</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+          <h1 id="Java基础复习"><a href="#Java基础复习" class="headerlink" title="Java基础复习"></a>Java基础复习</h1><h2 id=""><a href="#" class="headerlink" title=""></a>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2022/06/29/Java%E5%9F%BA%E7%A1%80%E5%A4%8D%E4%B9%A0/#more" rel="contents">
@@ -748,7 +728,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2023-09-24 11:01:05" itemprop="dateModified" datetime="2023-09-24T11:01:05+08:00">2023-09-24</time>
+                <time title="修改时间：2023-09-24 11:02:54" itemprop="dateModified" datetime="2023-09-24T11:02:54+08:00">2023-09-24</time>
               </span>
 
           
@@ -776,10 +756,20 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>1</p>
+          <h1 id="泛型"><a href="#泛型" class="headerlink" title="泛型"></a>泛型</h1><h2 id="前言之ArrayList"><a href="#前言之ArrayList" class="headerlink" title="前言之ArrayList"></a>前言之ArrayList</h2><p>ArrayList大家都肯定很熟悉  在需要存储一个不定长度的时候，我们通常第一时间想的就是ArrayList。</p>
+<blockquote>
+<p>实际上<code>ArrayList</code>内部就是一个<code>Object[]</code>数组，配合存储一个当前分配的长度，就可以充当“可变数组”：</p>
+<p>引用自廖雪峰老师的博客</p>
+</blockquote>
+<p>我们翻开他的底层源码 我们会发现</p>
+<p><img src="http://windxiao-1307340949.cosgz.myqcloud.com/20220628144411.png"></p>
+<p>原型是创建了一个Object[]的数组(初始容量为空 如果add第一个元素则会吧数组大小赋成10) 刚开始的 DEFAULT_CAPACITY 为10</p>
+<p>未指定泛型前 我们需要这样写来获取对象</p>
+<p><img src="http://windxiao-1307340949.cosgz.myqcloud.com/20220628150407.png"></p>
+<p>很容易出现ClassCastException，因为容易“误转型”：</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2022/06/28/%E6%B3%9B%E5%9E%8B/">
+              <a class="btn" href="/2022/06/28/%E6%B3%9B%E5%9E%8B/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -919,7 +909,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-06-01 10:55:30" itemprop="dateModified" datetime="2022-06-01T10:55:30+08:00">2022-06-01</time>
+                <time title="修改时间：2023-09-24 11:03:32" itemprop="dateModified" datetime="2023-09-24T11:03:32+08:00">2023-09-24</time>
               </span>
 
           
@@ -948,12 +938,7 @@
 
       
           <h1 id="正量数字复盘"><a href="#正量数字复盘" class="headerlink" title="正量数字复盘"></a>正量数字复盘</h1><p>自我介绍(2 min) </p>
-<h2 id="Java基础"><a href="#Java基础" class="headerlink" title="Java基础"></a>Java基础</h2><h3 id="String类的方法"><a href="#String类的方法" class="headerlink" title="String类的方法"></a>String类的方法</h3><p>刚开始只想起<code>equals</code>方法</p>
-<p>后面问截取 我答成<code>split</code>方法了  实际上应该是<code>substring</code></p>
-<p>又问了个切割  应该是上面的<code>split</code> 这里我把<code>substring</code>方面说了 </p>
-<p>其实还有很多 面试完之后IDEA里面敲了一下 发现还有很多常用的方法</p>
-<p>一个是获取字符串长度 <code>length()</code> </p>
-<p>一个查看字符串索引的字母  <code>charAt()</code></p>
+<h2 id="Java基础"><a href="#Java基础" class="headerlink" title="Java基础"></a>Java基础</h2><h3 id=""><a href="#" class="headerlink" title=""></a>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2022/04/24/%E6%AD%A3%E9%87%8F%E6%95%B0%E5%AD%97%E5%A4%8D%E7%9B%98/#more" rel="contents">
