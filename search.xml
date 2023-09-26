@@ -83,6 +83,20 @@
       </tags>
   </entry>
   <entry>
+    <title>Arrays工具类</title>
+    <url>/2021/11/08/Arrays%E5%B7%A5%E5%85%B7%E7%B1%BB/</url>
+    <content><![CDATA[<p>Arrays.sort(arr)</p>
+<p>给数组arr排序</p>
+<p>二分法查找的使用</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.leetcode;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.Arrays;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ArraysTest</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> [] arr = &#123;<span class="number">1</span>,<span class="number">11</span>,<span class="number">22</span>,<span class="number">33</span>,<span class="number">45</span>,<span class="number">35</span>&#125;;</span><br><span class="line">        Arrays.sort(arr);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; arr.length; i++) &#123;</span><br><span class="line">            System.out.println(arr[i]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> index = Arrays.binarySearch(arr,<span class="number">333</span>);</span><br><span class="line">        System.out.println(index);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <tags>
+        <tag>java</tag>
+        <tag>Arrays</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>BigInteger</title>
     <url>/2021/11/23/BigInteger/</url>
     <content><![CDATA[<p>BigInteger !!!</p>
@@ -156,20 +170,6 @@
 ]]></content>
       <tags>
         <tag>java</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Arrays工具类</title>
-    <url>/2021/11/08/Arrays%E5%B7%A5%E5%85%B7%E7%B1%BB/</url>
-    <content><![CDATA[<p>Arrays.sort(arr)</p>
-<p>给数组arr排序</p>
-<p>二分法查找的使用</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.leetcode;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.Arrays;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ArraysTest</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> [] arr = &#123;<span class="number">1</span>,<span class="number">11</span>,<span class="number">22</span>,<span class="number">33</span>,<span class="number">45</span>,<span class="number">35</span>&#125;;</span><br><span class="line">        Arrays.sort(arr);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; arr.length; i++) &#123;</span><br><span class="line">            System.out.println(arr[i]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> index = Arrays.binarySearch(arr,<span class="number">333</span>);</span><br><span class="line">        System.out.println(index);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <tags>
-        <tag>java</tag>
-        <tag>Arrays</tag>
       </tags>
   </entry>
   <entry>
@@ -1443,6 +1443,22 @@
       </tags>
   </entry>
   <entry>
+    <title>nginx和servelt</title>
+    <url>/2021/11/17/nginx%E5%92%8Cservelt/</url>
+    <content><![CDATA[<p>  最近再写自己的网站和自己的项目  很高兴一直有人带着我学习，在我迷茫的时候指导一下我。</p>
+<p>最近遇见了ip+端口转换为域名的问题</p>
+<p>本来我用境外服务器可以直接用80端口  用起来也很方便 不用备案啥的 但是就是太容易挂了  </p>
+<p>所以下定决心撸了个腾讯云的服务器</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># For more information on configuration, see:</span><br><span class="line">#   * Official English Documentation: http://nginx.org/en/docs/</span><br><span class="line">#   * Official Russian Documentation: http://nginx.org/ru/docs/</span><br><span class="line"></span><br><span class="line">user root;</span><br><span class="line">worker_processes auto;</span><br><span class="line">error_log /var/log/nginx/error.log;</span><br><span class="line">pid /run/nginx.pid;</span><br><span class="line"></span><br><span class="line"># Load dynamic modules. See /usr/share/nginx/README.dynamic.</span><br><span class="line">include /usr/share/nginx/modules/*.conf;</span><br><span class="line"></span><br><span class="line">events &#123;</span><br><span class="line">    worker_connections 1024;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">http &#123;</span><br><span class="line">    log_format  main  &#x27;$remote_addr - $remote_user [$time_local] &quot;$request&quot; &#x27;</span><br><span class="line">                      &#x27;$status $body_bytes_sent &quot;$http_referer&quot; &#x27;</span><br><span class="line">                      &#x27;&quot;$http_user_agent&quot; &quot;$http_x_forwarded_for&quot;&#x27;;</span><br><span class="line"></span><br><span class="line">    access_log  /var/log/nginx/access.log  main;</span><br><span class="line"></span><br><span class="line">    sendfile            on;</span><br><span class="line">    tcp_nopush          on;</span><br><span class="line">    tcp_nodelay         on;</span><br><span class="line">    keepalive_timeout   65;</span><br><span class="line">    types_hash_max_size 2048;</span><br><span class="line"></span><br><span class="line">    include             /etc/nginx/mime.types;</span><br><span class="line">    default_type        application/octet-stream;</span><br><span class="line"></span><br><span class="line">    # Load modular configuration files from the /etc/nginx/conf.d directory.</span><br><span class="line">    # See http://nginx.org/en/docs/ngx_core_module.html#include</span><br><span class="line">    # for more information.</span><br><span class="line">    include /etc/nginx/conf.d/*.conf;</span><br><span class="line">  </span><br><span class="line">    server &#123;</span><br><span class="line">        listen       8080 default_server;</span><br><span class="line">        listen       [::]:8080 default_server;</span><br><span class="line">        server_name  www.sy.huttop.top;</span><br><span class="line">        </span><br><span class="line">        root         /root/java/;        #修改为root         /data/www;</span><br><span class="line">        </span><br><span class="line">        include /etc/nginx/default.d/*.conf;</span><br><span class="line"></span><br><span class="line">         location / &#123;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        error_page 404 /404.html;</span><br><span class="line">            location = /40x.html &#123;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        error_page 500 502 503 504 /50x.html;</span><br><span class="line">            location = /50x.html &#123;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  server &#123;</span><br><span class="line">        listen       8888 default_server;</span><br><span class="line">        listen       [::]:8888 default_server;</span><br><span class="line">        server_name www.huttop.top;</span><br><span class="line">        </span><br><span class="line">        root         /root/zhuye/;        #修改为root         /data/www;</span><br><span class="line">        </span><br><span class="line">        include /etc/nginx/default.d/*.conf;</span><br><span class="line"></span><br><span class="line">        location / &#123;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        error_page 404 /404.html;</span><br><span class="line">            location = /40x.html &#123;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        error_page 500 502 503 504 /50x.html;</span><br><span class="line">            location = /50x.html &#123;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
+
+<p>这是配置文件  </p>
+]]></content>
+      <tags>
+        <tag>nginx</tag>
+        <tag>网络</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>nginx搭建前端项目</title>
     <url>/2021/10/12/nginx%E6%90%AD%E5%BB%BA%E5%89%8D%E7%AB%AF%E9%A1%B9%E7%9B%AE/</url>
     <content><![CDATA[<p>所需Xshell +Xtfp+服务器+ip</p>
@@ -1477,22 +1493,6 @@
 ]]></content>
       <tags>
         <tag>nginx前端</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>nginx和servelt</title>
-    <url>/2021/11/17/nginx%E5%92%8Cservelt/</url>
-    <content><![CDATA[<p>  最近再写自己的网站和自己的项目  很高兴一直有人带着我学习，在我迷茫的时候指导一下我。</p>
-<p>最近遇见了ip+端口转换为域名的问题</p>
-<p>本来我用境外服务器可以直接用80端口  用起来也很方便 不用备案啥的 但是就是太容易挂了  </p>
-<p>所以下定决心撸了个腾讯云的服务器</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># For more information on configuration, see:</span><br><span class="line">#   * Official English Documentation: http://nginx.org/en/docs/</span><br><span class="line">#   * Official Russian Documentation: http://nginx.org/ru/docs/</span><br><span class="line"></span><br><span class="line">user root;</span><br><span class="line">worker_processes auto;</span><br><span class="line">error_log /var/log/nginx/error.log;</span><br><span class="line">pid /run/nginx.pid;</span><br><span class="line"></span><br><span class="line"># Load dynamic modules. See /usr/share/nginx/README.dynamic.</span><br><span class="line">include /usr/share/nginx/modules/*.conf;</span><br><span class="line"></span><br><span class="line">events &#123;</span><br><span class="line">    worker_connections 1024;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">http &#123;</span><br><span class="line">    log_format  main  &#x27;$remote_addr - $remote_user [$time_local] &quot;$request&quot; &#x27;</span><br><span class="line">                      &#x27;$status $body_bytes_sent &quot;$http_referer&quot; &#x27;</span><br><span class="line">                      &#x27;&quot;$http_user_agent&quot; &quot;$http_x_forwarded_for&quot;&#x27;;</span><br><span class="line"></span><br><span class="line">    access_log  /var/log/nginx/access.log  main;</span><br><span class="line"></span><br><span class="line">    sendfile            on;</span><br><span class="line">    tcp_nopush          on;</span><br><span class="line">    tcp_nodelay         on;</span><br><span class="line">    keepalive_timeout   65;</span><br><span class="line">    types_hash_max_size 2048;</span><br><span class="line"></span><br><span class="line">    include             /etc/nginx/mime.types;</span><br><span class="line">    default_type        application/octet-stream;</span><br><span class="line"></span><br><span class="line">    # Load modular configuration files from the /etc/nginx/conf.d directory.</span><br><span class="line">    # See http://nginx.org/en/docs/ngx_core_module.html#include</span><br><span class="line">    # for more information.</span><br><span class="line">    include /etc/nginx/conf.d/*.conf;</span><br><span class="line">  </span><br><span class="line">    server &#123;</span><br><span class="line">        listen       8080 default_server;</span><br><span class="line">        listen       [::]:8080 default_server;</span><br><span class="line">        server_name  www.sy.huttop.top;</span><br><span class="line">        </span><br><span class="line">        root         /root/java/;        #修改为root         /data/www;</span><br><span class="line">        </span><br><span class="line">        include /etc/nginx/default.d/*.conf;</span><br><span class="line"></span><br><span class="line">         location / &#123;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        error_page 404 /404.html;</span><br><span class="line">            location = /40x.html &#123;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        error_page 500 502 503 504 /50x.html;</span><br><span class="line">            location = /50x.html &#123;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  server &#123;</span><br><span class="line">        listen       8888 default_server;</span><br><span class="line">        listen       [::]:8888 default_server;</span><br><span class="line">        server_name www.huttop.top;</span><br><span class="line">        </span><br><span class="line">        root         /root/zhuye/;        #修改为root         /data/www;</span><br><span class="line">        </span><br><span class="line">        include /etc/nginx/default.d/*.conf;</span><br><span class="line"></span><br><span class="line">        location / &#123;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        error_page 404 /404.html;</span><br><span class="line">            location = /40x.html &#123;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        error_page 500 502 503 504 /50x.html;</span><br><span class="line">            location = /50x.html &#123;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125; </span><br></pre></td></tr></table></figure>
-
-<p>这是配置文件  </p>
-]]></content>
-      <tags>
-        <tag>nginx</tag>
-        <tag>网络</tag>
       </tags>
   </entry>
   <entry>
@@ -2850,6 +2850,58 @@
 ]]></content>
   </entry>
   <entry>
+    <title>集合</title>
+    <url>/2021/12/01/%E9%9B%86%E5%90%88/</url>
+    <content><![CDATA[<p> 数组其实就是一个集合,集合实际上就是一个容器。</p>
+<p>集合不能直接存储基本类型  存储的是Java对象的内存地址</p>
+<p>list.add(100) 100会自动装箱成为Integer类型</p>
+<p><img src="https://i.loli.net/2021/12/01/MFhqyvIxNbR4pOg.png"></p>
+<p>ArraysList 底层为数组 非线程安全的</p>
+<p>LinkedList     底层为双向链表</p>
+<p>Vector采用了数组的这个结构 线程安全</p>
+<p>HashMap 底层为哈希表</p>
+<p>TreeMao 底层为二叉树</p>
+<p>collection 继承于 Iterable(迭代器)</p>
+<p>集合分为两大类  1.单个方式存储元素(ArrayList )  父接口为collection</p>
+<p> 可以以键值对的方式(HashMap)&lt;K,V&gt;</p>
+<p>foreach语句 又叫for循环增加语句</p>
+<p>for(数据类型 变量:数组)</p>
+<p>  ｛</p>
+<p>​    ｝</p>
+<p>例：</p>
+<p>for（int i : arr）</p>
+<p>{</p>
+<p>sum = sum+i;</p>
+<p>}</p>
+<p>List存进去有序可重复(指的是存进去的顺序，下标以0 开始 以1递增)</p>
+<p>数组的方法</p>
+<p>数组排序 Arrays.sort(数组)</p>
+<p>克隆一个数组   int[] clone = score.clone();</p>
+<p>Map集合和collection没关系 </p>
+<p>以key和value实现的键值对的方式存储元素</p>
+<p>Map集合包括HashMap和Hashtable</p>
+<p>HashMap底层的是哈希表，是非线程安全的</p>
+<p>Hashtabl底层的是哈希表 ，是线程安全的</p>
+<p>HashMap是无序的</p>
+<p><img src="https://i.loli.net/2021/12/02/JsawZrOkED5BnAK.png"></p>
+<p>#迭代器(Iterator)</p>
+<p>Interator为对象  可以用hasNext和next</p>
+<p>hasNext下一个是不是还有</p>
+<p>next下一个</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">     ArrayList  list = <span class="keyword">new</span> ArrayList();</span><br><span class="line">        list.add(<span class="number">1</span>);</span><br><span class="line">        list.add(<span class="number">2</span>);</span><br><span class="line">        list.add(<span class="number">3</span>);</span><br><span class="line">        list.add(<span class="number">4</span>);</span><br><span class="line">        list.add(<span class="number">5</span>);</span><br><span class="line">        list.add(<span class="number">4</span>);</span><br><span class="line">        list.add(<span class="number">3</span>);</span><br><span class="line">        list.add(<span class="number">2</span>);</span><br><span class="line">        list.add(<span class="number">1</span>);</span><br><span class="line">        Iterator iterator = list.iterator();</span><br><span class="line">        <span class="keyword">while</span> (iterator.hasNext())</span><br><span class="line">        &#123;</span><br><span class="line">            System.out.println(iterator.next());</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>输出顺序也就是输入的顺序</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.HUToh;</span><br><span class="line"><span class="keyword">import</span> java.io.BufferedInputStream;</span><br><span class="line"><span class="keyword">import</span> java.io.BufferedReader;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"><span class="keyword">import</span> java.io.InputStreamReader;</span><br><span class="line"><span class="keyword">import</span> java.util.*  ;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">     Set list = <span class="keyword">new</span> HashSet();</span><br><span class="line">        list.add(<span class="number">1</span>);</span><br><span class="line">        list.add(<span class="number">2</span>);</span><br><span class="line">        list.add(<span class="number">3</span>);</span><br><span class="line">        list.add(<span class="number">5</span>);</span><br><span class="line">        list.add(<span class="number">4</span>);</span><br><span class="line">        list.add(<span class="number">4</span>);</span><br><span class="line">        list.add(<span class="number">3</span>);</span><br><span class="line">        list.add(<span class="number">2</span>);</span><br><span class="line">        list.add(<span class="number">1</span>);</span><br><span class="line">        Iterator iterator = list.iterator();</span><br><span class="line">        <span class="keyword">while</span> (iterator.hasNext())</span><br><span class="line">        &#123;</span><br><span class="line">            System.out.println(iterator.next());</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>输出顺序和输入顺序并不一样</p>
+<p>所以说Set是无序的  而且Set是不重复的</p>
+<p>即Set具有自动去重功能</p>
+]]></content>
+      <tags>
+        <tag>java</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>阅文笔试2021笔试题复习</title>
     <url>/2022/04/07/%E9%98%85%E6%96%87%E7%AC%94%E8%AF%95%E5%A4%8D%E4%B9%A0/</url>
     <content><![CDATA[<h1 id="阅文笔试复习"><a href="#阅文笔试复习" class="headerlink" title="阅文笔试复习"></a>阅文笔试复习</h1><h2 id="1-详细描述ThreadPoolExecutor的各个参数的含义，介绍一个任务提交到线程池后的执行流程"><a href="#1-详细描述ThreadPoolExecutor的各个参数的含义，介绍一个任务提交到线程池后的执行流程" class="headerlink" title="1.详细描述ThreadPoolExecutor的各个参数的含义，介绍一个任务提交到线程池后的执行流程"></a>1.详细描述ThreadPoolExecutor的各个参数的含义，介绍一个任务提交到线程池后的执行流程</h2><ul>
@@ -3017,58 +3069,6 @@
 ]]></content>
       <tags>
         <tag>笔试</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>集合</title>
-    <url>/2021/12/01/%E9%9B%86%E5%90%88/</url>
-    <content><![CDATA[<p> 数组其实就是一个集合,集合实际上就是一个容器。</p>
-<p>集合不能直接存储基本类型  存储的是Java对象的内存地址</p>
-<p>list.add(100) 100会自动装箱成为Integer类型</p>
-<p><img src="https://i.loli.net/2021/12/01/MFhqyvIxNbR4pOg.png"></p>
-<p>ArraysList 底层为数组 非线程安全的</p>
-<p>LinkedList     底层为双向链表</p>
-<p>Vector采用了数组的这个结构 线程安全</p>
-<p>HashMap 底层为哈希表</p>
-<p>TreeMao 底层为二叉树</p>
-<p>collection 继承于 Iterable(迭代器)</p>
-<p>集合分为两大类  1.单个方式存储元素(ArrayList )  父接口为collection</p>
-<p> 可以以键值对的方式(HashMap)&lt;K,V&gt;</p>
-<p>foreach语句 又叫for循环增加语句</p>
-<p>for(数据类型 变量:数组)</p>
-<p>  ｛</p>
-<p>​    ｝</p>
-<p>例：</p>
-<p>for（int i : arr）</p>
-<p>{</p>
-<p>sum = sum+i;</p>
-<p>}</p>
-<p>List存进去有序可重复(指的是存进去的顺序，下标以0 开始 以1递增)</p>
-<p>数组的方法</p>
-<p>数组排序 Arrays.sort(数组)</p>
-<p>克隆一个数组   int[] clone = score.clone();</p>
-<p>Map集合和collection没关系 </p>
-<p>以key和value实现的键值对的方式存储元素</p>
-<p>Map集合包括HashMap和Hashtable</p>
-<p>HashMap底层的是哈希表，是非线程安全的</p>
-<p>Hashtabl底层的是哈希表 ，是线程安全的</p>
-<p>HashMap是无序的</p>
-<p><img src="https://i.loli.net/2021/12/02/JsawZrOkED5BnAK.png"></p>
-<p>#迭代器(Iterator)</p>
-<p>Interator为对象  可以用hasNext和next</p>
-<p>hasNext下一个是不是还有</p>
-<p>next下一个</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">     ArrayList  list = <span class="keyword">new</span> ArrayList();</span><br><span class="line">        list.add(<span class="number">1</span>);</span><br><span class="line">        list.add(<span class="number">2</span>);</span><br><span class="line">        list.add(<span class="number">3</span>);</span><br><span class="line">        list.add(<span class="number">4</span>);</span><br><span class="line">        list.add(<span class="number">5</span>);</span><br><span class="line">        list.add(<span class="number">4</span>);</span><br><span class="line">        list.add(<span class="number">3</span>);</span><br><span class="line">        list.add(<span class="number">2</span>);</span><br><span class="line">        list.add(<span class="number">1</span>);</span><br><span class="line">        Iterator iterator = list.iterator();</span><br><span class="line">        <span class="keyword">while</span> (iterator.hasNext())</span><br><span class="line">        &#123;</span><br><span class="line">            System.out.println(iterator.next());</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>输出顺序也就是输入的顺序</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.HUToh;</span><br><span class="line"><span class="keyword">import</span> java.io.BufferedInputStream;</span><br><span class="line"><span class="keyword">import</span> java.io.BufferedReader;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"><span class="keyword">import</span> java.io.InputStreamReader;</span><br><span class="line"><span class="keyword">import</span> java.util.*  ;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">     Set list = <span class="keyword">new</span> HashSet();</span><br><span class="line">        list.add(<span class="number">1</span>);</span><br><span class="line">        list.add(<span class="number">2</span>);</span><br><span class="line">        list.add(<span class="number">3</span>);</span><br><span class="line">        list.add(<span class="number">5</span>);</span><br><span class="line">        list.add(<span class="number">4</span>);</span><br><span class="line">        list.add(<span class="number">4</span>);</span><br><span class="line">        list.add(<span class="number">3</span>);</span><br><span class="line">        list.add(<span class="number">2</span>);</span><br><span class="line">        list.add(<span class="number">1</span>);</span><br><span class="line">        Iterator iterator = list.iterator();</span><br><span class="line">        <span class="keyword">while</span> (iterator.hasNext())</span><br><span class="line">        &#123;</span><br><span class="line">            System.out.println(iterator.next());</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>输出顺序和输入顺序并不一样</p>
-<p>所以说Set是无序的  而且Set是不重复的</p>
-<p>即Set具有自动去重功能</p>
-]]></content>
-      <tags>
-        <tag>java</tag>
       </tags>
   </entry>
 </search>
