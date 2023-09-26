@@ -1,181 +1,270 @@
 <!DOCTYPE html>
-<html lang=zh>
+<html lang="zh-CN">
 <head>
-    <!-- so meta -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="HandheldFriendly" content="True">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
-    <meta name="description" content="所需要的工具 一台服务器  一个可以编译jar的java环境 nginx用来正向代理 xshell连接服务器 安装java环境 1yum install java-1.8.0-openjdk  查看java是否安装好 1java -version  创建自己项目的路径并且cd到该路径 12mkdir javacd java  用命令让他跑起来 Linux启动">
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="所需要的工具 一台服务器  一个可以编译jar的java环境 nginx用来正向代理 xshell连接服务器 安装java环境 1yum install java-1.8.0-openjdk  查看java是否安装好 1java -version  创建自己项目的路径并且cd到该路径 12mkdir javacd java  用命令让他跑起来">
 <meta property="og:type" content="article">
-<meta property="og:title" content="pdf水印项目创建.md">
+<meta property="og:title" content="Java练手项目-pdf加水印">
 <meta property="og:url" content="http://example.com/2021/11/15/pdf%E6%B0%B4%E5%8D%B0%E9%A1%B9%E7%9B%AE%E5%88%9B%E5%BB%BA/index.html">
 <meta property="og:site_name" content="这是一个记录成长的博客">
-<meta property="og:description" content="所需要的工具 一台服务器  一个可以编译jar的java环境 nginx用来正向代理 xshell连接服务器 安装java环境 1yum install java-1.8.0-openjdk  查看java是否安装好 1java -version  创建自己项目的路径并且cd到该路径 12mkdir javacd java  用命令让他跑起来 Linux启动">
+<meta property="og:description" content="所需要的工具 一台服务器  一个可以编译jar的java环境 nginx用来正向代理 xshell连接服务器 安装java环境 1yum install java-1.8.0-openjdk  查看java是否安装好 1java -version  创建自己项目的路径并且cd到该路径 12mkdir javacd java  用命令让他跑起来">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://i.loli.net/2021/11/15/Mx38SdDYwjAyH4P.png">
+<meta property="og:image" content="https://i.loli.net/2021/11/25/QAhnxXS98FM6jws.png">
+<meta property="og:image" content="https://i.loli.net/2021/11/25/KcTm97dtOSshLg4.png">
 <meta property="article:published_time" content="2021-11-15T07:14:06.000Z">
-<meta property="article:modified_time" content="2022-05-23T07:03:44.087Z">
+<meta property="article:modified_time" content="2023-09-26T13:08:45.900Z">
 <meta property="article:author" content="wind">
 <meta property="article:tag" content="java">
-<meta property="article:tag" content="nginx">
 <meta property="article:tag" content="linux">
+<meta property="article:tag" content="nginx">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://i.loli.net/2021/11/15/Mx38SdDYwjAyH4P.png">
-    
-    
-      
-        
-          <link rel="shortcut icon" href="/images/favicon.ico">
-        
-      
-      
-        
-          <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
-        
-      
-      
-        
-          <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
-        
-      
-    
-    <!-- title -->
-    <title>pdf水印项目创建.md</title>
-    <!-- async scripts -->
-    <!-- Google Analytics -->
+
+<link rel="canonical" href="http://example.com/2021/11/15/pdf%E6%B0%B4%E5%8D%B0%E9%A1%B9%E7%9B%AE%E5%88%9B%E5%BB%BA/">
 
 
-    <!-- Umami Analytics -->
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
 
-
-    <!-- styles -->
-    
-<link rel="stylesheet" href="/css/style.css">
-
-    <!-- persian styles -->
-    
-    <!-- rss -->
-    
-    
-	<!-- mathjax -->
-	
-<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="这是一个记录成长的博客" type="application/atom+xml">
-</head>
-
-<body class="max-width mx-auto px3 ltr">
-    
-      <div id="header-post">
-  <a id="menu-icon" href="#" aria-label="目录"><i class="fa-solid fa-bars fa-lg"></i></a>
-  <a id="menu-icon-tablet" href="#" aria-label="目录"><i class="fa-solid fa-bars fa-lg"></i></a>
-  <a id="top-icon-tablet" href="#" aria-label="顶部" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa-solid fa-chevron-up fa-lg"></i></a>
-  <span id="menu">
-    <span id="nav">
-      <ul>
-        <!--
-       --><li><a href="/">首页</a></li><!--
-     --><!--
-       --><li><a href="/about/">关于</a></li><!--
-     --><!--
-       --><li><a href="/search/">搜索</a></li><!--
-     --><!--
-       --><li><a href="/archives/">归档</a></li><!--
-     --><!--
-       --><li><a target="_blank" rel="noopener" href="http://github.com/fengxiaop">项目</a></li><!--
-     -->
-      </ul>
-    </span>
-    <br/>
-    <span id="actions">
-      <ul>
-        
-        <li><a class="icon" aria-label="上一篇" href="/2021/11/17/nginx%E5%92%8Cservelt/"><i class="fa-solid fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
-        
-        
-        <li><a class="icon" aria-label="下一篇" href="/2021/11/11/pdf%E5%8A%A0%E6%B0%B4%E5%8D%B0/"><i class="fa-solid fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
-        
-        <li><a class="icon" aria-label="返回顶部" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
-        <li><a class="icon" aria-label="分享文章" href="#"><i class="fa-solid fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
-      </ul>
-      <span id="i-prev" class="info" style="display:none;">上一篇</span>
-      <span id="i-next" class="info" style="display:none;">下一篇</span>
-      <span id="i-top" class="info" style="display:none;">返回顶部</span>
-      <span id="i-share" class="info" style="display:none;">分享文章</span>
-    </span>
-    <br/>
-    <div id="share" style="display: none">
-      <ul>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://example.com/2021/11/15/pdf%E6%B0%B4%E5%8D%B0%E9%A1%B9%E7%9B%AE%E5%88%9B%E5%BB%BA/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://example.com/2021/11/15/pdf%E6%B0%B4%E5%8D%B0%E9%A1%B9%E7%9B%AE%E5%88%9B%E5%BB%BA/&text=pdf水印项目创建.md"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://example.com/2021/11/15/pdf%E6%B0%B4%E5%8D%B0%E9%A1%B9%E7%9B%AE%E5%88%9B%E5%BB%BA/&title=pdf水印项目创建.md"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://example.com/2021/11/15/pdf%E6%B0%B4%E5%8D%B0%E9%A1%B9%E7%9B%AE%E5%88%9B%E5%BB%BA/&is_video=false&description=pdf水印项目创建.md"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=pdf水印项目创建.md&body=Check out this article: http://example.com/2021/11/15/pdf%E6%B0%B4%E5%8D%B0%E9%A1%B9%E7%9B%AE%E5%88%9B%E5%BB%BA/"><i class="fa-solid fa-envelope " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://example.com/2021/11/15/pdf%E6%B0%B4%E5%8D%B0%E9%A1%B9%E7%9B%AE%E5%88%9B%E5%BB%BA/&title=pdf水印项目创建.md"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://example.com/2021/11/15/pdf%E6%B0%B4%E5%8D%B0%E9%A1%B9%E7%9B%AE%E5%88%9B%E5%BB%BA/&title=pdf水印项目创建.md"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://example.com/2021/11/15/pdf%E6%B0%B4%E5%8D%B0%E9%A1%B9%E7%9B%AE%E5%88%9B%E5%BB%BA/&title=pdf水印项目创建.md"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://example.com/2021/11/15/pdf%E6%B0%B4%E5%8D%B0%E9%A1%B9%E7%9B%AE%E5%88%9B%E5%BB%BA/&title=pdf水印项目创建.md"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://example.com/2021/11/15/pdf%E6%B0%B4%E5%8D%B0%E9%A1%B9%E7%9B%AE%E5%88%9B%E5%BB%BA/&name=pdf水印项目创建.md&description=&lt;p&gt;  所需要的工具 一台服务器  一个可以编译jar的java环境 nginx用来正向代理&lt;/p&gt;
-&lt;p&gt;xshell连接服务器&lt;/p&gt;
-&lt;p&gt;安装java环境&lt;/p&gt;
-&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;yum install java-1.8.0-openjdk&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;p&gt;查看java是否安装好&lt;/p&gt;
-&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;java -version&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;p&gt;创建自己项目的路径并且cd到该路径&lt;/p&gt;
-&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;mkdir java&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;cd java&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;p&gt;用命令让他跑起来&lt;/p&gt;
-&lt;p&gt;Linux启动&lt;/p&gt;"><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://example.com/2021/11/15/pdf%E6%B0%B4%E5%8D%B0%E9%A1%B9%E7%9B%AE%E5%88%9B%E5%BB%BA/&t=pdf水印项目创建.md"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
-</ul>
-
-    </div>
-    
-    
-  </span>
-</div>
-
-    
-    <div class="content index py4 ">
-        
-        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
-  <header>
-    
-    <h1 class="posttitle p-name" itemprop="name headline">
-        pdf水印项目创建.md
-    </h1>
-
-
-
-    <div class="meta">
-      <span class="author p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person">
-        <span class="p-name" itemprop="name">wind</span>
-      </span>
-      
-    <div class="postdate">
-      
-        <time datetime="2021-11-15T07:14:06.000Z" class="dt-published" itemprop="datePublished">2021-11-15</time>
-        
-      
-    </div>
-
-
-      
-
-      
-    <div class="article-tag">
-        <i class="fa-solid fa-tag"></i>
-        <a class="p-category" href="/tags/java/" rel="tag">java</a>, <a class="p-category" href="/tags/linux/" rel="tag">linux</a>, <a class="p-category" href="/tags/nginx/" rel="tag">nginx</a>
-    </div>
-
-
-    </div>
-  </header>
+  <title>Java练手项目-pdf加水印 | 这是一个记录成长的博客</title>
   
 
-  <div class="content e-content" itemprop="articleBody">
-    <p>  所需要的工具 一台服务器  一个可以编译jar的java环境 nginx用来正向代理</p>
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="这是一个记录成长的博客" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">这是一个记录成长的博客</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/home/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-commonweal">
+
+    <a href="/404/" rel="section"><i class="fa fa-fw fa-heartbeat"></i>公益 404</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/11/15/pdf%E6%B0%B4%E5%8D%B0%E9%A1%B9%E7%9B%AE%E5%88%9B%E5%BB%BA/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fsafe-img.xhscdn.com%2Fbw1%2F5b826fa0-563d-45ed-8ba7-2357e54a158f%3FimageView2%2F2%2Fw%2F1080%2Fformat%2Fjpg&refer=http%3A%2F%2Fsafe-img.xhscdn.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1698076311&t=b844a3ac136d203583a56088ea6ce17e">
+      <meta itemprop="name" content="wind">
+      <meta itemprop="description" content="ISFJ-A">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="这是一个记录成长的博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Java练手项目-pdf加水印
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-11-15 15:14:06" itemprop="dateCreated datePublished" datetime="2021-11-15T15:14:06+08:00">2021-11-15</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-09-26 21:08:45" itemprop="dateModified" datetime="2023-09-26T21:08:45+08:00">2023-09-26</time>
+              </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="fa fa-comment-o"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2021/11/15/pdf%E6%B0%B4%E5%8D%B0%E9%A1%B9%E7%9B%AE%E5%88%9B%E5%BB%BA/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/11/15/pdf%E6%B0%B4%E5%8D%B0%E9%A1%B9%E7%9B%AE%E5%88%9B%E5%BB%BA/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>  所需要的工具 一台服务器  一个可以编译jar的java环境 nginx用来正向代理</p>
 <p>xshell连接服务器</p>
 <p>安装java环境</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install java-1.8.0-openjdk</span><br></pre></td></tr></table></figure>
@@ -187,6 +276,8 @@
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mkdir java</span><br><span class="line">cd java</span><br></pre></td></tr></table></figure>
 
 <p>用命令让他跑起来</p>
+<span id="more"></span>
+
 <p>Linux启动</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">nohup java -jar pdf-service-0.0.1-SNAPSHOT.jar  </span><br><span class="line">--host=http://161.117.229.248/</span><br><span class="line">--pdfPassword=2021 --footerDesc=\u9875\u811a\u6587\u5b57  </span><br><span class="line">--watermarkPic=https://www.wwei.cn/yasuotu/images/logo.png  </span><br><span class="line">--basicUrl=tmp/resources/static/pdf/    </span><br><span class="line">--location=10,10,30,30 &gt; nohup.out 2&gt;&amp;1 &amp;</span><br></pre></td></tr></table></figure>
 
@@ -198,154 +289,267 @@
 <p><img src="https://i.loli.net/2021/11/15/Mx38SdDYwjAyH4P.png"></p>
 <p>杀死进程</p>
 <p><code>kill -9 id</code></p>
+<p>首先导入依赖</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- https://mvnrepository.com/artifact/com.itextpdf/itextpdf --&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">         <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.itextpdf<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">         <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>itextpdf<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">         <span class="tag">&lt;<span class="name">version</span>&gt;</span>5.5.13<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">     <span class="comment">&lt;!-- https://mvnrepository.com/artifact/com.lowagie/itext --&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">         <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.lowagie<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">         <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>itext<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">         <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.1.7<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-  </div>
-</article>
+<p>代码如下</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br><span class="line">238</span><br><span class="line">239</span><br><span class="line">240</span><br><span class="line">241</span><br><span class="line">242</span><br><span class="line">243</span><br><span class="line">244</span><br><span class="line">245</span><br><span class="line">246</span><br><span class="line">247</span><br><span class="line">248</span><br><span class="line">249</span><br><span class="line">250</span><br><span class="line">251</span><br><span class="line">252</span><br><span class="line">253</span><br><span class="line">254</span><br><span class="line">255</span><br><span class="line">256</span><br><span class="line">257</span><br><span class="line">258</span><br><span class="line">259</span><br><span class="line">260</span><br><span class="line">261</span><br><span class="line">262</span><br><span class="line">263</span><br><span class="line">264</span><br><span class="line">265</span><br><span class="line">266</span><br><span class="line">267</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.awt.AlphaComposite;</span><br><span class="line"><span class="keyword">import</span> java.awt.Color;</span><br><span class="line"><span class="keyword">import</span> java.awt.Font;</span><br><span class="line"><span class="keyword">import</span> java.awt.Graphics2D;</span><br><span class="line"><span class="keyword">import</span> java.awt.Image;</span><br><span class="line"><span class="keyword">import</span> java.awt.RenderingHints;</span><br><span class="line"><span class="keyword">import</span> java.awt.image.BufferedImage;</span><br><span class="line"><span class="keyword">import</span> java.io.File;</span><br><span class="line"><span class="keyword">import</span> java.io.FileOutputStream;</span><br><span class="line"><span class="keyword">import</span> java.io.InputStream;</span><br><span class="line"><span class="keyword">import</span> java.io.OutputStream;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> javax.imageio.ImageIO;</span><br><span class="line"><span class="keyword">import</span> javax.swing.ImageIcon;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*******************************************************************************</span></span><br><span class="line"><span class="comment"> * Description: 图片水印工具类</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> zengshunyao</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@version</span> 1.0</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ImageRemarkUtil</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 水印透明度</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">float</span> alpha = <span class="number">0.5f</span>;</span><br><span class="line">    <span class="comment">// 水印横向位置</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">int</span> positionWidth = <span class="number">150</span>;</span><br><span class="line">    <span class="comment">// 水印纵向位置</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">int</span> positionHeight = <span class="number">300</span>;</span><br><span class="line">    <span class="comment">// 水印文字字体</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> Font font = <span class="keyword">new</span> Font(<span class="string">&quot;宋体&quot;</span>, Font.BOLD, <span class="number">100</span>);</span><br><span class="line">    <span class="comment">// 水印文字颜色</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> Color color = Color.red;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> alpha</span></span><br><span class="line"><span class="comment">     *            水印透明度</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> positionWidth</span></span><br><span class="line"><span class="comment">     *            水印横向位置</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> positionHeight</span></span><br><span class="line"><span class="comment">     *            水印纵向位置</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> font</span></span><br><span class="line"><span class="comment">     *            水印文字字体</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> color</span></span><br><span class="line"><span class="comment">     *            水印文字颜色</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">setImageMarkOptions</span><span class="params">(<span class="keyword">float</span> alpha, <span class="keyword">int</span> positionWidth,</span></span></span><br><span class="line"><span class="params"><span class="function">                                           <span class="keyword">int</span> positionHeight, Font font, Color color)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (alpha != <span class="number">0.0f</span>)</span><br><span class="line">            ImageRemarkUtil.alpha = alpha;</span><br><span class="line">        <span class="keyword">if</span> (positionWidth != <span class="number">0</span>)</span><br><span class="line">            ImageRemarkUtil.positionWidth = positionWidth;</span><br><span class="line">        <span class="keyword">if</span> (positionHeight != <span class="number">0</span>)</span><br><span class="line">            ImageRemarkUtil.positionHeight = positionHeight;</span><br><span class="line">        <span class="keyword">if</span> (font != <span class="keyword">null</span>)</span><br><span class="line">            ImageRemarkUtil.font = font;</span><br><span class="line">        <span class="keyword">if</span> (color != <span class="keyword">null</span>)</span><br><span class="line">            ImageRemarkUtil.color = color;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 给图片添加水印图片</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> iconPath</span></span><br><span class="line"><span class="comment">     *            水印图片路径</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> srcImgPath</span></span><br><span class="line"><span class="comment">     *            源图片路径</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> targerPath</span></span><br><span class="line"><span class="comment">     *            目标图片路径</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">markImageByIcon</span><span class="params">(String iconPath, String srcImgPath,</span></span></span><br><span class="line"><span class="params"><span class="function">                                       String targerPath)</span> </span>&#123;</span><br><span class="line">        markImageByIcon(iconPath, srcImgPath, targerPath, <span class="keyword">null</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 给图片添加水印图片、可设置水印图片旋转角度</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> iconPath</span></span><br><span class="line"><span class="comment">     *            水印图片路径</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> srcImgPath</span></span><br><span class="line"><span class="comment">     *            源图片路径</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> targerPath</span></span><br><span class="line"><span class="comment">     *            目标图片路径</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> degree</span></span><br><span class="line"><span class="comment">     *            水印图片旋转角度</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">markImageByIcon</span><span class="params">(String iconPath, String srcImgPath,</span></span></span><br><span class="line"><span class="params"><span class="function">                                       String targerPath, Integer degree)</span> </span>&#123;</span><br><span class="line">        OutputStream os = <span class="keyword">null</span>;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line"></span><br><span class="line">            Image srcImg = ImageIO.read(<span class="keyword">new</span> File(srcImgPath));</span><br><span class="line"></span><br><span class="line">            BufferedImage buffImg = <span class="keyword">new</span> BufferedImage(srcImg.getWidth(<span class="keyword">null</span>),</span><br><span class="line">                    srcImg.getHeight(<span class="keyword">null</span>), BufferedImage.TYPE_INT_RGB);</span><br><span class="line"></span><br><span class="line">            <span class="comment">// 1、得到画笔对象</span></span><br><span class="line">            Graphics2D g = buffImg.createGraphics();</span><br><span class="line"></span><br><span class="line">            <span class="comment">// 2、设置对线段的锯齿状边缘处理</span></span><br><span class="line">            g.setRenderingHint(RenderingHints.KEY_INTERPOLATION,</span><br><span class="line">                    RenderingHints.VALUE_INTERPOLATION_BILINEAR);</span><br><span class="line"></span><br><span class="line">            g.drawImage(</span><br><span class="line">                    srcImg.getScaledInstance(srcImg.getWidth(<span class="keyword">null</span>),</span><br><span class="line">                            srcImg.getHeight(<span class="keyword">null</span>), Image.SCALE_SMOOTH), <span class="number">0</span>, <span class="number">0</span>,</span><br><span class="line">                    <span class="keyword">null</span>);</span><br><span class="line">            <span class="comment">// 3、设置水印旋转</span></span><br><span class="line">            <span class="keyword">if</span> (<span class="keyword">null</span> != degree) &#123;</span><br><span class="line">                g.rotate(Math.toRadians(degree),</span><br><span class="line">                        (<span class="keyword">double</span>) buffImg.getWidth() / <span class="number">2</span>,</span><br><span class="line">                        (<span class="keyword">double</span>) buffImg.getHeight() / <span class="number">2</span>);</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="comment">// 4、水印图片的路径 水印图片一般为gif或者png的，这样可设置透明度</span></span><br><span class="line">            ImageIcon imgIcon = <span class="keyword">new</span> ImageIcon(iconPath);</span><br><span class="line"></span><br><span class="line">            <span class="comment">// 5、得到Image对象。</span></span><br><span class="line">            Image img = imgIcon.getImage();</span><br><span class="line"></span><br><span class="line">            g.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_ATOP,</span><br><span class="line">                    alpha));</span><br><span class="line"></span><br><span class="line">            <span class="comment">// 6、水印图片的位置</span></span><br><span class="line">            g.drawImage(img, positionWidth, positionHeight, <span class="keyword">null</span>);</span><br><span class="line">            g.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER));</span><br><span class="line">            <span class="comment">// 7、释放资源</span></span><br><span class="line">            g.dispose();</span><br><span class="line"></span><br><span class="line">            <span class="comment">// 8、生成图片</span></span><br><span class="line">            os = <span class="keyword">new</span> FileOutputStream(targerPath);</span><br><span class="line">            ImageIO.write(buffImg, <span class="string">&quot;JPG&quot;</span>, os);</span><br><span class="line"></span><br><span class="line">            System.out.println(<span class="string">&quot;图片完成添加水印图片&quot;</span>);</span><br><span class="line"></span><br><span class="line">        &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                <span class="keyword">if</span> (<span class="keyword">null</span> != os)</span><br><span class="line">                    os.close();</span><br><span class="line">            &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 给图片添加水印文字</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> logoText</span></span><br><span class="line"><span class="comment">     *            水印文字</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> srcImgPath</span></span><br><span class="line"><span class="comment">     *            源图片路径</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> targerPath</span></span><br><span class="line"><span class="comment">     *            目标图片路径</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">markImageByText</span><span class="params">(String logoText, String srcImgPath,</span></span></span><br><span class="line"><span class="params"><span class="function">                                       String targerPath)</span> </span>&#123;</span><br><span class="line">        markImageByText(logoText, srcImgPath, targerPath, <span class="keyword">null</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 给图片添加水印文字、可设置水印文字的旋转角度</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> logoText</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> srcImgPath</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> targerPath</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> degree</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">markImageByText</span><span class="params">(String logoText, String srcImgPath,</span></span></span><br><span class="line"><span class="params"><span class="function">                                       String targerPath, Integer degree)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        InputStream is = <span class="keyword">null</span>;</span><br><span class="line">        OutputStream os = <span class="keyword">null</span>;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            <span class="comment">// 1、源图片</span></span><br><span class="line">            Image srcImg = ImageIO.read(<span class="keyword">new</span> File(srcImgPath));</span><br><span class="line">            BufferedImage buffImg = <span class="keyword">new</span> BufferedImage(srcImg.getWidth(<span class="keyword">null</span>),</span><br><span class="line">                    srcImg.getHeight(<span class="keyword">null</span>), BufferedImage.TYPE_INT_RGB);</span><br><span class="line"></span><br><span class="line">            <span class="comment">// 2、得到画笔对象</span></span><br><span class="line">            Graphics2D g = buffImg.createGraphics();</span><br><span class="line">            <span class="comment">// 3、设置对线段的锯齿状边缘处理</span></span><br><span class="line">            g.setRenderingHint(RenderingHints.KEY_INTERPOLATION,</span><br><span class="line">                    RenderingHints.VALUE_INTERPOLATION_BILINEAR);</span><br><span class="line">            g.drawImage(</span><br><span class="line">                    srcImg.getScaledInstance(srcImg.getWidth(<span class="keyword">null</span>),</span><br><span class="line">                            srcImg.getHeight(<span class="keyword">null</span>), Image.SCALE_SMOOTH), <span class="number">0</span>, <span class="number">0</span>,</span><br><span class="line">                    <span class="keyword">null</span>);</span><br><span class="line">            <span class="comment">// 4、设置水印旋转</span></span><br><span class="line">            <span class="keyword">if</span> (<span class="keyword">null</span> != degree) &#123;</span><br><span class="line">                g.rotate(Math.toRadians(degree),</span><br><span class="line">                        (<span class="keyword">double</span>) buffImg.getWidth() / <span class="number">2</span>,</span><br><span class="line">                        (<span class="keyword">double</span>) buffImg.getHeight() / <span class="number">2</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">// 5、设置水印文字颜色</span></span><br><span class="line">            g.setColor(color);</span><br><span class="line">            <span class="comment">// 6、设置水印文字Font</span></span><br><span class="line">            g.setFont(font);</span><br><span class="line">            <span class="comment">// 7、设置水印文字透明度</span></span><br><span class="line">            g.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_ATOP,</span><br><span class="line">                    alpha));</span><br><span class="line">            <span class="comment">// 8、第一参数-&gt;设置的内容，后面两个参数-&gt;文字在图片上的坐标位置(x,y)</span></span><br><span class="line">            g.drawString(logoText, positionWidth, positionHeight);</span><br><span class="line">            <span class="comment">// 9、释放资源</span></span><br><span class="line">            g.dispose();</span><br><span class="line">            <span class="comment">// 10、生成图片</span></span><br><span class="line">            os = <span class="keyword">new</span> FileOutputStream(targerPath);</span><br><span class="line">            ImageIO.write(buffImg, <span class="string">&quot;JPG&quot;</span>, os);</span><br><span class="line"></span><br><span class="line">            System.out.println(<span class="string">&quot;图片完成添加水印文字&quot;</span>);</span><br><span class="line"></span><br><span class="line">        &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                <span class="keyword">if</span> (<span class="keyword">null</span> != is)</span><br><span class="line">                    is.close();</span><br><span class="line">            &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                <span class="keyword">if</span> (<span class="keyword">null</span> != os)</span><br><span class="line">                    os.close();</span><br><span class="line">            &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        String logoText = <span class="string">&quot;三 年 一 梦&quot;</span>;</span><br><span class="line">        String iconPath = <span class="string">&quot;D:/pdf/dp/dp_1.png&quot;</span>;</span><br><span class="line"></span><br><span class="line">        String targerTextPath2 = <span class="string">&quot;d:/qie_text_rotate.jpg&quot;</span>;</span><br><span class="line"></span><br><span class="line">        String targerIconPath = <span class="string">&quot;d:/qie_icon.jpg&quot;</span>;</span><br><span class="line">        String targerIconPath2 = <span class="string">&quot;d:/qie_icon_rotate.jpg&quot;</span>;</span><br><span class="line">        System.out.println(<span class="string">&quot;给图片添加水印文字开始...&quot;</span>);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; <span class="number">10</span>; i++) &#123;</span><br><span class="line">            String srcImgPath = <span class="string">&quot;D:/pdf/1/1_&quot;</span>+i+<span class="string">&quot;.png&quot;</span>;</span><br><span class="line">            String targerTextPath = <span class="string">&quot;d:/水印/qie_text&quot;</span>+i+<span class="string">&quot;.jpg&quot;</span>;</span><br><span class="line">            <span class="comment">// 给图片添加水印文字</span></span><br><span class="line">            markImageByText(logoText, srcImgPath, targerTextPath);</span><br><span class="line">            <span class="comment">// 给图片添加水印文字,水印文字旋转-45</span></span><br><span class="line">            <span class="comment">//markImageByText(logoText, srcImgPath, targerTextPath2, -45);</span></span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(<span class="string">&quot;给图片添加水印文字结束...&quot;</span>);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        <span class="comment">//System.out.println(&quot;给图片添加水印图片开始...&quot;);</span></span><br><span class="line">        <span class="comment">//setImageMarkOptions(0.3f, 1, 1, null, null);</span></span><br><span class="line">        <span class="comment">// 给图片添加水印图片</span></span><br><span class="line">        <span class="comment">//markImageByIcon(iconPath, srcImgPath, targerIconPath);</span></span><br><span class="line">        <span class="comment">// 给图片添加水印图片,水印图片旋转-45</span></span><br><span class="line">        <span class="comment">//markImageByIcon(iconPath, srcImgPath, targerIconPath2, -45);</span></span><br><span class="line">        <span class="comment">//System.out.println(&quot;给图片添加水印图片结束...&quot;);</span></span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>PDF水印demo学习</p>
+<p>第一步创建一个Application类 加上@SpringBootApplication的注解</p>
+<p>打印控制台消息</p>
+<p><code>System.out.println(&quot;SpringBoot启动成功&quot;);</code></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.example;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.springframework.boot.SpringApplication;</span><br><span class="line"><span class="keyword">import</span> org.springframework.boot.autoconfigure.SpringBootApplication;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">@SpringBootApplication</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Application</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        SpringApplication.run(Application.class, args);</span><br><span class="line">        System.out.println(<span class="string">&quot;SpringBoot启动成功&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://i.loli.net/2021/11/25/QAhnxXS98FM6jws.png"></p>
+<p>水印程序</p>
+<p><img src="https://i.loli.net/2021/11/25/KcTm97dtOSshLg4.png"></p>
+<p>FileDTO文件的属性</p>
+<p>文件序号 index</p>
+<p>文件路径 path</p>
+<p>构造有参无参</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 文件序号</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> Integer index;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 文件路径</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> String path;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Integer <span class="title">getIndex</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> index;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setIndex</span><span class="params">(Integer index)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.index = index;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getPath</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> path;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setPath</span><span class="params">(String path)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.path = path;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
 
-        
-          <div id="footer-post-container">
-  <div id="footer-post">
+<p>PDF拆分为image</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.example.pdfwatermark;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.apache.pdfbox.pdmodel.PDDocument;</span><br><span class="line"><span class="keyword">import</span> org.apache.pdfbox.rendering.ImageType;</span><br><span class="line"><span class="keyword">import</span> org.apache.pdfbox.rendering.PDFRenderer;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> javax.imageio.ImageIO;</span><br><span class="line"><span class="keyword">import</span> java.awt.image.BufferedImage;</span><br><span class="line"><span class="keyword">import</span> java.io.*;</span><br><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Pdf2Image</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 将File PDF文件转化为每一张图片</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> file PDF文件</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> 返回每一张图片的实体对象集合</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> List&lt;FileDTO&gt; <span class="title">generate</span><span class="params">(File file)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            Long now = System.currentTimeMillis();</span><br><span class="line"></span><br><span class="line">            <span class="comment">//读取PDF</span></span><br><span class="line">            PDDocument document = PDDocument.load(file);</span><br><span class="line"></span><br><span class="line">            <span class="comment">//加载PDF对象</span></span><br><span class="line">            PDFRenderer pdfRenderer = <span class="keyword">new</span> PDFRenderer(document);</span><br><span class="line"></span><br><span class="line">            <span class="comment">//存储的PDF每一张图片的路径以及索引</span></span><br><span class="line">            List&lt;FileDTO&gt; dataList = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line"></span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> page = <span class="number">0</span>;page&lt;document.getNumberOfPages();page++)&#123;</span><br><span class="line"></span><br><span class="line">                <span class="comment">//读取PDF每一页的图片</span></span><br><span class="line">                BufferedImage img = pdfRenderer.renderImageWithDPI(page, <span class="number">300</span>, ImageType.RGB);</span><br><span class="line"></span><br><span class="line">                <span class="comment">//生成图片的本地路径</span></span><br><span class="line">                String pathname = PdfWatermarkConstants.PDF_2_IMAGE + now + <span class="string">&quot;/&quot;</span> + file.getName() + page + <span class="string">&quot;.png&quot;</span>;</span><br><span class="line"></span><br><span class="line">                <span class="comment">//创建本地文件</span></span><br><span class="line">                File imageFile = <span class="keyword">new</span> File(pathname);</span><br><span class="line">                <span class="comment">//创建文件夹</span></span><br><span class="line">                imageFile.mkdirs();</span><br><span class="line">                <span class="comment">//创建文件</span></span><br><span class="line">                imageFile.createNewFile();</span><br><span class="line"></span><br><span class="line">                FileDTO dto = <span class="keyword">new</span> FileDTO();</span><br><span class="line">                dataList.add(dto);</span><br><span class="line"></span><br><span class="line">                dto.setIndex(page);</span><br><span class="line">                dto.setPath(pathname);</span><br><span class="line"></span><br><span class="line">                <span class="comment">//生成PNG格式的图片</span></span><br><span class="line">                ImageIO.write(img, <span class="string">&quot;png&quot;</span>, imageFile);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">//关闭Doc流</span></span><br><span class="line">            document.close();</span><br><span class="line"></span><br><span class="line">            <span class="keyword">return</span> dataList;</span><br><span class="line">        &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-    <div id="nav-footer" style="display: none">
-      <ul>
-        
-          <li><a href="/">首页</a></li>
-        
-          <li><a href="/about/">关于</a></li>
-        
-          <li><a href="/search/">搜索</a></li>
-        
-          <li><a href="/archives/">归档</a></li>
-        
-          <li><a target="_blank" rel="noopener" href="http://github.com/fengxiaop">项目</a></li>
-        
-      </ul>
+
     </div>
 
     
     
+    
 
-    <div id="share-footer" style="display: none">
-      <ul>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=http://example.com/2021/11/15/pdf%E6%B0%B4%E5%8D%B0%E9%A1%B9%E7%9B%AE%E5%88%9B%E5%BB%BA/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=http://example.com/2021/11/15/pdf%E6%B0%B4%E5%8D%B0%E9%A1%B9%E7%9B%AE%E5%88%9B%E5%BB%BA/&text=pdf水印项目创建.md"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=http://example.com/2021/11/15/pdf%E6%B0%B4%E5%8D%B0%E9%A1%B9%E7%9B%AE%E5%88%9B%E5%BB%BA/&title=pdf水印项目创建.md"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=http://example.com/2021/11/15/pdf%E6%B0%B4%E5%8D%B0%E9%A1%B9%E7%9B%AE%E5%88%9B%E5%BB%BA/&is_video=false&description=pdf水印项目创建.md"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=pdf水印项目创建.md&body=Check out this article: http://example.com/2021/11/15/pdf%E6%B0%B4%E5%8D%B0%E9%A1%B9%E7%9B%AE%E5%88%9B%E5%BB%BA/"><i class="fa-solid fa-envelope fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=http://example.com/2021/11/15/pdf%E6%B0%B4%E5%8D%B0%E9%A1%B9%E7%9B%AE%E5%88%9B%E5%BB%BA/&title=pdf水印项目创建.md"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=http://example.com/2021/11/15/pdf%E6%B0%B4%E5%8D%B0%E9%A1%B9%E7%9B%AE%E5%88%9B%E5%BB%BA/&title=pdf水印项目创建.md"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=http://example.com/2021/11/15/pdf%E6%B0%B4%E5%8D%B0%E9%A1%B9%E7%9B%AE%E5%88%9B%E5%BB%BA/&title=pdf水印项目创建.md"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=http://example.com/2021/11/15/pdf%E6%B0%B4%E5%8D%B0%E9%A1%B9%E7%9B%AE%E5%88%9B%E5%BB%BA/&title=pdf水印项目创建.md"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=http://example.com/2021/11/15/pdf%E6%B0%B4%E5%8D%B0%E9%A1%B9%E7%9B%AE%E5%88%9B%E5%BB%BA/&name=pdf水印项目创建.md&description=&lt;p&gt;  所需要的工具 一台服务器  一个可以编译jar的java环境 nginx用来正向代理&lt;/p&gt;
-&lt;p&gt;xshell连接服务器&lt;/p&gt;
-&lt;p&gt;安装java环境&lt;/p&gt;
-&lt;figure class=&#34;highlight shell&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;yum install java-1.8.0-openjdk&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;p&gt;查看java是否安装好&lt;/p&gt;
-&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;java -version&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;p&gt;创建自己项目的路径并且cd到该路径&lt;/p&gt;
-&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;mkdir java&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;cd java&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;p&gt;用命令让他跑起来&lt;/p&gt;
-&lt;p&gt;Linux启动&lt;/p&gt;"><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=http://example.com/2021/11/15/pdf%E6%B0%B4%E5%8D%B0%E9%A1%B9%E7%9B%AE%E5%88%9B%E5%BB%BA/&t=pdf水印项目创建.md"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
-</ul>
-
-    </div>
-
-    <div id="actions-footer">
-        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fa-solid fa-bars fa-lg" aria-hidden="true"></i> 菜单</a>
-        
-        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fa-solid fa-share-alt fa-lg" aria-hidden="true"></i> 分享</a>
-        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up fa-lg" aria-hidden="true"></i> 返回顶部</a>
-    </div>
-
-  </div>
-</div>
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/java/" rel="tag"># java</a>
+              <a href="/tags/linux/" rel="tag"># linux</a>
+              <a href="/tags/nginx/" rel="tag"># nginx</a>
+          </div>
 
         
-        <footer id="footer">
-  <div class="footer-left">
-    Copyright &copy;
-    
-    
-    2020-2023
-    wind
-  </div>
-  <div class="footer-right">
-    <nav>
-      <ul>
-        <!--
-       --><li><a href="/">首页</a></li><!--
-     --><!--
-       --><li><a href="/about/">关于</a></li><!--
-     --><!--
-       --><li><a href="/search/">搜索</a></li><!--
-     --><!--
-       --><li><a href="/archives/">归档</a></li><!--
-     --><!--
-       --><li><a target="_blank" rel="noopener" href="http://github.com/fengxiaop">项目</a></li><!--
-     -->
-      </ul>
-    </nav>
-  </div>
-</footer>
 
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/11/02/java%E5%AE%9E%E7%8E%B0pdf%E8%BD%AC%E4%B8%BA%E5%9B%BE%E7%89%87/" rel="prev" title="java实现pdf转为图片">
+      <i class="fa fa-chevron-left"></i> java实现pdf转为图片
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2021/11/19/springboot%E7%A8%8B%E5%BA%8F/" rel="next" title="springboot程序">
+      springboot程序 <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
-    <!-- styles -->
-
-
-
-  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
-
-
-    <!-- jquery -->
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script>
-
-
-
-
-<!-- clipboard -->
-
+      </footer>
+    
+  </article>
   
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script>
   
-  <script type="text/javascript">
-  $(function() {
-    // copy-btn HTML
-    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"复制到粘贴板！\">";
-    btn += '<i class="fa-regular fa-clone"></i>';
-    btn += '</span>';
-    // mount it!
-    $(".highlight table").before(btn);
-    var clip = new ClipboardJS('.btn-copy', {
-      text: function(trigger) {
-        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+  
+
+
+
+          </div>
+          
+    <div class="comments" id="valine-comments"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
       }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
     });
-    clip.on('success', function(e) {
-      e.trigger.setAttribute('aria-label', "复制成功！");
-      e.clearSelection();
-    })
-  })
-  </script>
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="wind"
+      src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fsafe-img.xhscdn.com%2Fbw1%2F5b826fa0-563d-45ed-8ba7-2357e54a158f%3FimageView2%2F2%2Fw%2F1080%2Fformat%2Fjpg&refer=http%3A%2F%2Fsafe-img.xhscdn.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1698076311&t=b844a3ac136d203583a56088ea6ce17e">
+  <p class="site-author-name" itemprop="name">wind</p>
+  <div class="site-description" itemprop="description">ISFJ-A</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">26</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">21</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/fengxiaop" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;fengxiaop" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:1493020035@qq.com" title="E-Mail → mailto:1493020035@qq.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+  </div>
 
 
-<script src="/js/main.js"></script>
 
-<!-- search -->
+      </div>
 
-<!-- Baidu Analytics -->
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
 
-<!-- Cloudflare Analytics -->
 
-<!-- Disqus Comments -->
+      </div>
+    </main>
 
-<!-- utterances Comments -->
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 2020 – 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">wind</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : false,
+      appId      : 'tGJTBwxlWX5ctLtQikOA4iv7-gzGzoHsz',
+      appKey     : 'pMi4UO6S1uRK3jRYh2nMYXD1',
+      placeholder: "Just go go",
+      avatar     : 'mm',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : false,
+      lang       : 'zh-cn' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : false,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
 
 </body>
 </html>
