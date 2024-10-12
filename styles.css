@@ -1,0 +1,50 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.background-container {
+    position: relative;
+    background-image: url('生日图片.jpg'); /* 请替换为你的背景图片路径 */
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-wrapper {
+    background-color: rgba(255, 255, 255, 0.7); /* 半透明白色背景，以便文字更易读 */
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+h1 {
+    color: #ff4500; /* 生日主题色：橙色 */
+    margin-bottom: 10px;
+}
+
+p {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.menu-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu-list li {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+/* 可选：为列表项添加图标 */
+.menu-list li:before {
+    content: "🍽️";
+    margin-right: 10px;
+}
